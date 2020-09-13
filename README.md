@@ -1,4 +1,4 @@
-# buffalo_client
+# Buffalo พันธ์ุประวัติควายไทย
 
 ## Project setup
 ```
@@ -13,11 +13,6 @@ npm run serve
 ### Compiles and minifies for production
 ```
 npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
 ```
 
 ### Customize configuration
