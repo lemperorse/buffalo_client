@@ -5,7 +5,19 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
 
+import VueGeolocation from 'vue-browser-geolocation'
+
 Vue.config.productionTip = false
+
+Vue.use(VueGeolocation) 
+// key:'AIzaSyA6tCMNLaeTHyjiwtdPmH1ilJesXelH68U' 
+import * as VueGoogleMaps from 'vue2-google-maps'
+ 
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyA6tCMNLaeTHyjiwtdPmH1ilJesXelH68U',
+  },
+})
 
 new Vue({
   router,

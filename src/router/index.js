@@ -5,22 +5,31 @@ import BaseRoot from '../views/root/Base';
 
 import BaseUser from '../views/user/Base';
 import {userRouter}from './user'
+import BaseAdmin from '../views/admin/Base';
+import {adminRouter}from './admin'
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: "/",
     component: BaseRoot,
-    children: [ {
+    children: [ 
+      {
       path: '/',
-      name: 'aaa', 
-      component: () => import('@/views/About.vue')
-    }]
+      name: 'login', 
+      component: () => import('@/views/root/Login.vue')
+     }
+  ]
   },
   {
     path: "/user/",
     component: BaseUser,
     children: userRouter
+  },
+  {
+    path: "/admin/",
+    component: BaseAdmin,
+    children: adminRouter
   },
    
 ]
