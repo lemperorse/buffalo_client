@@ -1,6 +1,5 @@
  <template>
-<div>
-    <h2>Base Root</h2>
+<div> 
     <router-view></router-view>
     </div>
 </template>
