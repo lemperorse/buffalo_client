@@ -39,7 +39,13 @@ const userRouter = [
         path: 'reportgrow',
         name: 'reportgrow', 
         component: getView('Reportgrow')
-    }
+    },
+    {
+        path: 'addage',
+        name: 'addage', 
+        component: getView('Addage')
+    },
+
 ]
 
 module.exports = {

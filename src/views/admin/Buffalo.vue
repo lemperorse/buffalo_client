@@ -1,7 +1,7 @@
 <template>
 <!-- <div class="bg-gray-100 font-sans leading-normal tracking-normal"> -->
 <div class="container w-full mx-auto">
-    <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal"> 
+    <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
         <v-container>
             <h2 class="font-bold text-2xl">ข้อมูลควาย</h2>
             <v-breadcrumbs :items="bc" large>
@@ -172,32 +172,9 @@
                                     <v-card-title primary-title>
                                         <h5 class="font-bold text-2xl">การเจริญเติบโต</h5>
                                         <v-spacer></v-spacer>
-                                        <v-dialog v-model="dialog" scrollable max-width="600px">
-                                            <template v-slot:activator="{ on, attrs }">
-                                                <v-btn color="success" dark v-bind="attrs" v-on="on">
-                                                    <v-icon>mdi-plus</v-icon>เพิ่มอายุ
-                                                </v-btn>
-                                            </template>
-                                            <v-card>
-                                                <v-card-title>
-                                                    <span>เพิ่มอายุควาย</span>
-                                                </v-card-title>
-                                                <v-card-text>
-                                                    <v-container>
-                                                        <v-text-field value="" prepend-inner-icon="mdi-weight-kilogram" outlined type="number" label="น้ำหนัก(กิโลกรัม)"></v-text-field>
-                                                        <v-text-field value="" prepend-inner-icon="mdi-arrow-left-right" outlined type="number" label="ความกว้างรอบอก(เซนติเมตร)"></v-text-field>
-                                                        <v-text-field value="" prepend-inner-icon="mdi-arrow-left-right" outlined type="number" label="ความยาวรอบลำตัว(เซนติเมตร)"></v-text-field>
-                                                        <v-text-field value="" prepend-inner-icon="mdi-human-male-height-variant" outlined type="number" label="ความสูง(เซนติเมตร)"></v-text-field>
-                                                        <v-select :items="age1" value="" prepend-inner-icon="mdi-clock" outlined label="อายุ(240,400,600วัน)"></v-select>
-                                                    </v-container>
-                                                </v-card-text>
-                                                <v-card-actions>
-                                                    <v-spacer></v-spacer>
-                                                    <v-btn color="green" dark @click="dialog = false">บันทึก</v-btn>
-                                                    <v-btn color="error" @click="dialog = false">ยกเลิก</v-btn>
-                                                </v-card-actions>
-                                            </v-card>
-                                        </v-dialog>
+                                        <v-btn @click="$router.push('/admin/addage')" color="success" dark>
+                                            <v-icon>mdi-plus</v-icon>เพิ่มอายุ
+                                        </v-btn>
                                     </v-card-title>
                                     <v-card-text>
                                         <div>
@@ -295,7 +272,7 @@
                                 </v-card>
                             </v-tab-item>
 
-                             <v-tab-item>
+                            <v-tab-item>
                                 <v-card flat>
                                     <v-card-title primary-title>
                                         <h5 class="font-bold text-2xl">ตั้งค่า</h5>
@@ -313,13 +290,13 @@
                                                             <v-divider vertical inset class="mx-1" dark></v-divider> -->
                                                             <h5 @click="$router.go()">ลบควาย</h5>
                                                             <v-spacer></v-spacer>
-                                                            <v-btn  :loading="loading3" :disabled="loading3" color="error" class="white--text" @click="loader = 'loading3'">
+                                                            <v-btn :loading="loading3" :disabled="loading3" color="error" class="white--text" @click="loader = 'loading3'">
                                                                 <v-icon>mdi-eraser</v-icon>ลบควาย
                                                             </v-btn>
                                                         </v-card-title>
                                                     </v-expansion-panel-content>
                                                 </v-expansion-panel>
- 
+
                                             </v-expansion-panels>
                                         </div>
                                     </v-card-text>
@@ -354,7 +331,7 @@ export default {
                 disabled: false,
                 href: '/#/admin/buffalo'
             },
-            ],
+        ],
         panel: [0, 1, 2, 3],
 
         sex: ['ตัวผู้', 'ตัวเมีย'],
@@ -519,6 +496,7 @@ export default {
 
 }
 </script>
+
 <style scoped>
 .btnw50 {
     width: 50%;

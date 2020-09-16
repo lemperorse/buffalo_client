@@ -79,6 +79,11 @@ const adminRouter = [
         name: 'addbuffalo', 
         component: getView('Addbuffalo')
     },
+    {
+        path: 'addage',
+        name: 'addage', 
+        component: getView('Addage')
+    },
 
 
 ]

@@ -172,11 +172,12 @@
                                     <v-card-title primary-title>
                                         <h5 class="font-bold text-2xl">การเจริญเติบโต</h5>
                                         <v-spacer></v-spacer>
-                                        <v-dialog v-model="dialog" scrollable max-width="600px">
-                                            <template v-slot:activator="{ on, attrs }">
-                                                <v-btn color="success" dark v-bind="attrs" v-on="on">
+                                        <v-btn @click="$router.push('/user/addage')" color="success" dark >
                                                     <v-icon>mdi-plus</v-icon>เพิ่มอายุ
                                                 </v-btn>
+                                        <!-- <v-dialog v-model="dialog" scrollable max-width="600px">
+                                            <template v-slot:activator="{ on, attrs }">
+                                                
                                             </template>
                                             <v-card>
                                                 <v-card-title>
@@ -197,7 +198,7 @@
                                                     <v-btn color="error" @click="dialog = false">ยกเลิก</v-btn>
                                                 </v-card-actions>
                                             </v-card>
-                                        </v-dialog>
+                                        </v-dialog> -->
                                     </v-card-title>
                                     <v-card-text>
                                         <div>

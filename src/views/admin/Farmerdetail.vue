@@ -177,62 +177,7 @@
                                                             <v-btn @click="$router.push('/admin/addbuffalo')" color="success" dark class="">
                                                                 <v-icon>mdi-plus</v-icon>เพิ่มควาย
                                                             </v-btn>
-
-                                                            <!-- <v-dialog v-model="dialog" scrollable max-width="500px">
-                                                                <template v-slot:activator="{ on, attrs }">
-                                                                    <v-btn color="success" dark class="" v-bind="attrs" v-on="on">
-                                                                        <v-icon>mdi-plus</v-icon>เพิ่มควาย
-                                                                    </v-btn>
-                                                                </template>
-                                                                <v-card>
-                                                                    <v-card-title>
-                                                                        <h4>เพิ่มควาย</h4>
-                                                                    </v-card-title>
-
-                                                                    <v-card-text>
-                                                                        <v-container>
-                                                                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined label="ชื่อหรือหมายเลขควาย"></v-text-field>
-                                                                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-numeric-10-box-multiple-outline" color="green" outlined type="number" label="หมายเลข NID"></v-text-field>
-                                                                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined type="number" label="หมายเลขไมโครชิป"></v-text-field>
-                                                                            <v-menu ref="menu" v-model="menu" :close-on-content-click="false" transition="scale-transition" offset-y min-width="290px">
-                                                                                <template v-slot:activator="{ on, attrs }">
-                                                                                    <v-text-field color="green" outlined v-model="date" class="rounded-lg" label="วัน/เดือน/ปีเกิด" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
-                                                                                </template>
-                                                                                <v-date-picker color="green" ref="picker" v-model="date" :max="new Date().toISOString().substr(0, 10)" min="1950-01-01" @change="save1"></v-date-picker>
-                                                                            </v-menu>
-                                                                            <v-select :items="sex" class="rounded-lg" prepend-inner-icon="mdi-gender-male-female" color="green" outlined label="เพศ"></v-select>
-                                                                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-calendar-clock" color="green" outlined type="number" label="อายุ (..ปี..เดือน)"></v-text-field>
-                                                                            <v-select :items="color" class="rounded-lg" prepend-inner-icon="mdi-invert-colors" color="green" outlined label="สี"></v-select>
-                                                                            <v-select :items="from" class="rounded-lg" prepend-inner-icon="mdi-import" color="green" outlined label="แหล่งที่มา"></v-select>
-                                                                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-tag-outline" color="green" outlined type="number" label="ราคา"></v-text-field>
-                                                                            <v-select :items="status" class="rounded-lg" prepend-inner-icon="mdi-post-outline" color="green" outlined label="สถานะควาย"></v-select>
-                                                                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined label="ชื่อหรือหมายเลขพ่อ"></v-text-field>
-                                                                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-numeric-10-box-multiple-outline" color="green" outlined type="number" label="หมายเลข NID พ่อ"></v-text-field>
-                                                                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined type="number" label="หมายเลขไมโครชิปพ่อ"></v-text-field>
-                                                                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined label="ชื่อหรือหมายเลขแม่"></v-text-field>
-                                                                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-numeric-10-box-multiple-outline" color="green" outlined type="number" label="หมายเลข NID แม่"></v-text-field>
-                                                                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined type="number" label="หมายเลขไมโครชิปแม่"></v-text-field>
-                                                                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-weight-kilogram" color="green" outlined type="number" label="น้ำหนัก (กิโลกรัม)"></v-text-field>
-                                                                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-arrow-left-right" color="green" outlined type="number" label="ความกว้างรอบอก (เซนติเมตร)"></v-text-field>
-                                                                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-arrow-left-right" color="green" outlined type="number" label="ความยาวลำตัว (เซนติเมตร)"></v-text-field>
-                                                                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-human-male-height-variant" color="green" outlined type="number" label="ความสูง (เซนติเมตร)"></v-text-field>
-                                                                            <v-file-input class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined multiple label="เพิ่มภาพด้านข้าง"></v-file-input>
-                                                                            <v-file-input class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined multiple label="เพิ่มภาพด้านหลัง"></v-file-input>
-
-                                                                        </v-container>
-                                                                    </v-card-text>
-
-                                                                    <v-card-actions>
-                                                                        <v-spacer></v-spacer>
-                                                                        <v-btn color="green" class="rounded-lg" dark @click="save">
-                                                                            <h5>บันทึก</h5>
-                                                                        </v-btn>
-                                                                        <v-btn color="error" class="rounded-lg" @click="close">
-                                                                            <h5>ยกเลิก</h5>
-                                                                        </v-btn>
-                                                                    </v-card-actions>
-                                                                </v-card>
-                                                            </v-dialog> -->
+ 
                                                         </div>
                                                     </div>
                                                 </div>

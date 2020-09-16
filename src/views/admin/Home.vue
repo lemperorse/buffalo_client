@@ -169,7 +169,7 @@
                         <h3 class="mb-2">จำนวนฟาร์มทั้งหมด</h3>
                         <v-menu ref="menu" v-model="menu" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y min-width="290px">
                             <template v-slot:activator="{ on, attrs }">
-                                <v-text-field v-model="date" label="Picker in menu" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
+                                <v-text-field v-model="date" label="เลือกวันที่" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
                             </template>
                             <v-date-picker v-model="date" no-title scrollable>
                                 <v-spacer></v-spacer>
@@ -181,7 +181,7 @@
                         <div class="flex flex-row items-center">
                             <column-chart :data="chartData"></column-chart>
                         </div>
-                        <v-btn small class="mt-2" color="success" block @click="$router.push('reportsummary')">แสดงเพิ่มเติม</v-btn>
+                        <v-btn small class="mt-2" color="success" block @click="$router.push('reportbuffalo')">แสดงเพิ่มเติม</v-btn>
                     </div>
                     <!--/Metric Card-->
                 </div>
@@ -191,7 +191,7 @@
                         <h3 class="mb-2">ควายทั้งหมด</h3>
                         <v-menu ref="menu2" v-model="menu2" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y min-width="290px">
                             <template v-slot:activator="{ on, attrs }">
-                                <v-text-field v-model="date" label="Picker in menu" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
+                                <v-text-field v-model="date" label="เลือกวันที่" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
                             </template>
                             <v-date-picker v-model="date" no-title scrollable>
                                 <v-spacer></v-spacer>
@@ -202,7 +202,7 @@
                         <div class="flex flex-row items-center">
                             <bar-chart :data="chartData"></bar-chart>
                         </div>
-                        <v-btn small class="mt-2" color="success" block @click="$router.push('reportsummary')">แสดงเพิ่มเติม</v-btn>
+                        <v-btn small class="mt-2" color="success" block @click="$router.push('reportbuffalo')">แสดงเพิ่มเติม</v-btn>
                     </div>
                     <!--/Metric Card-->
                 </div>
@@ -212,7 +212,7 @@
                         <h3 class="mb-2">จำนวนผู้ใช้งานในแต่ละเดือน</h3>
                         <v-menu ref="menu3" v-model="menu3" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y min-width="290px">
                             <template v-slot:activator="{ on, attrs }">
-                                <v-text-field v-model="date" label="Picker in menu" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
+                                <v-text-field v-model="date" label="เลือกวันที่" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
                             </template>
                             <v-date-picker v-model="date" no-title scrollable>
                                 <v-spacer></v-spacer>
@@ -223,7 +223,7 @@
                         <div class="flex flex-row items-center">
                             <pie-chart :data="chartData"></pie-chart>
                         </div>
-                        <v-btn small class="mt-2" color="success" block @click="$router.push('reportsummary')">แสดงเพิ่มเติม</v-btn>
+                        <v-btn small class="mt-2" color="success" block @click="$router.push('reportsystem')">แสดงเพิ่มเติม</v-btn>
                     </div>
                     <!--/Metric Card-->
                 </div>

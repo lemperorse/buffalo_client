@@ -130,7 +130,7 @@
                         <h3 class="mb-2">จำนวนควายทั้งหมด</h3>
                         <v-menu ref="menu1" v-model="menu1" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y min-width="290px">
                             <template v-slot:activator="{ on, attrs }">
-                                <v-text-field v-model="date" label="Picker in menu" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
+                                <v-text-field v-model="date" label="เลือกวันที่" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
                             </template>
                             <v-date-picker v-model="date" no-title scrollable>
                                 <v-spacer></v-spacer>
@@ -151,7 +151,7 @@
                         <h3 class="mb-2">ควายที่มีชีวิต</h3>
                         <v-menu ref="menu2" v-model="menu2" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y min-width="290px">
                             <template v-slot:activator="{ on, attrs }">
-                                <v-text-field v-model="date" label="Picker in menu" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
+                                <v-text-field v-model="date" label="เลือกวันที่" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
                             </template>
                             <v-date-picker v-model="date" no-title scrollable>
                                 <v-spacer></v-spacer>
@@ -172,7 +172,7 @@
                         <h3 class="mb-2">ควายที่ไม่มีชีวิต</h3>
                         <v-menu ref="menu3" v-model="menu3" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y min-width="290px">
                             <template v-slot:activator="{ on, attrs }">
-                                <v-text-field v-model="date" label="Picker in menu" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
+                                <v-text-field v-model="date" label="เลือกวันที่" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
                             </template>
                             <v-date-picker v-model="date" no-title scrollable>
                                 <v-spacer></v-spacer>
