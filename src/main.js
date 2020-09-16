@@ -5,6 +5,11 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
 
+import Chartkick from 'vue-chartkick'
+import Chart from 'chart.js'
+
+Vue.use(Chartkick.use(Chart))
+
 import VueGeolocation from 'vue-browser-geolocation'
 
 Vue.config.productionTip = false

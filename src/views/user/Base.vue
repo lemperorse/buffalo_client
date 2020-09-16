@@ -1,49 +1,54 @@
- <template>
-<div>
-     <router-view />
-    </div>
+<template>
+<v-app>
+    <navbaruser name="เกษตกร" />
+
+    <v-main>
+        <router-view />
+    </v-main>
+</v-app>
 </template>
 
-    <script>
+<script>
+import navbaruser from '@/components/user/navbaruser';
 export default {
     name: 'Root',
     /*-------------------------ประกาศ components ---------------------------------------*/
     components: {
+        navbaruser
+    },
+    /*-------------------------รับค่าเมื่อเราเป็น components---------------------------------------*/
+    props: {
 
     },
-  /*-------------------------รับค่าเมื่อเราเป็น components---------------------------------------*/
-props:{
-
-},
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
-    return {
+        return {
 
-txt:'Hello World'
+            txt: 'Hello World'
 
         };
-    }, 
+    },
     /*------------------------- สิ่งทที่อยู่ในนี้จะถูกรัยเมื่อโหลด ------------------------------------------*/
-     mounted:async function() {
-    /**** เรียกใช้ methods ชื่อ load() */
-        await this.load(); 
+    mounted: async function () {
+        /**** เรียกใช้ methods ชื่อ load() */
+        await this.load();
     },
     /*------------------------- กระทำการตอน router ถูกโหลดเข้ามา------------------------------------------*/
-     async beforeRouteEnter(to, from, next) { 
+    async beforeRouteEnter(to, from, next) {
         next()
     },
     /*-------------------------ใช้จัดการ operation  หรือ คำนวณค่าต่างๆ (คล้าย methods)------------------------------------------*/
-    computed:{
+    computed: {
 
-},
+    },
     /*-------------------------Methods------------------------------------------*/
-methods:{
-    /******* Methods default run ******/
-    load:async function(){
+    methods: {
+        /******* Methods default run ******/
+        load: async function () {}
+    },
 }
-},
-    }
 </script>
+
 <style lang='postcss' scoped>
 
 </style>

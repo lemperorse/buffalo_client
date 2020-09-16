@@ -18,6 +18,16 @@ const routes = [
       path: '/',
       name: 'login', 
       component: () => import('@/views/root/Login.vue')
+     },
+     {
+      path: '/register',
+      name: 'register', 
+      component: () => import('@/views/root/Register.vue')
+     },
+     {
+      path: '/forgotpassword',
+      name: 'forgotpassword', 
+      component: () => import('@/views/root/Forgotpassword.vue')
      }
   ]
   },

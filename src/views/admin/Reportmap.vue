@@ -3,6 +3,16 @@
     <!--Container-->
     <div class="container w-full mx-auto">
         <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
+
+            <v-container>
+                <h2 class="font-bold text-2xl">รายงานสรุปจำนวนควาย</h2>
+                <v-breadcrumbs :items="bc" large>
+                    <template v-slot:divider>
+                        <v-icon>mdi-chevron-right</v-icon>
+                    </template>
+                </v-breadcrumbs>
+                <hr class="border-b-2 border-gray-400 ">
+            </v-container>
             <!--Console Content-->
             <div class="flex flex-wrap">
                 <div class="w-full md:w-1/1 xl:w-1/1 p-3">
@@ -39,6 +49,17 @@
 export default {
     data() {
         return {
+            bc: [{
+                text: 'แดชบอร์ด',
+                disabled: false,
+                href: '/#/admin/home',
+            },
+            {
+                text: 'รายงานเชิงแผนที่',
+                disabled: false,
+                href: '/#/admin/reportmap',
+            }, ],
+
             province: ['พะเยา', 'น่าน'],
             aumphur: ['เมือง', 'แม่กา'],
             tumbon: ['แม่กา', 'แม่ใจ'],

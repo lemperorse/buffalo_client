@@ -59,6 +59,26 @@ const adminRouter = [
         name: 'admin-export', 
         component: getView('Export')
     },
+    {
+        path: 'addadmin',
+        name: 'addadmin', 
+        component: getView('Addadmin')
+    },
+    {
+        path: 'editadmin',
+        name: 'editadmin', 
+        component: getView('Editadmin')
+    },
+    {
+        path: 'addfarmer',
+        name: 'addfarmer', 
+        component: getView('Addfarmer')
+    },
+    {
+        path: 'addbuffalo',
+        name: 'addbuffalo', 
+        component: getView('Addbuffalo')
+    },
 
 
 ]

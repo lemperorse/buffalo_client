@@ -3,6 +3,16 @@
     <!--Container-->
     <div class="container w-full mx-auto">
         <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
+
+            <v-container>
+                <h2 class="font-bold text-2xl">คำขอรหัสผ่าน</h2>
+                <v-breadcrumbs :items="bc" large>
+                    <template v-slot:divider>
+                        <v-icon>mdi-chevron-right</v-icon>
+                    </template>
+                </v-breadcrumbs>
+                <hr class="border-b-2 border-gray-400 ">
+            </v-container>
             <!--Console Content-->
             <div class="flex flex-wrap">
                 <div class="w-full md:w-1/1 xl:w-1/1 p-3">
@@ -16,7 +26,7 @@
                 </div>
 
                 <div class="w-full md:w-1/1 xl:w-1/1 p-3">
-                    <v-data-table dense :headers="headers" :items="desserts" :search="search" sort-by="calories" class="elevation-2 pa-2"> 
+                    <v-data-table :headers="headers" :items="desserts" :search="search" sort-by="calories" class="elevation-2 pa-2"> 
                         <!-- <template v-slot:item.glutenfree="{ item }"> -->
                         <!-- <v-simple-checkbox v-model="item.glutenfree" disabled></v-simple-checkbox> -->
                         <!-- <v-select chips outlined :items="items" label="Solo field"></v-select> -->
@@ -47,6 +57,12 @@
 <script> 
 export default {
     data: () => ({
+        bc: [{
+                text: 'คำขอรหัสผ่าน',
+                disabled: false,
+                href: '/#/admin/resetpass',
+            }, 
+            ],
 
         search: '',
         dialog: false,

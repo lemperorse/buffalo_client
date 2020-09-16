@@ -295,7 +295,7 @@
                                 </v-card>
                             </v-tab-item>
 
-                             <v-tab-item>
+                            <v-tab-item>
                                 <v-card flat>
                                     <v-card-title primary-title>
                                         <h5 class="font-bold text-2xl">ตั้งค่า</h5>
@@ -325,7 +325,7 @@
                                     </v-card-text>
                                 </v-card>
                             </v-tab-item>
-
+                            
                         </v-tabs>
                     </v-card>
                 </div>
@@ -340,20 +340,15 @@ export default {
     components: {},
     data: () => ({
         bc: [{
-                text: 'เกษตกร',
+                text: 'ควายทั้งหมด',
                 disabled: false,
-                href: '/#/admin/allfarmer',
-            },
-            {
-                text: 'ข้อมูลเกษตกร',
-                disabled: false,
-                href: '/#/admin/farmer',
+                href: '/#/user/allbuffalo',
             },
             {
                 text: 'ข้อมูลควาย',
                 disabled: false,
-                href: '/#/admin/buffalo'
-            },
+                href: '/#/user/buffalo',
+            }, 
             ],
         panel: [0, 1, 2, 3],
 
@@ -520,7 +515,7 @@ export default {
 }
 </script>
 <style scoped>
-.btnw50 {
-    width: 50%;
-}
+.btnw50{
+    width:50%;
+} 
 </style>
