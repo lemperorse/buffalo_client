@@ -28,7 +28,7 @@
 
     </v-navigation-drawer>
 
-    <v-app-bar  elevate-on-scroll app clipped-left>
+    <v-app-bar   color="white" app clipped-left>
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         <h3>
             &nbsp; {{name}}
@@ -52,8 +52,13 @@ export default {
             drawer: null,
             items: [{
                     text: "แดชบอร์ด",
-                    icon: "em em-clipboard",
+                    icon: "em em-linked_paperclips",
                     router: "/user/home"
+                },
+                {
+                    text: "ค้นหาใบพันธ์ประวัติ",
+                    icon: "em em-clipboard",
+                    router: "/user/profile"
                 },
                 {
                     text: "ข้อมูลส่วนตัว",
