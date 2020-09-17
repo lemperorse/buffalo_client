@@ -1,18 +1,29 @@
 <template>
 <!-- <div class="bg-gray-100 font-sans leading-normal tracking-normal"> -->
-<div>
+<div class="bg-gray-100">
     <!--Container-->
     <div class="container w-full mx-auto">
         <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
+
+            <v-container>
+                <h2 class="font-bold text-3xl"><i class="em em-herb text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; ส่งออกข้อมูลควาย</h2>
+                <!-- <h2 class="font-bold text-2xl">ผู้ดูแลระบบ</h2> -->
+                <v-breadcrumbs :items="bc" large>
+                    <template v-slot:divider>
+                        <v-icon>mdi-chevron-right</v-icon>
+                    </template>
+                </v-breadcrumbs>
+                <hr class="border-b-2 border-gray-400 ">
+            </v-container>
             <!--Console Content-->
             <div class="flex flex-wrap">
                 <div class="w-full md:w-1/1 xl:w-1/1 p-3">
                     <!--Metric Card-->
-                    <div class="bg-white border rounded shadow p-2">
+                    <div class="bg-white border-b-4 border-pink-700 rounded shadow-xl p-2">
                         <div class="flex flex-row items-center">
                             <v-text-field dense class="" v-model="search" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
                             <v-divider vertical class="ma-1"></v-divider>
-                            <v-btn color="green" medium dense dark class="">ส่งออกรายงาน</v-btn> 
+                            <v-btn depressed   color="green" medium dense dark class="">ส่งออกรายงาน</v-btn> 
                         </div>
                         <v-divider class="ma-1"></v-divider>
                         <div class="flex flex-row items-center">
@@ -26,7 +37,7 @@
                 </div>
 
                 <div class="w-full md:w-1/1 xl:w-1/1 p-3">
-                    <v-data-table dense :headers="headers" :items="desserts" :search="search" sort-by="calories" class="elevation-5   pa-2">
+                    <v-data-table class="bg-white border-b-4 border-pink-700 rounded shadow-xl p-2" dense :headers="headers" :items="desserts" :search="search" sort-by="calories">
 
                         <template v-slot:no-data>
                             <v-btn color="primary" @click="initialize">Reset</v-btn>
@@ -43,14 +54,14 @@
 export default {
     data: () => ({
         bc: [{
-                text: 'รายงาน',
+                text: 'แดชบอร์ด',
                 disabled: false,
-                href: '/#/report',
+                href: '/#/admin/home',
             },
             {
-                text: 'ข้อมูลการเจริญเติบโตของกระบือ',
+                text: 'ส่งออกข้อมูลควาย',
                 disabled: false,
-                href: '/#/export',
+                href: '/#/admin/export',
             },
         ],
         province: [{

@@ -1,28 +1,30 @@
 <template>
 <!-- <div class="bg-gray-100 font-sans leading-normal tracking-normal"> -->
-<div class="container w-full mx-auto">
+<div class="container w-full mx-auto bg-gray-100">
     <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
         <v-container>
-            <h2 class="font-bold text-2xl">ข้อมูลควาย</h2>
+            <h2 class="font-bold text-3xl"><i class="em em-water_buffalo text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; ควาย</h2>
+            <!-- <h2 class="font-bold text-2xl">ข้อมูลควาย</h2> -->
             <v-breadcrumbs :items="bc" large>
                 <template v-slot:divider>
                     <v-icon>mdi-chevron-right</v-icon>
                 </template>
             </v-breadcrumbs>
-            <hr class="border-b-2 border-gray-400 ma-1">
+            <hr class="border-b-2 border-gray-400 ">
         </v-container>
 
         <!--Console Content-->
         <div class="flex flex-wrap">
             <div class="w-full md:w-1/1 xl:w-1/1 p-3">
                 <!--Metric Card-->
-                <div class="bg-white border">
+                <div class="bg-white border-b-4 border-green-600 shadow-xl">
                     <div class="flex flex-row items-center">
-                        <v-select large dense class="pa-2 mt-6" :items="items" label="มีชีวิต,ไม่มีชีวิต" flat outlined single-line></v-select>
+                        
+                        <v-select outlined flat dense class="mt-6 pa-2" :items="items" label="มีชีวิต,ไม่มีชีวิต"   single-line></v-select>
                         <!-- <v-text-field dense v-model="search" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field> -->
 
                         <v-divider vertical class="p-1"></v-divider>
-                        <v-btn @click="$router.push('/user/addbuffalo')" color="green" class="rounded-lg deep-purple accent-4" dark>
+                        <v-btn depressed   @click="$router.push('/user/addbuffalo')" color="green" class=" deep-purple accent-4" dark>
                             <h3>เพิ่มควาย</h3>
                         </v-btn>
                     </div>
@@ -36,65 +38,30 @@
                             <p class="d-block pa-2 deep-purple accent-4 white--text rounded-lg">{{ radios || 'null' }}</p>
                         </center> -->
                     </v-radio-group>
-                </div>
-                <div class="flex flex-wrap mt-2">
-                    <v-card class="w-full md:w-1/2 xl:w-1/4 p-1 mt-1">
-                        <v-card-title primary-title>
-                            <v-img src="https://images.pexels.com/photos/1054650/pexels-photo-1054650.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" aspect-ratio="2"></v-img>
-                        </v-card-title>
-                        <v-card-text>
-                            <h3 class="pt-2 font-bold text-2xl">ชื่อควาย : พ่อเปี้ย</h3>
-                            <h3 class="pt-2 font-weight-light text-2xl">เบอร์หู : 123</h3>
-                            <h3 class="pt-2 font-weight-light text-2xl">อายุ : 4ปี</h3>
-                            <h3 class="pt-2 font-weight-light text-2xl">เพศ : ผู้</h3>
-                        </v-card-text>
-                        <v-card-actions>
-                            <v-btn @click="$router.push('/user/buffalo')" block color="success">แสดงเพิ่มเติม</v-btn>
-                        </v-card-actions>
-                    </v-card>
-                    <v-card class="w-full md:w-1/2 xl:w-1/4 p-1 mt-1">
-                        <v-card-title primary-title>
-                            <v-img src="https://images.pexels.com/photos/1054650/pexels-photo-1054650.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" aspect-ratio="2"></v-img>
-                        </v-card-title>
-                        <v-card-text>
-                            <h3 class="pt-2 font-bold text-2xl">ชื่อควาย : พ่อเปี้ย</h3>
-                            <h3 class="pt-2 font-weight-light text-2xl">เบอร์หู : 123</h3>
-                            <h3 class="pt-2 font-weight-light text-2xl">อายุ : 4ปี</h3>
-                            <h3 class="pt-2 font-weight-light text-2xl">เพศ : ผู้</h3>
-                        </v-card-text>
-                        <v-card-actions>
-                            <v-btn @click="$router.push('/user/buffalo')" block color="success">แสดงเพิ่มเติม</v-btn>
-                        </v-card-actions>
-                    </v-card>
-                    <v-card class="w-full md:w-1/2 xl:w-1/4 p-1 mt-1">
-                        <v-card-title primary-title>
-                            <v-img src="https://images.pexels.com/photos/1054650/pexels-photo-1054650.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" aspect-ratio="2"></v-img>
-                        </v-card-title>
-                        <v-card-text>
-                            <h3 class="pt-2 font-bold text-2xl">ชื่อควาย : พ่อเปี้ย</h3>
-                            <h3 class="pt-2 font-weight-light text-2xl">เบอร์หู : 123</h3>
-                            <h3 class="pt-2 font-weight-light text-2xl">อายุ : 4ปี</h3>
-                            <h3 class="pt-2 font-weight-light text-2xl">เพศ : ผู้</h3>
-                        </v-card-text>
-                        <v-card-actions>
-                            <v-btn @click="$router.push('/user/buffalo')" block color="success">แสดงเพิ่มเติม</v-btn>
-                        </v-card-actions>
-                    </v-card>
-                    <v-card class="w-full md:w-1/2 xl:w-1/4 p-1 mt-1">
-                        <v-card-title primary-title>
-                            <v-img src="https://images.pexels.com/photos/1054650/pexels-photo-1054650.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" aspect-ratio="2"></v-img>
-                        </v-card-title>
-                        <v-card-text>
-                            <h3 class="pt-2 font-bold text-2xl">ชื่อควาย : พ่อเปี้ย</h3>
-                            <h3 class="pt-2 font-weight-light text-2xl">เบอร์หู : 123</h3>
-                            <h3 class="pt-2 font-weight-light text-2xl">อายุ : 4ปี</h3>
-                            <h3 class="pt-2 font-weight-light text-2xl">เพศ : ผู้</h3>
-                        </v-card-text>
-                        <v-card-actions>
-                            <v-btn block color="success">แสดงเพิ่มเติม</v-btn>
-                        </v-card-actions>
-                    </v-card>
+                </div> 
+            </div>
 
+            <div class="w-full md:w-1/1 xl:w-1/1 ">
+                <div class="flex flex-wrap">
+                    <div class="w-full md:w-1/2 xl:w-1/4 p-3" v-for="i in 8">
+                        <!--Metric Card-->
+                        <div class="bg-white border-b-4 border-green-600 rounded shadow-xl p-2">
+                            <div class="flex flex-row items-center">
+                                <div class="flex-shrink pr-4">
+                                    <v-avatar color="orange" size="80">
+                                        <v-img src="https://images.pexels.com/photos/1054650/pexels-photo-1054650.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></v-img>
+                                    </v-avatar>
+                                </div>
+                                <div class="flex-1 text-right md:text-center border-b-1 border-green-600">
+                                    <h5 class="font-bold uppercase text-base">พ่อเปี้ย(1231)</h5>
+                                    <h3 class="font-bold text-sm">เพศ : ผู้ </h3>
+                                    <button @click="$router.push('buffalo')" class="text-gray-600 p-2">ดูรายละเอียด</button> 
+                                    <!-- <button class="text-gray-600 text-sm">แสดงข้อมูลเพิ่มเติม</button> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!--/Metric Card-->
+                    </div>  
                 </div>
                 <div class="text-center mt-4">
                     <v-pagination v-model="page" color="green" :length="4" prev-icon="mdi-menu-left" next-icon="mdi-menu-right"></v-pagination>

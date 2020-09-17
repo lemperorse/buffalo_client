@@ -1,9 +1,10 @@
 <template>
 <!-- <div class="bg-gray-100 font-sans leading-normal tracking-normal"> -->
-<div class="container w-full mx-auto">
-    <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal"> 
+<div class="container w-full mx-auto bg-gray-100">
+    <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
         <v-container>
-            <h2 class="font-bold text-2xl">ข้อมูลควาย</h2>
+            <h2 class="font-bold text-3xl"><i class="em em-water_buffalo text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; ข้อมูลควาย</h2>
+            <!-- <h2 class="font-bold text-2xl">ข้อมูลควาย</h2> -->
             <v-breadcrumbs :items="bc" large>
                 <template v-slot:divider>
                     <v-icon>mdi-chevron-right</v-icon>
@@ -14,11 +15,12 @@
         <!--Console Content-->
         <div class="flex flex-wrap">
             <div class="w-full md:w-1/2 xl:w-1/2 p-3">
-                <v-card>
+                <!-- <v-card> -->
+                <div class="bg-white border-b-4 border-blue-500  rounded shadow-xl p-2">
                     <v-card-title primary-title>
                         ภาพถ่ายด้านหน้า
                         <v-spacer></v-spacer>
-                        <v-btn :loading="loading3" :disabled="loading3" color="indigo" class="white--text" @click="loader = 'loading3'">
+                        <v-btn depressed   :loading="loading3" :disabled="loading3" color="indigo" class="white--text" @click="loader = 'loading3'">
                             <v-icon>mdi-cloud-upload</v-icon>อัพโหลดรูปภาพ
                         </v-btn>
                     </v-card-title>
@@ -27,14 +29,16 @@
                     <v-card-text>
                         <v-img src="https://images.pexels.com/photos/1054650/pexels-photo-1054650.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" aspect-ratio="2"></v-img>
                     </v-card-text>
-                </v-card>
+                </div>
+                <!-- </v-card> -->
             </div>
             <div class="w-full md:w-1/2 xl:w-1/2 p-3">
-                <v-card>
+                <!-- <v-card> -->
+                <div class="bg-white border-b-4 border-blue-500  rounded shadow-xl p-2">
                     <v-card-title primary-title>
                         ภาพถ่ายด้านข้าง
                         <v-spacer></v-spacer>
-                        <v-btn :loading="loading3" :disabled="loading3" color="indigo" class="white--text" @click="loader = 'loading3'">
+                        <v-btn depressed   :loading="loading3" :disabled="loading3" color="indigo" class="white--text" @click="loader = 'loading3'">
                             <v-icon>mdi-cloud-upload</v-icon>อัพโหลดรูปภาพ
                         </v-btn>
                     </v-card-title>
@@ -42,12 +46,14 @@
                     <v-card-text>
                         <v-img src="https://images.pexels.com/photos/1054650/pexels-photo-1054650.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" aspect-ratio="2"></v-img>
                     </v-card-text>
-                </v-card>
+                    <!-- </v-card> -->
+                </div>
             </div>
 
             <div class="flex flex-wrap">
                 <div class="w-full md:w-1/1 xl:w-1/1 p-3">
-                    <v-card>
+                    <!-- <v-card> -->
+                    <div class="bg-white border-b-4 border-blue-500  rounded shadow-xl p-2">
                         <v-tabs>
                             <v-tab>
                                 <v-icon left>mdi-cow</v-icon>
@@ -76,7 +82,7 @@
                                             <v-expansion-panels v-model="panel" multiple flat>
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-500 text-2xl">ข้อมูลทั่วไป</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">ข้อมูลทั่วไป</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-text-field value="พ่อเปี้ย" prepend-inner-icon="mdi-cow" label="ชื่อหรือหมายเลขควาย"></v-text-field>
@@ -97,7 +103,7 @@
 
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-500 text-2xl">ราคาและแหล่งที่มา</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">ราคาและแหล่งที่มา</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-select :items="from" value="พ่อค้าคนกลาง" prepend-inner-icon="mdi-import" label="แหล่งที่มา"></v-select>
@@ -107,7 +113,7 @@
 
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-500 text-2xl">พ่อพันธุ์และแม่พันธุ์</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">พ่อพันธุ์และแม่พันธุ์</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-text-field value="พ่อเปี้ย" prepend-inner-icon="mdi-cow" label="ชื่อหรือหมายเลขพ่อ"></v-text-field>
@@ -121,7 +127,7 @@
 
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-500 text-2xl">น้ำหนัก</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">น้ำหนัก</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-text-field value="111" prepend-inner-icon="mdi-weight-kilogram" type="number" label="น้ำหนัก(กิโลกรัม)"></v-text-field>
@@ -161,7 +167,10 @@
                                     </v-card-text>
                                     <v-card-title>
                                         <v-spacer></v-spacer>
-                                        <v-btn class="btnw50" color="success">แก้ไข</v-btn>
+                                        <!-- <v-btn class="btnw50" color="success">แก้ไข</v-btn> -->
+                                        <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                                            แก้ไข
+                                        </button>
                                     </v-card-title>
 
                                 </v-card>
@@ -172,12 +181,12 @@
                                     <v-card-title primary-title>
                                         <h5 class="font-bold text-2xl">การเจริญเติบโต</h5>
                                         <v-spacer></v-spacer>
-                                        <v-btn @click="$router.push('/user/addage')" color="success" dark >
-                                                    <v-icon>mdi-plus</v-icon>เพิ่มอายุ
-                                                </v-btn>
+                                        <v-btn depressed   @click="$router.push('/user/addage')" color="success" dark>
+                                            <v-icon>mdi-plus</v-icon>เพิ่มอายุ
+                                        </v-btn>
                                         <!-- <v-dialog v-model="dialog" scrollable max-width="600px">
                                             <template v-slot:activator="{ on, attrs }">
-                                                
+
                                             </template>
                                             <v-card>
                                                 <v-card-title>
@@ -205,7 +214,7 @@
                                             <v-expansion-panels v-model="panel" multiple flat>
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-500 text-2xl">อายุ 240 วัน</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">อายุ 240 วัน</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-text-field value="111" prepend-inner-icon="mdi-weight-kilogram" type="number" label="น้ำหนัก(กิโลกรัม)"></v-text-field>
@@ -217,7 +226,7 @@
 
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-500 text-2xl">อายุ 400 วัน</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">อายุ 400 วัน</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-text-field value="111" prepend-inner-icon="mdi-weight-kilogram" type="number" label="น้ำหนัก(กิโลกรัม)"></v-text-field>
@@ -229,7 +238,7 @@
 
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-500 text-2xl">อายุ 600 วัน</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">อายุ 600 วัน</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-text-field value="111" prepend-inner-icon="mdi-weight-kilogram" type="number" label="น้ำหนัก(กิโลกรัม)"></v-text-field>
@@ -243,7 +252,10 @@
                                     </v-card-text>
                                     <v-card-title>
                                         <v-spacer></v-spacer>
-                                        <v-btn class="btnw50" color="success">แก้ไข</v-btn>
+                                        <!-- <v-btn class="btnw50" color="success">แก้ไข</v-btn> -->
+                                        <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                                            แก้ไข
+                                        </button>
                                     </v-card-title>
 
                                 </v-card>
@@ -259,7 +271,7 @@
                                             <v-expansion-panels v-model="panel" multiple flat>
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-500 text-2xl">ใบพันธุ์ประวัติอ้างอิง</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">ใบพันธุ์ประวัติอ้างอิง</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-card-title class="black--text white darken-4 d-flex">
@@ -267,7 +279,7 @@
                                                             <v-divider vertical inset class="mx-1" dark></v-divider>
                                                             <h5 @click="$router.go()">ใบพันธุ์ประวัติอ้างอิง</h5>
                                                             <v-spacer></v-spacer>
-                                                            <v-btn :loading="loading3" :disabled="loading3" color="indigo" class="white--text" @click="loader = 'loading3'">
+                                                            <v-btn depressed   :loading="loading3" :disabled="loading3" color="indigo" class="white--text" @click="loader = 'loading3'">
                                                                 <v-icon>mdi-cloud-upload</v-icon>อัพโหลด
                                                             </v-btn>
                                                         </v-card-title>
@@ -276,7 +288,7 @@
 
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-500 text-2xl">ใบพันธุ์ประวัติทางการ</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">ใบพันธุ์ประวัติทางการ</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-card-title class="black--text white darken-4 d-flex">
@@ -284,7 +296,7 @@
                                                             <v-divider vertical inset class="mx-1" dark></v-divider>
                                                             <h5 @click="$router.go()">ใบพันธุ์ประวัติทางการ</h5>
                                                             <v-spacer></v-spacer>
-                                                            <v-btn :loading="loading3" :disabled="loading3" color="indigo" class="white--text" @click="loader = 'loading3'">
+                                                            <v-btn depressed   :loading="loading3" :disabled="loading3" color="indigo" class="white--text" @click="loader = 'loading3'">
                                                                 <v-icon>mdi-cloud-upload</v-icon>อัพโหลด
                                                             </v-btn>
                                                         </v-card-title>
@@ -306,7 +318,7 @@
                                             <v-expansion-panels v-model="panel" multiple flat>
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-500 text-2xl">ควาย</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">ควาย</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-card-title class="black--text white darken-4 d-flex">
@@ -314,21 +326,23 @@
                                                             <v-divider vertical inset class="mx-1" dark></v-divider> -->
                                                             <h5 @click="$router.go()">ลบควาย</h5>
                                                             <v-spacer></v-spacer>
-                                                            <v-btn  :loading="loading3" :disabled="loading3" color="error" class="white--text" @click="loader = 'loading3'">
+                                                            <v-btn depressed   :loading="loading3" :disabled="loading3" color="error" class="white--text" @click="loader = 'loading3'">
                                                                 <v-icon>mdi-eraser</v-icon>ลบควาย
                                                             </v-btn>
                                                         </v-card-title>
                                                     </v-expansion-panel-content>
                                                 </v-expansion-panel>
- 
+
                                             </v-expansion-panels>
                                         </div>
                                     </v-card-text>
                                 </v-card>
                             </v-tab-item>
-                            
+
                         </v-tabs>
-                    </v-card>
+                        <!-- </v-card> -->
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -349,8 +363,8 @@ export default {
                 text: 'ข้อมูลควาย',
                 disabled: false,
                 href: '/#/user/buffalo',
-            }, 
-            ],
+            },
+        ],
         panel: [0, 1, 2, 3],
 
         sex: ['ตัวผู้', 'ตัวเมีย'],
@@ -515,8 +529,9 @@ export default {
 
 }
 </script>
+
 <style scoped>
-.btnw50{
-    width:50%;
-} 
+.btnw50 {
+    width: 50%;
+}
 </style>

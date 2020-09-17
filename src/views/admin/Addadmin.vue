@@ -1,12 +1,13 @@
 <template>
  <!-- <div class="bg-gray-100 font-sans leading-normal tracking-normal"> -->
- <div>
+ <div class="bg-gray-100">
      <!--Container-->
      <div class="container w-full mx-auto">
          <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
 
              <v-container>
-                 <h2 class="font-bold text-2xl">ผู้ดูแลระบบ</h2>
+                 <h2 class="font-bold text-3xl"><i class="em em-male-technologist text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; ผู้ดูแลระบบ</h2>
+                 <!-- <h2 class="font-bold text-2xl">ผู้ดูแลระบบ</h2> -->
                  <v-breadcrumbs :items="bc" large>
                      <template v-slot:divider>
                          <v-icon>mdi-chevron-right</v-icon>
@@ -18,18 +19,20 @@
              <div class="flex flex-wrap">
                  <div class="w-full md:w-1/1 xl:w-1/1 p-3">
                      <!--Metric Card-->
-                     <div class="bg-white border rounded shadow p-2"> 
+                     <div class="bg-white border-b-4 border-purple-500 rounded shadow-xl p-10"> 
                              <v-text-field label="ชื่อ" placeholder=""></v-text-field>
                              <v-text-field label="นามสกุล" placeholder=""></v-text-field>
                              <v-text-field label="ชื่อผู้ใช้งาน" placeholder=""></v-text-field>
                              <v-text-field label="รหัสผ่าน" placeholder=""></v-text-field>
                              <v-text-field label="ยืนยันรหัสผ่าน" placeholder=""></v-text-field>
                              <v-text-field label="อีเมล" placeholder=""></v-text-field>
-                             <v-card-title primary-title> 
+                             <!-- <v-card-title primary-title> 
                              <v-spacer></v-spacer>
-                             <v-btn @click="$router.push('/admin/alladmin')" class="btnw50" color="success">บันทึก</v-btn>
-                            </v-card-title>
+                            
+                            </v-card-title> -->
+                             <v-btn depressed block medium @click="$router.push('/admin/alladmin')" color="success">บันทึก</v-btn>
                      </div>
+                     
                      <!--/Metric Card-->  
                  </div>
              </div>

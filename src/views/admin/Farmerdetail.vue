@@ -1,10 +1,10 @@
 <template>
-<div>
+<div class="bg-gray-100">
     <div class="container w-full mx-auto">
         <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
 
             <v-container>
-                <h2 class="font-bold text-2xl">ข้อมูลเกษตกร</h2>
+                <h2 class="font-bold text-3xl"><i class="em em-male-farmer text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; ข้อมูลเกษตกร</h2>
                 <v-breadcrumbs :items="bc" large>
                     <template v-slot:divider>
                         <v-icon>mdi-chevron-right</v-icon>
@@ -13,15 +13,29 @@
                 <hr class="border-b-2 border-gray-400 ">
             </v-container>
             <!--Console Content-->
-            <div class="flex  justify-center items-center">
-                <div class="w-full ">
-                    <v-img class="rounded-full shadow-xl w-32 h-32" src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"></v-img>
+            <div class="flex flex-row flex-wrap p-3">
+                <div class="mx-auto w-2/3">
+                    <!-- Profile Card -->
+                    <div class="rounded-lg shadow-lg bg-gray-600 w-full flex flex-row flex-wrap p-3 antialiased bgcardprofile">
+                        <div class="md:w-1/3 w-full">
+                            <img class="rounded-lg shadow-lg antialiased" src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg">
+                        </div>
+                        <div class="md:w-2/3 w-full px-3 flex flex-row flex-wrap">
+                            <div class="w-full text-right text-gray-700 font-semibold relative pt-3 md:pt-0">
+                                <div class="text-2xl text-white leading-tight">นายแดง มีชัย</div>
+                                <div class="text-normal text-gray-300 hover:text-gray-400 cursor-pointer"><span class="border-b border-dashed border-gray-500 pb-1">เกษตกร</span></div>
+                                <div class="text-sm text-gray-300 hover:text-gray-400 cursor-pointer md:absolute pt-3 md:pt-0 bottom-0 right-0">เข้าสู่ระบบครั้งล่าสุด: <b>2 ที่ผ่านมา</b></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Profile Card -->
                 </div>
             </div>
 
             <div class="flex flex-wrap">
                 <div class="w-full md:w-1/1 xl:w-1/1 p-3">
-                    <v-card>
+                    <!-- <v-card> -->
+                        <div class="bg-white border-b-4 border-blue-500 rounded shadow-xl p-2">
                         <v-tabs>
                             <v-tab>
                                 <v-icon left>mdi-account</v-icon>
@@ -54,7 +68,7 @@
                                             <v-expansion-panels v-model="panel" multiple flat>
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-500 text-2xl">เกี่ยวกับเกษตกร</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">เกี่ยวกับเกษตกร</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-select :items="prefix" value="นาย" label="คำนำหน้า" prepend-inner-icon="mdi-human-male-female"></v-select>
@@ -69,7 +83,7 @@
 
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-500 text-2xl">ติดต่อและที่อยู่</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">ติดต่อและที่อยู่</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-text-field value="123/123" label="ที่อยู่" prepend-inner-icon="mdi-home-map-marker"></v-text-field>
@@ -90,7 +104,10 @@
                                     </v-card-text>
                                     <v-card-title>
                                         <v-spacer></v-spacer>
-                                        <v-btn class="btnw50" color="success">แก้ไข</v-btn>
+                                        <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                                            แก้ไข
+                                        </button>
+                                        <!-- <v-btn class="btnw50" color="success">แก้ไข</v-btn> -->
                                     </v-card-title>
 
                                 </v-card>
@@ -106,7 +123,7 @@
                                             <v-expansion-panels v-model="panel" multiple flat>
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-500 text-2xl">เกี่ยวกับฟาร์ม</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">เกี่ยวกับฟาร์ม</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-text-field value="ฟาร์มนายแดง" prepend-inner-icon="mdi-home-outline" label="ชื่อฟาร์ม"></v-text-field>
@@ -117,7 +134,7 @@
 
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-500 text-2xl">ที่อยู่ฟาร์ม</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">ที่อยู่ฟาร์ม</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-text-field value="111 ต.แม่กา" prepend-inner-icon="mdi-home" label="​ที่อยู่ฟาร์ม"></v-text-field>
@@ -130,7 +147,7 @@
 
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-500 text-2xl">พิกัด GPS</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">พิกัด GPS</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-text-field value="1231231231" prepend-inner-icon="mdi-map-marker-multiple-outline" label="พิกัดฟาร์มตามระบบ GPS (ละติจูด)"></v-text-field>
@@ -153,7 +170,10 @@
                                     </v-card-text>
                                     <v-card-title>
                                         <v-spacer></v-spacer>
-                                        <v-btn class="btnw50" color="success">แก้ไข</v-btn>
+                                        <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                                            แก้ไข
+                                        </button>
+                                        <!-- <v-btn class="btnw50" color="success">แก้ไข</v-btn> -->
                                     </v-card-title>
 
                                 </v-card>
@@ -170,11 +190,11 @@
                                             <div class="flex flex-wrap">
                                                 <div class="w-full md:w-1/1 xl:w-1/1 p-1">
                                                     <!--Metric Card-->
-                                                    <div class="bg-white border     p-2">
+                                                    <div class="bg-white border-b-4 border-blue-500 rounded shadow-xl p-2">
                                                         <div class="flex flex-row items-center">
                                                             <v-text-field dense v-model="search" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
                                                             <v-divider vertical class="ma-1"></v-divider>
-                                                            <v-btn @click="$router.push('/admin/addbuffalo')" color="success" dark class="">
+                                                            <v-btn depressed @click="$router.push('/admin/addbuffalo')" color="success" dark class="">
                                                                 <v-icon>mdi-plus</v-icon>เพิ่มควาย
                                                             </v-btn>
  
@@ -186,7 +206,7 @@
                                     </div>
 
                                     <v-card-text>
-                                        <v-data-table :headers="headers" :items="desserts" :search="search" sort-by="calories" class="elevation-2 pa-2">
+                                        <v-data-table class="bg-white  border-blue-500 rounded shadow-xl p-2" :headers="headers" :items="desserts" :search="search" sort-by="calories">
                                             <template v-slot:item.actions="{ item }">
                                                 <!-- <v-tooltip v-model="show" top> -->
                                                 <v-tooltip top>
@@ -222,27 +242,42 @@
                                     <v-card-title primary-title>
                                         <h2 class="font-bold text-2xl">รูปภาพ</h2>
                                     </v-card-title>
-                                    <v-card-title primary-title>
-                                        <div class="md:ml-20">
-                                            <center>
-                                                <h3>ภาพถ่ายบัตรประจำตัวประชาชน</h3>
-                                                <v-img class=" elevation-1" :aspect-ratio="1.5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNf3OTIf1lugjQhtLRTP8cwuosPAJmIykTsry1UL87ArfVFx84&usqp=CAU"></v-img>
-                                                <v-btn color="success">
-                                                    <v-icon>mdi-upload</v-icon>อัพโหลดบัตรประชาชน
-                                                </v-btn>
-                                            </center>
+                                    <v-card-text>
+                                        <div>
+                                            <v-expansion-panels v-model="panel" multiple flat>
+                                                <v-expansion-panel>
+                                                    <v-expansion-panel-header>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">ภาพถ่ายบัตรประชาชน</h5>
+                                                    </v-expansion-panel-header>
+                                                    <v-expansion-panel-content>
+                                                        <center>
+                                                            <!-- <h3>ภาพถ่ายบัตรประจำตัวประชาชน</h3> -->
+                                                            <v-img class=" elevation-1" width="300" height="150" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNf3OTIf1lugjQhtLRTP8cwuosPAJmIykTsry1UL87ArfVFx84&usqp=CAU"></v-img>
+                                                            <v-btn color="success mt-4" depressed>
+                                                                <v-icon>mdi-upload</v-icon>อัพโหลดบัตรประชาชน
+                                                            </v-btn>
+                                                        </center>
+                                                    </v-expansion-panel-content>
+                                                </v-expansion-panel>
+
+                                                <v-expansion-panel>
+                                                    <v-expansion-panel-header>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">ภาพถ่ายฟาร์ม</h5>
+                                                    </v-expansion-panel-header>
+                                                    <v-expansion-panel-content>
+                                                        <center>
+                                                            <!-- <h3>ภาพถ่ายบัตรประจำตัวประชาชน</h3> -->
+                                                            <v-img class=" elevation-1" width="300" height="150" src="https://images.pexels.com/photos/158179/lake-constance-sheep-pasture-sheep-blue-158179.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></v-img>
+                                                            <v-btn color="success mt-4" depressed>
+                                                                <v-icon>mdi-upload</v-icon>อัพโหลดภาพถ่ายฟาร์ม
+                                                            </v-btn>
+                                                        </center>
+                                                    </v-expansion-panel-content>
+                                                </v-expansion-panel>
+
+                                            </v-expansion-panels>
                                         </div>
-                                        <v-spacer></v-spacer>
-                                        <div class="md:mr-20">
-                                            <center>
-                                                <h3>ภาพถ่ายฟาร์ม</h3>
-                                                <v-img class=" elevation-1" :aspect-ratio="1.5" src="https://images.pexels.com/photos/158179/lake-constance-sheep-pasture-sheep-blue-158179.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></v-img>
-                                                <v-btn color="success">
-                                                    <v-icon>mdi-upload</v-icon>อัพโหลดบัตรประชาชน
-                                                </v-btn>
-                                            </center>
-                                        </div>
-                                    </v-card-title>
+                                    </v-card-text> 
                                 </v-card>
                             </v-tab-item>
 
@@ -256,7 +291,7 @@
                                             <v-expansion-panels v-model="panel" multiple flat>
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-500 text-2xl">ตั้งค่ารหัสผ่าน</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">ตั้งค่ารหัสผ่าน</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-text-field value="dang1234" label="รหัสผ่านเก่า" type="password"></v-text-field>
@@ -267,7 +302,7 @@
 
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-500 text-2xl">ลบเกษตกร</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">ลบเกษตกร</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-card-title class="black--text white darken-4 d-flex">
@@ -275,7 +310,7 @@
                                                             <v-divider vertical inset class="mx-1" dark></v-divider> -->
                                                             <h5 @click="$router.go()">ลบเกษตกร</h5>
                                                             <v-spacer></v-spacer>
-                                                            <v-btn :loading="loading3" :disabled="loading3" color="error" class="white--text" @click="loader = 'loading3'">
+                                                            <v-btn depressed :loading="loading3" :disabled="loading3" color="error" class="white--text" @click="loader = 'loading3'">
                                                                 <v-icon>mdi-eraser</v-icon>ลบเกษตกร
                                                             </v-btn>
                                                         </v-card-title>
@@ -287,13 +322,17 @@
                                     </v-card-text>
                                     <v-card-title>
                                         <v-spacer></v-spacer>
-                                        <v-btn class="btnw50" color="success">แก้ไข</v-btn>
+                                        <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                                            แก้ไข
+                                        </button>
+                                        <!-- <v-btn class="btnw50" color="success">แก้ไข</v-btn> -->
                                     </v-card-title>
                                 </v-card>
                             </v-tab-item>
 
                         </v-tabs>
-                    </v-card>
+                        </div>
+                    <!-- </v-card> -->
                 </div>
             </div>
         </div>
@@ -488,5 +527,11 @@ export default {
 <style scoped>
 .btnw50 {
     width: 50%;
+}
+.bgcardprofile {
+    background-image: url('https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-repeat: no-repat;
+    background-size: cover;
+    background-blend-mode: multiply;
 }
 </style>

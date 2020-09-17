@@ -1,11 +1,12 @@
 <template>
-<div>
+<div class="bg-gray-100">
     <!--Container-->
     <div class="container w-full mx-auto">
         <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
 
             <v-container>
-                <h2 class="font-bold text-2xl">รายงานความเคลื่อนไหวการใช้งานระบบ</h2>
+                <h2 class="font-bold text-3xl"><i class="em em-desktop_computer text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; รายงานความเคลื่อนไหวการใช้งานระบบ</h2>
+                <!-- <h2 class="font-bold text-2xl">ผู้ดูแลระบบ</h2> -->
                 <v-breadcrumbs :items="bc" large>
                     <template v-slot:divider>
                         <v-icon>mdi-chevron-right</v-icon>
@@ -17,7 +18,7 @@
             <div class="flex flex-wrap">
                 <div class="w-full md:w-1/1 xl:w-1/1 p-3">
                     <!--Metric Card-->
-                    <div class="bg-white border rounded shadow p-2">
+                    <div class="bg-white border-b-4 border-green-700 rounded shadow-xl p-2">
                         <div class="flex flex-col md:flex-row items-center">
                             <v-select dense color="green" outlined :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
                             <v-divider vertical class="ma-1"></v-divider>
@@ -29,7 +30,7 @@
                     <!--/Metric Card-->
                 </div>
                 <div class="w-full md:w-1/1 xl:w-1/1 p-3">
-                    <v-data-table :headers="headers" :items="desserts" :search="search" sort-by="calories" class="pa-3 elevation-2 ">
+                    <v-data-table class="bg-white border-b-4 border-green-700 rounded shadow-xl p-2" :headers="headers" :items="desserts" :search="search" sort-by="calories">
                         <template v-slot:top>
                             <v-dialog v-model="dialog" max-width="500px">
                                 <v-card class="rounded-lg">

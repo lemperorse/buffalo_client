@@ -1,9 +1,10 @@
 <template>
 <!-- <div class="bg-gray-100 font-sans leading-normal tracking-normal"> -->
-<div class="container w-full mx-auto">
+<div class=" bg-gray-100 container w-full mx-auto">
     <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
         <v-container>
-            <h2 class="font-bold text-2xl">รายงานสรุป</h2>
+        <h2 class="font-bold text-3xl"><i class="em em-card_file_box" aria-role="presentation" aria-label=""></i> &nbsp; รายงานสรุป</h2>
+            <!-- <h2 class="font-bold text-2xl">รายงานสรุป</h2> -->
             <v-breadcrumbs :items="bc" large>
                 <template v-slot:divider>
                     <v-icon>mdi-chevron-right</v-icon>
@@ -16,7 +17,7 @@
         <div class="flex flex-wrap">
             <div class="w-full md:w-1/1 xl:w-1/1 p-3">
                 <!--Metric Card-->
-                <div class="bg-white border">
+                <div class="bg-white border-b-4 border-green-500 rounded shadow-xl p-2">
                     <div class="flex flex-row items-center">
                         <v-select large dense class="pa-2 mt-6" :items="items" label="มีชีวิต,ไม่มีชีวิต" flat outlined single-line></v-select>
                     </div>
@@ -32,10 +33,10 @@
             <div class="flex flex-wrap"> 
                 <div class="w-full md:w-1/1 xl:w-1/1 p-3">
                     <!--Metric Card-->
-                    <div class="bg-white border rounded shadow p-2">
-                        <h3 class="mb-2">สรุปควาย</h3>
+                    <div class="bg-white border-b-4 border-green-500 rounded shadow-xl p-2">
+                        <h3 class="font-bold uppercase text-xl text-green-700 mb-2">สรุปควาย</h3>
                         <div class="flex flex-row items-center">
-                             <column-chart :data="chartData"></column-chart>
+                             <column-chart :colors="['#009966']" :data="chartData"></column-chart>
                         </div>
                          
                     </div>

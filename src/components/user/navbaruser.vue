@@ -1,7 +1,7 @@
 <template>
 <div>
-    <v-navigation-drawer dense color="white" v-model="drawer" app clipped> 
-        <v-list dense rounded>
+    <v-navigation-drawer  color="white" v-model="drawer" app clipped> 
+        <v-list  rounded>
             <v-list-item two-line > 
                 <v-list-item-avatar size="50">
                     <img src="https://randomuser.me/api/portraits/men/81.jpg">
@@ -52,22 +52,22 @@ export default {
             drawer: null,
             items: [{
                     text: "แดชบอร์ด",
-                    icon: "mdi-view-dashboard-outline",
+                    icon: "em em-clipboard",
                     router: "/user/home"
                 },
                 {
                     text: "ข้อมูลส่วนตัว",
-                    icon: "mdi-account",
+                    icon: "em em-man-man-girl-boy",
                     router: "/user/profile"
                 },
                 {
                     text: "ข้อมูลควาย",
-                    icon: "mdi-account-group",
+                    icon: "em em-water_buffalo",
                     router: "/user/allbuffalo"
                 }, 
                 {
                     text: "ออกจากระบบ",
-                    icon: "mdi-logout",
+                    icon: "em em-electric_plug",
                     router: "/"
                 },
 
