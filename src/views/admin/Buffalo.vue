@@ -14,7 +14,7 @@
         </v-container>
         <!--Console Content-->
         <div class="flex flex-wrap">
-            <div class="w-full md:w-1/2 xl:w-1/2 p-3">
+            <div class="w-full md:w-1/2 xl:w-1/2 p-0 mb-3 md:p-3">
                 <!-- <v-card> -->
                 <div class="bg-white border-b-4 border-blue-500  rounded shadow-xl p-2">
                     <v-card-title primary-title>
@@ -32,7 +32,7 @@
                 </div>
                 <!-- </v-card> -->
             </div>
-            <div class="w-full md:w-1/2 xl:w-1/2 p-3">
+            <div class="w-full md:w-1/2 xl:w-1/2 p-0 mb-3 md:p-3">
                 <!-- <v-card> -->
                 <div class="bg-white border-b-4 border-blue-500  rounded shadow-xl p-2">
                     <v-card-title primary-title>
@@ -51,7 +51,7 @@
             </div>
 
             <div class="flex flex-wrap">
-                <div class="w-full md:w-1/1 xl:w-1/1 p-3">
+                <div class="w-full md:w-1/1 xl:w-1/1 p-0 mb-3 md:p-3">
                     <!-- <v-card> -->
                     <div class="bg-white border-b-4 border-blue-500  rounded shadow-xl p-2">
                         <v-tabs>

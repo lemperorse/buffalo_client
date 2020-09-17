@@ -1,5 +1,5 @@
 <template>
-<div class="bg-gray-100"> 
+<div class="bg-gray-100">
     <div class="container w-full mx-auto">
         <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
 
@@ -15,15 +15,15 @@
             </v-container>
             <!--Console Content-->
             <div class="flex flex-wrap">
-                <div class="w-full md:w-1/1 xl:w-1/1 p-3">
+                <div class="w-full md:w-1/1 xl:w-1/1 p-0 mb-3 md:p-3">
                     <!--Metric Card-->
                     <div class="bg-white border-b-4 border-green-500 rounded shadow-xl p-2">
                         <div class="flex flex-row items-center">
                             <v-text-field dense class="" v-model="search" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
                             <v-divider vertical class="ma-1"></v-divider>
-                            <v-btn depressed   @click="$router.push('/admin/addfarmer')" color="success" medium dense dark class="">
+                            <v-btn depressed @click="$router.push('/admin/addfarmer')" color="success" medium dense dark class="">
                                 <v-icon>mdi-plus</v-icon>เพิ่มเกษตรกร
-                            </v-btn> 
+                            </v-btn>
                         </div>
                         <!-- <v-divider class="ma-1"></v-divider> -->
                         <!-- <div class="flex flex-row items-center">
@@ -39,8 +39,9 @@
                     <!--/Metric Card-->
                 </div>
 
-                <div class="w-full md:w-1/1 xl:w-1/1 p-3"> 
-                    <v-data-table class="bg-white border-b-4 border-green-500  rounded  shadow-xl  p-2" :headers="headers" :items="desserts" :search="search" >
+                <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3">
+                    <v-data-table class="bg-white border-b-4 border-green-500  rounded  shadow-xl  p-2" :headers="headers" :items="desserts" :search="search">
+
                         <template v-slot:item.actions="{ item }">
                             <!-- <v-tooltip v-model="show" top> -->
                             <v-tooltip top>
@@ -88,11 +89,14 @@
 <script>
 export default {
     data: () => ({
-        bc: [{
+        
+        bc: [
+            {
             text: 'เกษตกร',
             disabled: false,
             href: '/#/admin/allfarmer',
-        }, ],
+            }, 
+        ],
         province: [{
                 text: 'พะเยา'
             },
@@ -169,6 +173,11 @@ export default {
                 sortable: false,
             },
             {
+                text: 'สิทธ์การใช้งาน',
+                value: 'license',
+                sortable: false,
+            }, 
+            {
                 text: 'การจัดการ',
                 value: 'actions',
                 sortable: false,
@@ -213,60 +222,70 @@ export default {
                     name: 'นายแดง แดงแดง',
                     Phonenumber: '0911231231',
                     group: 'กลุ่มแม่ใจ',
+                    license: 'ผู้ใช้', 
                 },
                 {
                     IDCard: 3123412345612,
                     name: 'นายดำ ดำดำ',
                     Phonenumber: '0914123412',
                     group: 'กลุ่มแม่ใจ',
+                    license: 'ผู้ใช้'
                 },
                 {
                     IDCard: 1231241231233,
                     name: 'นายเขียว เขียวเขียว',
                     Phonenumber: '0812312312',
                     group: 'กลุ่มพาน',
+                    license: 'ผู้ใช้'
                 },
                 {
                     IDCard: 1111111111111,
                     name: 'นายเขียว เขียวขจี',
                     Phonenumber: '0822312312',
                     group: 'กลุ่มพาน',
+                    license: 'ผู้ใช้'
                 },
                 {
                     IDCard: 2222222222222,
                     name: 'นายเหลือง เหลืองเหลือง',
                     Phonenumber: '0833333333',
                     group: 'กลุ่มแม่กา',
+                    license: 'ผู้ใช้'
                 },
                 {
                     IDCard: 3333333333333,
                     name: 'นายชัย',
                     Phonenumber: '0844444444',
                     group: 'กลุ่มแม่กา',
+                    license: 'ผู้ใช้'
                 },
                 {
                     IDCard: 4444444444444,
                     name: 'นายใหญ่',
                     Phonenumber: '0855555555',
                     group: 'กลุ่มพะเยา',
+                    license: 'ผู้ใช้'
                 },
                 {
                     IDCard: 5555555555555,
                     name: 'นายเล็ก',
                     Phonenumber: '0866666666',
                     group: 'กลุ่มพะเยา',
+                    license: 'ผู้ใช้'
                 },
                 {
                     IDCard: 6666666666666,
                     name: 'นายคำ',
                     Phonenumber: '0877777777',
                     group: 'กลุ่มพะเยา',
+                    license: 'ผู้ใช้'
                 },
                 {
                     IDCard: 7777777777777,
                     name: 'นายนาย',
                     Phonenumber: '0888888888',
                     group: 'กลุ่มพะเยา',
+                    license: 'ผู้ใช้'
                 },
 
             ]

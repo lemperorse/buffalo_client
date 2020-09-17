@@ -16,7 +16,7 @@
             </v-container>
             <!--Console Content-->
             <div class="flex flex-wrap">
-                <div class="w-full md:w-1/1 xl:w-1/1 p-3">
+                <div class="w-full md:w-1/1 xl:w-1/1 p-0 mb-3 md:p-3">
                     <!--Metric Card-->
                     <div class="bg-white border-b-4 border-blue-500  rounded  shadow-xl  p-2">
                         <div class="flex flex-row items-center">
@@ -26,7 +26,7 @@
                     <!--/Metric Card-->
                 </div>
 
-                <div class="w-full md:w-1/1 xl:w-1/1 p-3">
+                <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3">
                     <v-data-table class="bg-white border-b-4 border-blue-500 rounded shadow-xl p-2" :headers="headers" :items="desserts" :search="search" sort-by="calories">
                         <!-- <template v-slot:item.glutenfree="{ item }"> -->
                         <!-- <v-simple-checkbox v-model="item.glutenfree" disabled></v-simple-checkbox> -->

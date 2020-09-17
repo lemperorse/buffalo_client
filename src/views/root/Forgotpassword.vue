@@ -12,39 +12,30 @@
         <!--Console Content-->
         <div class="flex flex-wrap">
             <div class="w-full md:w-1/1 xl:w-1/1 p-3">
-                <v-card>
+                <!-- <v-card> -->
+                <div class="bg-white border-b-4 border-blue-500 rounded shadow-xl p-2">
                     <v-card-title primary-title>
                         กรอกข้อมูล
                     </v-card-title>
                     <v-divider class="px-10"></v-divider>
                     <v-card-text>
-                        <v-text-field value="" label="เลขบัตรประชาชน" type="number"></v-text-field>
-                        <v-text-field value="" label="เบอร์โทรศัพท์" type="number"></v-text-field>
+                        <v-text-field value="" label="เลขบัตรประชาชน" type="number" prepend-inner-icon="mdi-card-account-details-outline"></v-text-field>
+                        <v-text-field value="" label="เบอร์โทรศัพท์" type="number" prepend-inner-icon="mdi-phone"></v-text-field>
                     </v-card-text>
-                    <v-card-actions>
+                    <!-- <v-card-actions>
                         <v-spacer></v-spacer>
                         <v-btn class="btnw50" color="success">ยืนยัน</v-btn>
-                    </v-card-actions>
-                </v-card>
-                <!-- <v-stepper >
-                    <v-stepper-header>
-                        <v-stepper-step :complete="e1 > 1" step="1">ลืมรหัสผ่าน</v-stepper-step> 
-                    </v-stepper-header>
+                    </v-card-actions> -->
+                    <v-card-title>
+                    <v-spacer></v-spacer>
+                    <!-- <v-btn class="btnw50" depressed color="blue" dark>แก้ไข</v-btn> -->
+                    <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                        ยืนยัน
+                    </button>
+                </v-card-title>
+                    <!-- </v-card> -->
+                </div>
 
-                    <v-stepper-items>
-                        <v-stepper-content step="1">
-                            <v-text-field label="ชื่อผู้ใช้งาน" placeholder="ชื่อผู้ใช้งาน" prepend-inner-icon="mdi-account-star"></v-text-field>
-                            <v-text-field label="รหัสผ่าน" placeholder="รหัสผ่าน" type="password" prepend-inner-icon="mdi-lock"></v-text-field>
-                            <v-text-field label="ยืนยันรหัสผ่าน" placeholder="ยืนยันรหัสผ่าน" type="password" prepend-inner-icon="mdi-lock"></v-text-field>
-
-                            <v-btn color="primary" block>
-                                ยืนยัน
-                            </v-btn>
-
-                        </v-stepper-content> 
-
-                    </v-stepper-items>
-                </v-stepper> -->
             </div>
         </div>
     </div>
@@ -62,7 +53,7 @@ export default {
 </script>
 
 <style scoped>
-.btnw50{
-    width:50%;
-} 
+.btnw50 {
+    width: 50%;
+}
 </style>

@@ -28,6 +28,11 @@ const routes = [
       path: '/forgotpassword',
       name: 'forgotpassword', 
       component: () => import('@/views/root/Forgotpassword.vue')
+     },
+     {
+      path: '/contact',
+      name: 'contact', 
+      component: () => import('@/views/root/Contact.vue')
      }
   ]
   },

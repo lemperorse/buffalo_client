@@ -17,9 +17,9 @@
             </v-container>
             <!--Console Content-->
             <div class="flex flex-wrap">
-                <div class="w-full md:w-1/1 xl:w-1/1 p-3">
+                <div class="w-full md:w-1/1 xl:w-1/1 p-0  md:p-3">
                     <!--Metric Card-->
-                    <div class="bg-white border-b-4 border-blue-500  rounded shadow-xl p-10">
+                    <div class="bg-white border-b-4 border-blue-500  rounded shadow-xl p-4">
                         <v-text-field value="" prepend-inner-icon="mdi-weight-kilogram"   type="number" label="น้ำหนัก(กิโลกรัม)"></v-text-field>
                         <v-text-field value="" prepend-inner-icon="mdi-arrow-left-right"   type="number" label="ความกว้างรอบอก(เซนติเมตร)"></v-text-field>
                         <v-text-field value="" prepend-inner-icon="mdi-arrow-left-right"   type="number" label="ความยาวรอบลำตัว(เซนติเมตร)"></v-text-field>

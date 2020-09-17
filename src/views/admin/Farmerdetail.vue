@@ -33,7 +33,7 @@
             </div>
 
             <div class="flex flex-wrap">
-                <div class="w-full md:w-1/1 xl:w-1/1 p-3">
+                <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3">
                     <!-- <v-card> -->
                         <div class="bg-white border-b-4 border-blue-500 rounded shadow-xl p-2">
                         <v-tabs>

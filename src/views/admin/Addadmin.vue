@@ -17,15 +17,15 @@
              </v-container>
              <!--Console Content-->
              <div class="flex flex-wrap">
-                 <div class="w-full md:w-1/1 xl:w-1/1 p-3">
+                 <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3">
                      <!--Metric Card-->
-                     <div class="bg-white border-b-4 border-purple-500 rounded shadow-xl p-10"> 
-                             <v-text-field label="ชื่อ" placeholder=""></v-text-field>
-                             <v-text-field label="นามสกุล" placeholder=""></v-text-field>
-                             <v-text-field label="ชื่อผู้ใช้งาน" placeholder=""></v-text-field>
-                             <v-text-field label="รหัสผ่าน" placeholder=""></v-text-field>
-                             <v-text-field label="ยืนยันรหัสผ่าน" placeholder=""></v-text-field>
-                             <v-text-field label="อีเมล" placeholder=""></v-text-field>
+                     <div class="bg-white border-b-4 border-purple-500 rounded shadow-xl p-4"> 
+                             <v-text-field label="ชื่อ" placeholder="" prepend-inner-icon="mdi-card-account-details-outline"></v-text-field>
+                             <v-text-field label="นามสกุล" placeholder="" prepend-inner-icon="mdi-card-account-details-outline"></v-text-field>
+                             <v-text-field label="ชื่อผู้ใช้งาน" placeholder="" prepend-inner-icon="mdi-account"></v-text-field>
+                             <v-text-field label="รหัสผ่าน" placeholder="" prepend-inner-icon="mdi-lock"></v-text-field>
+                             <v-text-field label="ยืนยันรหัสผ่าน" placeholder="" prepend-inner-icon="mdi-lock"></v-text-field>
+                             <v-text-field label="อีเมล" placeholder="" prepend-inner-icon="mdi-email"></v-text-field>
                              <!-- <v-card-title primary-title> 
                              <v-spacer></v-spacer>
                             

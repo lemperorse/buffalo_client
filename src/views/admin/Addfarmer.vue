@@ -17,9 +17,9 @@
             </v-container>
             <!--Console Content-->
             <div class="flex flex-wrap">
-                <div class="w-full md:w-1/1 xl:w-1/1 p-3">
+                <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3">
                     <!--Metric Card-->
-                    <div class="bg-white border-b-4 border-green-500 rounded shadow-xl p-10">
+                    <div class="bg-white border-b-4 border-green-500 rounded shadow-xl p-4">
                         <v-select :items="prefix" prepend-inner-icon="mdi-card-account-details-outline" label="คำนำหน้า "></v-select>
                         <v-text-field prepend-inner-icon="mdi-card-account-details-outline" label="ชื่อ "></v-text-field>
                         <v-text-field prepend-inner-icon="mdi-card-account-details-outline" label="นามสกุล"></v-text-field>

@@ -15,7 +15,7 @@
 
         <!--Console Content-->
         <div class="flex flex-wrap">
-            <div class="w-full md:w-1/1 xl:w-1/1 p-3">
+            <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3 mb-3">
                 <!--Metric Card-->
                 <div class="bg-white border-b-4 border-green-600 shadow-xl">
                     <div class="flex flex-row items-center">
@@ -43,7 +43,7 @@
 
             <div class="w-full md:w-1/1 xl:w-1/1 ">
                 <div class="flex flex-wrap">
-                    <div class="w-full md:w-1/2 xl:w-1/4 p-3" v-for="i in 8">
+                    <div class="w-full md:w-1/2 xl:w-1/4 p-0 md:p-3 mb-3" v-for="i in 8">
                         <!--Metric Card-->
                         <div class="bg-white border-b-4 border-green-600 rounded shadow-xl p-2">
                             <div class="flex flex-row items-center">

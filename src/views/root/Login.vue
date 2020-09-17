@@ -23,13 +23,26 @@
 
                 </v-col>
             </v-row>
-            <v-container>
-                <hr class="ma-6">
-                <v-row align="center" justify="center">
-                    <p class="f16">คุณไม่มีบัญชีผู้ใช้ใช่หรือไม่? <v-btn outlined @click="$router.push('register')" color="white">สมัครสมาชิก</v-btn>
-                    </p>
-                </v-row>
-            </v-container>
+            <!-- ติดต่อสอบสอบถาม
+            - หัวข้อ
+            - เนื้อหา
+            ติดต่อลืมรหัสผ่าน
+            - เลขบัตร
+            - เบอร์โทร
+             -->
+             <!-- <v-divider class="ma-4" color="white"></v-divider> -->
+             <v-row class="" align="center" justify="center">
+                <v-col cols="10" sm="8" md="4">
+                    <v-divider class="pa" color="white"></v-divider>
+                    <div>
+                        <v-card-title primary-title> 
+                            <v-btn depressed @click="$router.push('register')" color="indigo" dark>สมัครสมาชิก</v-btn>
+                            <v-spacer></v-spacer>
+                            <v-btn  text @click="$router.push('contact')" color="white">ติดต่อแอดมิน</v-btn>
+                        </v-card-title> 
+                    </div>
+                </v-col>
+            </v-row> 
 
         </v-container>
     </v-main>

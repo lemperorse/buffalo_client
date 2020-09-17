@@ -11,7 +11,7 @@
         </v-container>
         <!--Console Content-->
         <div class="flex flex-wrap">
-            <div class="w-full md:w-1/1 xl:w-1/1 p-3">
+            <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3">
                 <v-stepper v-model="e1">
                     <v-stepper-header>
                         <v-stepper-step :complete="e1 > 1" step="1">ชื่อผู้ใช้งาน</v-stepper-step>
@@ -28,10 +28,10 @@
                             <v-text-field label="ยืนยันรหัสผ่าน" placeholder="ยืนยันรหัสผ่าน" type="password" prepend-inner-icon="mdi-lock"></v-text-field>
 
                             <v-btn color="primary" @click="e1 = 2">
-                                Continue
+                                ต่อไป
                             </v-btn>
 
-                            <v-btn text>Cancel</v-btn>
+                            <v-btn text>ยกเลิก</v-btn>
                         </v-stepper-content>
 
                         <v-stepper-content step="2">
@@ -44,10 +44,10 @@
                             <v-text-field label="จังหวัด" prepend-inner-icon="mdi-pin" type="text"></v-text-field>
 
                             <v-btn color="primary" @click="e1 = 1">
-                                Continue
+                                ต่อไป
                             </v-btn>
 
-                            <v-btn text @click="e1 = 1">Cancel</v-btn>
+                            <v-btn text @click="e1 = 1">ยกเลิก</v-btn>
                         </v-stepper-content>
 
                     </v-stepper-items>

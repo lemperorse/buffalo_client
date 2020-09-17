@@ -17,7 +17,7 @@
             </v-container>
             <!--Console Content-->
             <div class="flex flex-wrap">
-                <div class="w-full md:w-1/1 xl:w-1/1 p-3">
+                <div class="w-full md:w-1/1 xl:w-1/1 p-0 mb-3 md:p-3">
                     <!--Metric Card-->
                     <div class="bg-white border-b-4 border-purple-500 rounded shadow-xl p-2">
                         <div class="flex flex-row items-center">
@@ -32,7 +32,7 @@
                     <!--/Metric Card-->
                 </div>
 
-                <div class="w-full md:w-1/1 xl:w-1/1 p-3">
+                <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3">
                     <v-data-table class="bg-white border-b-4 border-purple-500 rounded shadow-xl p-2" :headers="headers" :items="desserts" :search="search" sort-by="calories">
                         <template v-slot:item.actions="{ item }">
                             <!-- <v-tooltip v-model="show" top> -->
@@ -90,7 +90,7 @@ export default {
         search: '',
         dialog: false,
         headers: [{
-                text: 'ชื่อจริง',
+                text: 'ชื่อ',
                 value: 'name',
                 sortable: false
             },
@@ -111,6 +111,11 @@ export default {
                 sortable: false
             },
             {
+                text: 'สิทธ์การใช้งาน',
+                value: 'license',
+                sortable: false,
+            }, 
+            {
                 text: 'การจัดการ',
                 value: 'actions',
                 sortable: false
@@ -123,13 +128,13 @@ export default {
             IDCard: '',
             name: '',
             email: '',
-            status: '',
+            license: '',
         },
         defaultItem: {
             IDCard: '',
             name: '',
             email: '',
-            status: '',
+            license: '',
         },
     }),
 
@@ -157,7 +162,7 @@ export default {
                     username: 'dang123',
                     password: '123456',
                     email: 'dang1@gmail.com',
-                    status: 'ผู้ดูแลระบบ',
+                    license: 'ผู้ดูแลระบบ',
                 },
                 {
                     name: 'นายแดง1',
@@ -165,7 +170,7 @@ export default {
                     username: 'dang1234',
                     password: '123123',
                     email: 'dan1g@gmail.com',
-                    status: 'ผู้ดูแลระบบ',
+                    license: 'ผู้ดูแลระบบ',
                 },
                 {
                     name: 'นายแดง2',
@@ -173,7 +178,7 @@ export default {
                     username: 'dang1232',
                     password: '111111',
                     email: 'dang1@gmail.com',
-                    status: 'ผู้ดูแลระบบ',
+                    license: 'ผู้ดูแลระบบ',
                 },
 
             ]
