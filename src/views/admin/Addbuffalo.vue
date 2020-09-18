@@ -15,7 +15,7 @@
                 <hr class="border-b-2 border-gray-400 ">
             </v-container>
             <!--Console Content-->
-              
+
             <div class="flex flex-wrap">
                 <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3">
                     <div class="bg-white border-b-4 border-blue-500 rounded shadow-xl">
