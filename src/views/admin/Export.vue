@@ -23,7 +23,6 @@
                         <div class="flex flex-row items-center">
                             <v-text-field dense class="" v-model="search" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
                             <!-- <v-divider vertical class="ma-1"></v-divider> -->
-                            
                         </div>
                         <v-divider class="ma-1"></v-divider>
                         <div class="flex flex-row items-center">

@@ -92,15 +92,7 @@
                                                 </v-expansion-panel>
 
                                             </v-expansion-panels>
-                                        </div>
-                                        <!-- <v-select   :items="prefix" value="นาย" label="คำนำหน้า" outlined prepend-inner-icon="mdi-human-male-female"></v-select>
-                                        <v-text-field   value="นายแดง" label="ชื่อ" outlined prepend-inner-icon="mdi-card-account-details-outline"></v-text-field>
-                                        <v-text-field   value="มีชัย" label="นามสกุล" outlined prepend-inner-icon="mdi-card-account-details-outline"></v-text-field>
-                                        <v-select   :items="gender" value="ชาย" label="เพศ" outlined prepend-inner-icon="mdi-human-male-female"></v-select>
-                                        <v-text-field   value="1231231231231" label="หมายเลขบัตรประชาชน" type="number" outlined prepend-inner-icon="mdi-card-account-details-outline"></v-text-field>
-                                        <v-text-field   value="55" label="อายุ" outlined prepend-inner-icon="mdi-account-clock-outline"></v-text-field>
-                                        <v-text-field   value="123/123" label="ที่อยู่" outlined prepend-inner-icon="mdi-home-map-marker"></v-text-field>
-                                        <v-text-field   value="0123123123" label="เบอร์โทร" type="number" outlined prepend-inner-icon="mdi-phone"></v-text-field> -->
+                                        </div> 
                                     </v-card-text>
                                     <v-card-title>
                                         <v-spacer></v-spacer>
@@ -156,17 +148,7 @@
                                                 </v-expansion-panel>
 
                                             </v-expansion-panels>
-                                        </div>
-                                        <!-- <v-text-field   value="ฟาร์มนายแดง" outlined prepend-inner-icon="mdi-home-outline" label="ชื่อฟาร์ม"></v-text-field> -->
-                                        <!-- <v-text-field   value="111 ต.แม่กา" outlined prepend-inner-icon="mdi-home" label="​ที่อยู่ฟาร์ม"></v-text-field>
-                                        <v-select   :items="tumbon" value="แม่กา" prepend-inner-icon="mdi-map-marker-multiple" outlined label="ตำบล"></v-select>
-                                        <v-select   :items="aumphur" value="แม่กา" prepend-inner-icon="mdi-map-marker-multiple" outlined label="อำเภอ"></v-select>
-                                        <v-select   :items="province" value="พะเยา" prepend-inner-icon="mdi-map-marker-multiple" outlined label="จังหวัด"></v-select>
-                                        <v-select   :items="postalcode" value="56000" prepend-inner-icon="mdi-postage-stamp" outlined label="รหัสไปรษณีย์"></v-select> -->
-                                        <!-- <v-text-field   value="1231231231" outlined prepend-inner-icon="mdi-map-marker-multiple-outline" label="พิกัดฟาร์มตามระบบ GPS (ละติจูด)"></v-text-field>
-                                        <v-text-field   value="123123123" outlined prepend-inner-icon="mdi-map-marker-multiple-outline" label="พิกัดฟาร์มตามระบบ GPS (ลองติจูด)"></v-text-field> -->
-                                        <!-- <v-text-field   value="12 ตัว" outlined prepend-inner-icon="mdi-cow" type="number" label="จำนวนควายทั้งหมด"></v-text-field>
-                                        <v-select   :items="group" value="กลุ่มแม่กา" prepend-inner-icon="mdi-account-group-outline" outlined label="กลุ่มเกษตกร"></v-select> -->
+                                        </div> 
                                     </v-card-text>
                                     <v-card-title>
                                         <v-spacer></v-spacer>
@@ -221,8 +203,8 @@
                                                 <!-- <v-tooltip v-model="show" top> -->
                                                 <v-tooltip top>
                                                     <template v-slot:activator="{ on, attrs }">
-                                                        <v-btn color="success" icon v-bind="attrs" v-on="on" @click="$router.push(`buffalo`)">
-                                                            <v-icon>mdi-eye-outline</v-icon>
+                                                        <v-btn color="warning" icon v-bind="attrs" v-on="on" @click="$router.push(`buffalo`)">
+                                                            <v-icon>mdi-pencil</v-icon>
                                                         </v-btn>
                                                     </template>
                                                     <span>ดูข้อมูล</span>

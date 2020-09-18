@@ -57,7 +57,7 @@
                                             <v-expansion-panels v-model="panel" multiple flat>
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">ตั้งค่ารหัสผ่าน</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">รายละเอียด</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-text-field value="dang1234" label="ชื่อผู้ใช้งาน" readonly prepend-inner-icon="mdi-account"></v-text-field>
