@@ -6,7 +6,7 @@
             <v-btn color="white" depressed fab @click="$router.go(-1)" small>
                 <v-icon class="icon">mdi-chevron-left</v-icon>กลับ
             </v-btn>
-            <h2 class="font-bold text-2xl mb-2">สมัครสมาชิก</h2> 
+            <h2 class="font-bold text-2xl mb-2">สมัครสมาชิก</h2>
             <hr class="border-b-2 border-gray-400 ">
         </v-container>
         <!--Console Content-->
@@ -26,28 +26,31 @@
                             <v-text-field label="ชื่อผู้ใช้งาน" placeholder="ชื่อผู้ใช้งาน" prepend-inner-icon="mdi-account-star"></v-text-field>
                             <v-text-field label="รหัสผ่าน" placeholder="รหัสผ่าน" type="password" prepend-inner-icon="mdi-lock"></v-text-field>
                             <v-text-field label="ยืนยันรหัสผ่าน" placeholder="ยืนยันรหัสผ่าน" type="password" prepend-inner-icon="mdi-lock"></v-text-field>
-
-                            <v-btn color="primary" @click="e1 = 2">
-                                ต่อไป
-                            </v-btn>
-
-                            <v-btn text>ยกเลิก</v-btn>
+                            <v-card-title primary-title>
+                                <v-spacer></v-spacer>
+                                <v-btn text>ยกเลิก</v-btn>
+                                <v-btn depressed color="primary" @click="e1 = 2">
+                                    ต่อไป
+                                </v-btn>
+                            </v-card-title>
                         </v-stepper-content>
 
                         <v-stepper-content step="2">
                             <v-text-field label="ชื่อ" prepend-inner-icon="mdi-account" type="text"></v-text-field>
-                            <v-text-field label="นามสกุล" prepend-inner-icon="mdi-account"></v-text-field> 
+                            <v-text-field label="นามสกุล" prepend-inner-icon="mdi-account"></v-text-field>
                             <v-text-field label="บ้านเลขที่" prepend-inner-icon="mdi-home-edit" type="text"></v-text-field>
                             <v-text-field label="หมู่บ้าน" prepend-inner-icon="mdi-home-group" type="text"></v-text-field>
                             <v-text-field label="ตำบล" prepend-inner-icon="mdi-pin" type="text"></v-text-field>
                             <v-text-field label="อำเภอ" prepend-inner-icon="mdi-pin" type="text"></v-text-field>
                             <v-text-field label="จังหวัด" prepend-inner-icon="mdi-pin" type="text"></v-text-field>
-
-                            <v-btn color="primary" @click="e1 = 1">
-                                ต่อไป
-                            </v-btn>
-
-                            <v-btn text @click="e1 = 1">ยกเลิก</v-btn>
+                            <v-text-field label="รหัสไปรษณีย์" prepend-inner-icon="mdi-postage-stamp" type="number"></v-text-field>
+                            <v-card-title primary-title>
+                                <v-spacer></v-spacer>
+                                <v-btn text @click="e1 = 1">ยกเลิก</v-btn>
+                                <v-btn depressed color="primary" @click="e1 = 1">
+                                    ต่อไป
+                                </v-btn>
+                            </v-card-title>
                         </v-stepper-content>
 
                     </v-stepper-items>
@@ -61,7 +64,7 @@
 <script>
 export default {
     data() {
-        return { 
+        return {
             e1: 1,
         }
     },

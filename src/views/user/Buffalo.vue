@@ -94,8 +94,8 @@
                                                             </template>
                                                             <v-date-picker ref="picker" v-model="date" :max="new Date().toISOString().substr(0, 10)" min="1950-01-01" @change="save1"></v-date-picker>
                                                         </v-menu>
-                                                        <v-select :items="sex" value="ตัวผู้" prepend-inner-icon="mdi-gender-male-female" label="เพศ"></v-select>
                                                         <v-text-field value="6" prepend-inner-icon="mdi-calendar-clock" type="number" label="อายุ(ปี)"></v-text-field>
+                                                        <v-select :items="sex" value="ตัวผู้" prepend-inner-icon="mdi-gender-male-female" label="เพศ"></v-select>
                                                         <v-select :items="color" value="ดำ" prepend-inner-icon="mdi-invert-colors" label="สี"></v-select>
                                                         <v-select :items="status" value="มีชีวิต" prepend-inner-icon="mdi-post-outline" label="สถานะ"></v-select>
                                                     </v-expansion-panel-content>
@@ -127,7 +127,7 @@
 
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">น้ำหนัก</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">ขนาดควาย</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-text-field value="111" prepend-inner-icon="mdi-weight-kilogram" type="number" label="น้ำหนัก(กิโลกรัม)"></v-text-field>

@@ -94,8 +94,8 @@
                                                             </template>
                                                             <v-date-picker ref="picker" v-model="date" :max="new Date().toISOString().substr(0, 10)" min="1950-01-01" @change="save1"></v-date-picker>
                                                         </v-menu>
-                                                        <v-select :items="sex" value="ตัวผู้" prepend-inner-icon="mdi-gender-male-female" label="เพศ"></v-select>
                                                         <v-text-field value="6" prepend-inner-icon="mdi-calendar-clock" type="number" label="อายุ(ปี)"></v-text-field>
+                                                        <v-select :items="sex" value="ตัวผู้" prepend-inner-icon="mdi-gender-male-female" label="เพศ"></v-select>
                                                         <v-select :items="color" value="ดำ" prepend-inner-icon="mdi-invert-colors" label="สี"></v-select>
                                                         <v-select :items="status" value="มีชีวิต" prepend-inner-icon="mdi-post-outline" label="สถานะ"></v-select>
                                                     </v-expansion-panel-content>
@@ -127,7 +127,7 @@
 
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
-                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">น้ำหนัก</h5>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">ขนาดควาย</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-text-field value="111" prepend-inner-icon="mdi-weight-kilogram" type="number" label="น้ำหนัก(กิโลกรัม)"></v-text-field>
@@ -137,33 +137,7 @@
                                                     </v-expansion-panel-content>
                                                 </v-expansion-panel>
                                             </v-expansion-panels>
-                                        </div>
-                                        <!-- <v-text-field value="พ่อเปี้ย" prepend-inner-icon="mdi-cow" outlined label="ชื่อหรือหมายเลขควาย"></v-text-field>
-                                        <v-text-field value="1233" prepend-inner-icon="mdi-numeric-10-box-multiple-outline" outlined type="number" label="หมายเลข NID"></v-text-field>
-                                        <v-text-field value="123" prepend-inner-icon="mdi-numeric" outlined type="number" label="หมายเลขไมโครซิป"></v-text-field>
-                                        <v-menu ref="menu" v-model="menu" :close-on-content-click="false" transition="scale-transition" offset-y min-width="290px">
-                                            <template v-slot:activator="{ on, attrs }">
-                                                <v-text-field outlined v-model="date" label="วัน/เดือน/ปีเกิด" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
-                                            </template>
-                                            <v-date-picker ref="picker" v-model="date" :max="new Date().toISOString().substr(0, 10)" min="1950-01-01" @change="save1"></v-date-picker>
-                                        </v-menu>
-                                        <v-select :items="sex" value="ตัวผู้" prepend-inner-icon="mdi-gender-male-female" outlined label="เพศ"></v-select>
-                                        <v-text-field value="6" prepend-inner-icon="mdi-calendar-clock" outlined type="number" label="อายุ(ปี)"></v-text-field>
-                                        <v-select :items="color" value="ดำ" prepend-inner-icon="mdi-invert-colors" outlined label="สี"></v-select> -->
-                                        <!-- <v-select :items="from" value="พ่อค้าคนกลาง" prepend-inner-icon="mdi-import" outlined label="แหล่งที่มา"></v-select>
-                                        <v-text-field value="12300" prepend-inner-icon="mdi-tag-outline" outlined type="number" label="ราคา(บาท)"></v-text-field> -->
-                                        <!-- <v-select :items="status" value="มีชีวิต" prepend-inner-icon="mdi-post-outline" outlined label="สถานะ"></v-select> -->
-                                        <!-- <v-text-field value="พ่อเปี้ย" prepend-inner-icon="mdi-cow" outlined label="ชื่อหรือหมายเลขพ่อ"></v-text-field>
-                                        <v-text-field value="123" prepend-inner-icon="mdi-numeric-10-box-multiple-outline" outlined type="number" label="หมายเลข NID พ่อ"></v-text-field>
-                                        <v-text-field value="111" prepend-inner-icon="mdi-numeric" outlined type="number" label="หมายเลขไมโครชิปพ่อ"></v-text-field>
-                                        <v-text-field value="แม่เปี้ย" prepend-inner-icon="mdi-cow" outlined label="ชื่อหรือหมายเลขแม่"></v-text-field>
-                                        <v-text-field value="12" prepend-inner-icon="mdi-numeric-10-box-multiple-outline" outlined type="number" label="หมายเลข NID แม่"></v-text-field>
-                                        <v-text-field value="1234" prepend-inner-icon="mdi-numeric" outlined type="number" label="หมายเลขไมโครชิปแม่"></v-text-field> -->
-                                        <!-- <v-text-field value="111" prepend-inner-icon="mdi-weight-kilogram" outlined type="number" label="น้ำหนัก(กิโลกรัม)"></v-text-field>
-                                        <v-text-field value="111" prepend-inner-icon="mdi-arrow-left-right" outlined type="number" label="ความกว้างรอบอก(เซนติเมตร)"></v-text-field>
-                                        <v-text-field value="111" prepend-inner-icon="mdi-arrow-left-right" outlined type="number" label="ความยาวรอบลำตัว(เซนติเมตร)"></v-text-field>
-                                        <v-text-field value="111" prepend-inner-icon="mdi-human-male-height-variant" outlined type="number" label="ความสูง(เซนติเมตร)"></v-text-field> -->
-
+                                        </div> 
                                     </v-card-text>
                                     <v-card-title>
                                         <v-spacer></v-spacer>
@@ -183,31 +157,7 @@
                                         <v-spacer></v-spacer>
                                         <v-btn depressed   @click="$router.push('/admin/addage')" color="success" dark>
                                             <v-icon>mdi-plus</v-icon>เพิ่มอายุ
-                                        </v-btn>
-                                        <!-- <v-dialog v-model="dialog" scrollable max-width="600px">
-                                            <template v-slot:activator="{ on, attrs }">
-
-                                            </template>
-                                            <v-card>
-                                                <v-card-title>
-                                                    <span>เพิ่มอายุควาย</span>
-                                                </v-card-title>
-                                                <v-card-text>
-                                                    <v-container>
-                                                        <v-text-field value="" prepend-inner-icon="mdi-weight-kilogram" outlined type="number" label="น้ำหนัก(กิโลกรัม)"></v-text-field>
-                                                        <v-text-field value="" prepend-inner-icon="mdi-arrow-left-right" outlined type="number" label="ความกว้างรอบอก(เซนติเมตร)"></v-text-field>
-                                                        <v-text-field value="" prepend-inner-icon="mdi-arrow-left-right" outlined type="number" label="ความยาวรอบลำตัว(เซนติเมตร)"></v-text-field>
-                                                        <v-text-field value="" prepend-inner-icon="mdi-human-male-height-variant" outlined type="number" label="ความสูง(เซนติเมตร)"></v-text-field>
-                                                        <v-select :items="age1" value="" prepend-inner-icon="mdi-clock" outlined label="อายุ(240,400,600วัน)"></v-select>
-                                                    </v-container>
-                                                </v-card-text>
-                                                <v-card-actions>
-                                                    <v-spacer></v-spacer>
-                                                    <v-btn color="green" dark @click="dialog = false">บันทึก</v-btn>
-                                                    <v-btn color="error" @click="dialog = false">ยกเลิก</v-btn>
-                                                </v-card-actions>
-                                            </v-card>
-                                        </v-dialog> -->
+                                        </v-btn> 
                                     </v-card-title>
                                     <v-card-text>
                                         <div>

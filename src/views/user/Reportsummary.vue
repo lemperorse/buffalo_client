@@ -3,7 +3,7 @@
 <div class=" bg-gray-100 container w-full mx-auto">
     <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
         <v-container>
-        <h2 class="font-bold text-3xl"><i class="em em-card_file_box" aria-role="presentation" aria-label=""></i> &nbsp; รายงานสรุป</h2>
+            <h2 class="font-bold text-3xl"><i class="em em-card_file_box" aria-role="presentation" aria-label=""></i> &nbsp; รายงานจำนวนควาย</h2>
             <!-- <h2 class="font-bold text-2xl">รายงานสรุป</h2> -->
             <v-breadcrumbs :items="bc" large>
                 <template v-slot:divider>
@@ -21,7 +21,7 @@
                     <div class="flex flex-row items-center">
                         <v-select large dense class="pa-2 mt-6" :items="items" label="มีชีวิต,ไม่มีชีวิต" flat outlined single-line></v-select>
                     </div>
-                    <v-radio-group class="pa-2" v-model="radios" :mandatory="false" :row="row">
+                    <v-radio-group class=" " v-model="radios" :mandatory="false" :row="row">
                         <v-layout row wrap :class="`d-flex justify-space-around`">
                             <v-radio color="success" label="ทั้งหมด" value="ทั้งหมด"></v-radio>
                             <v-radio color="success" label="ตัวผู้" value="ตัวผู้"></v-radio>
@@ -30,19 +30,51 @@
                     </v-radio-group>
                 </div>
             </div>
-            <div class="flex flex-wrap"> 
-                <div class="w-full md:w-1/1 xl:w-1/1 p-3">
+
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-1/2 xl:w-1/2 p-3">
+                    <div class="bg-white border-b-4 border-green-500 rounded shadow-xl p-2">
+                        <h3 class="font-bold uppercase text-xl text-green-700 mb-2">สรุปควาย</h3>
+                        <v-card-title primary-title>
+                            <h3 class="font-bold text-lg">ควายทั้งหมด :</h3>
+                            <v-spacer></v-spacer>
+                            <span class="font-bold text-lg  text-gray-600"> 100 ตัว</span>
+                        </v-card-title>
+                        <v-card-title primary-title>
+                            <h3 class="font-bold text-lg">ควายที่มีชีวิต :</h3>
+                            <v-spacer></v-spacer>
+                            <span class="font-bold text-lg  text-gray-600"> 80 ตัว</span>
+                        </v-card-title>
+                        <v-card-title primary-title>
+                            <h3 class="font-bold text-lg">ควายที่ไม่มีชีวิต :</h3>
+                            <v-spacer></v-spacer>
+                            <span class="font-bold text-lg  text-gray-600"> 10 ตัว</span>
+                        </v-card-title>
+                        <v-card-title primary-title>
+                            <h3 class="font-bold text-lg">ควายตัวผู้ :</h3>
+                            <v-spacer></v-spacer>
+                            <span class="font-bold text-lg  text-gray-600"> 30 ตัว</span>
+                        </v-card-title>
+                        <v-card-title primary-title>
+                            <h3 class="font-bold text-lg">ควายตัวเมีย :</h3>
+                            <v-spacer></v-spacer>
+                            <span class="font-bold text-lg  text-gray-600"> 50 ตัว</span>
+                        </v-card-title> 
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 xl:w-1/2 p-3">
                     <!--Metric Card-->
                     <div class="bg-white border-b-4 border-green-500 rounded shadow-xl p-2">
                         <h3 class="font-bold uppercase text-xl text-green-700 mb-2">สรุปควาย</h3>
                         <div class="flex flex-row items-center">
-                             <column-chart :colors="['#009966']" :data="chartData"></column-chart>
+                            <column-chart :colors="['#009966']" :data="chartData"></column-chart>
                         </div>
-                         
+
                     </div>
                     <!--/Metric Card-->
-                </div> 
+                </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -58,18 +90,18 @@ export default {
                     href: '/#/user/home',
                 },
                 {
-                    text: 'รายงานสรุป',
+                    text: 'รายงานจำนวนควาย',
                     disabled: false,
                     href: '/#/user/reportsummary',
                 },
             ],
-            chartData:{
-                '2020-05-13' : '10',
-                '2020-05-14' : '15',
-                '2020-05-15' : '30',
-                '2020-05-16' : '15',
-                '2020-05-17' : '50',
-                '2020-05-18' : '21',
+            chartData: {
+                '2020-05-13': '10',
+                '2020-05-14': '15',
+                '2020-05-15': '30',
+                '2020-05-16': '15',
+                '2020-05-17': '50',
+                '2020-05-18': '21',
             },
             items: ['มีชีวิต', 'ไม่มีชีวิต'],
             radios: 'ทั้งหมด',

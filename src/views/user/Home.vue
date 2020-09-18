@@ -85,7 +85,7 @@
                                 </div>
                             </div>
                             <div class="flex-1 text-right md:text-center">
-                                <h5 class="font-bold uppercase text-xl text-orange-700 ">รายงานสรุป</h5> 
+                                <h5 class="font-bold uppercase text-xl text-orange-700 ">รายงานจำนวนควาย</h5> 
                                 <button @click="$router.push('reportsummary')" class="text-gray-600 p-2">ดูรายละเอียด</button>
                                   <!-- <v-btn   color="gray"  text @click="$router.push('reportbuffalo')">ดูรายละเอียด</v-btn> -->
                             </div>

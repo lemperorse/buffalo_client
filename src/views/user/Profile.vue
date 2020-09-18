@@ -14,8 +14,8 @@
                 <hr class="border-b-2 border-gray-400 ">
             </v-container>
             <!--Console Content-->
-            <div class="flex flex-row flex-wrap p-3">
-                <div class="mx-auto w-2/3">
+            <div class="flex flex-row flex-wrap p-0 md:p-3 mb-3">
+                <div class="mx-auto w-full md:w-2/3">
                     <!-- Profile Card -->
                     <div class="rounded-lg shadow-lg bg-gray-600 w-full flex flex-row flex-wrap p-3 antialiased bgcardprofile">
                         <div class="md:w-1/3 w-full">
@@ -89,15 +89,7 @@
                                                 </v-expansion-panel>
 
                                             </v-expansion-panels>
-                                        </div>
-                                        <!-- <v-select   :items="prefix" value="นาย" label="คำนำหน้า" outlined prepend-inner-icon="mdi-human-male-female"></v-select>
-                                        <v-text-field   value="นายแดง" label="ชื่อ" outlined prepend-inner-icon="mdi-card-account-details-outline"></v-text-field>
-                                        <v-text-field   value="มีชัย" label="นามสกุล" outlined prepend-inner-icon="mdi-card-account-details-outline"></v-text-field>
-                                        <v-select   :items="gender" value="ชาย" label="เพศ" outlined prepend-inner-icon="mdi-human-male-female"></v-select>
-                                        <v-text-field   value="1231231231231" label="หมายเลขบัตรประชาชน" type="number" outlined prepend-inner-icon="mdi-card-account-details-outline"></v-text-field>
-                                        <v-text-field   value="55" label="อายุ" outlined prepend-inner-icon="mdi-account-clock-outline"></v-text-field>
-                                        <v-text-field   value="123/123" label="ที่อยู่" outlined prepend-inner-icon="mdi-home-map-marker"></v-text-field>
-                                        <v-text-field   value="0123123123" label="เบอร์โทร" type="number" outlined prepend-inner-icon="mdi-phone"></v-text-field> -->
+                                        </div> 
                                     </v-card-text>
                                     <v-card-title>
                                         <v-spacer></v-spacer>
@@ -153,17 +145,7 @@
                                                 </v-expansion-panel>
 
                                             </v-expansion-panels>
-                                        </div>
-                                        <!-- <v-text-field   value="ฟาร์มนายแดง" outlined prepend-inner-icon="mdi-home-outline" label="ชื่อฟาร์ม"></v-text-field> -->
-                                        <!-- <v-text-field   value="111 ต.แม่กา" outlined prepend-inner-icon="mdi-home" label="​ที่อยู่ฟาร์ม"></v-text-field>
-                                        <v-select   :items="tumbon" value="แม่กา" prepend-inner-icon="mdi-map-marker-multiple" outlined label="ตำบล"></v-select>
-                                        <v-select   :items="aumphur" value="แม่กา" prepend-inner-icon="mdi-map-marker-multiple" outlined label="อำเภอ"></v-select>
-                                        <v-select   :items="province" value="พะเยา" prepend-inner-icon="mdi-map-marker-multiple" outlined label="จังหวัด"></v-select>
-                                        <v-select   :items="postalcode" value="56000" prepend-inner-icon="mdi-postage-stamp" outlined label="รหัสไปรษณีย์"></v-select> -->
-                                        <!-- <v-text-field   value="1231231231" outlined prepend-inner-icon="mdi-map-marker-multiple-outline" label="พิกัดฟาร์มตามระบบ GPS (ละติจูด)"></v-text-field>
-                                        <v-text-field   value="123123123" outlined prepend-inner-icon="mdi-map-marker-multiple-outline" label="พิกัดฟาร์มตามระบบ GPS (ลองติจูด)"></v-text-field> -->
-                                        <!-- <v-text-field   value="12 ตัว" outlined prepend-inner-icon="mdi-cow" type="number" label="จำนวนควายทั้งหมด"></v-text-field>
-                                        <v-select   :items="group" value="กลุ่มแม่กา" prepend-inner-icon="mdi-account-group-outline" outlined label="กลุ่มเกษตกร"></v-select> -->
+                                        </div> 
                                     </v-card-text>
                                     <v-card-title>
                                         <v-spacer></v-spacer>

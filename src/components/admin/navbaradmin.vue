@@ -52,7 +52,7 @@ export default {
             drawer: null,
             items: [{
                     text: "แดชบอร์ด",
-                    icon: "em em-clipboard",
+                    icon: "em em-linked_paperclips",
                     router: "/admin/home"
                 },
                 {
@@ -77,7 +77,7 @@ export default {
                 }, 
                 {
                     text: "ออกจากระบบ",
-                    icon: "em em-electric_plug",
+                    icon: "em em-outbox_tray",
                     router: "/"
                 },
 

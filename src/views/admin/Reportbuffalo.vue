@@ -6,7 +6,7 @@
         <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
 
             <v-container>
-                <h2 class="font-bold text-3xl"><i class="em em-card_file_box text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; รายงานสรุปจำนวนควาย</h2>
+                <h2 class="font-bold text-3xl"><i class="em em-card_file_box text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; รายงานจำนวนควาย</h2>
                 <!-- <h2 class="font-bold text-2xl">รายงานสรุปจำนวนควาย</h2> -->
                 <v-breadcrumbs :items="bc" large>
                     <template v-slot:divider>
@@ -28,29 +28,44 @@
                             <v-select outlined color="success" :items="tumbon" label="กรุณาเลือกตำบล" hide-details></v-select>
                             <v-divider vertical class="m-1"></v-divider>
                             <v-select outlined color="success" :items="farm" label="กรุณาเลือกฟาร์ม" hide-details></v-select>
+                            <v-divider vertical class="m-1"></v-divider>
+                            <v-select outlined color="success" :items="group" label="กรุณาเลือกกลุ่มเกษตกร" hide-details></v-select>
                         </div>
                     </div>
                     <!--/Metric Card-->
                     <!-- <div class="w-full md:w-1/1 xl:w-1/1 p-3"> -->
                         <div class="bg-white border-b-4 border-orange-700 rounded shadow-xl p-2 mt-6">
-                            <div class="flex flex-row items-center m-3">
-                                <h3 class="font-bold text-1xl">ชื่อฟาร์ม :</h3> <span class="font-bold text-1xl  text-gray-500"> สวัสดิ์ฟาร์ม</span>
-                            </div>
-                            <div class="flex flex-row items-center m-3">
-                                <h4 class="font-bold text-1xl">กลุ่มเกษตกร : </h4><span class="font-bold text-1xl  text-gray-500"> แม่ใจ</span>
-                            </div>
-                            <div class="flex flex-row items-center m-3">
-                                <h4 class="font-bold text-1xl">จังหวัด : </h4><span class="font-bold text-1xl  text-gray-500"> พะเยา</span>
-                            </div>
-                            <div class="flex flex-row items-center m-3">
-                                <h4 class="font-bold text-1xl">อำเภอ : </h4><span class="font-bold text-1xl  text-gray-500"> เมือง</span>
-                            </div>
-                            <div class="flex flex-row items-center m-3">
-                                <h4 class="font-bold text-1xl">ตำบล : </h4><span class="font-bold text-1xl  text-gray-500"> แม่กา</span>
-                            </div>
-                            <div class="flex flex-row items-center m-3">
-                                <h4 class="font-bold text-1xl">จำนวนควายทั้งหมด : </h4><span class="font-bold text-1xl  text-gray-500"> 30 ตัว</span>
-                            </div>
+                            <v-card-title primary-title>
+                                <h3 class="font-bold text-lg">ชื่อฟาร์ม :</h3>
+                                <v-spacer></v-spacer>
+                                <span class="font-bold text-lg  text-gray-600"> สวัสดิ์ฟาร์ม</span>
+                            </v-card-title>
+                            <v-card-title primary-title>
+                                <h3 class="font-bold text-lg">กลุ่มเกษตกร :</h3>
+                                <v-spacer></v-spacer>
+                                <span class="font-bold text-lg  text-gray-600"> แม่ใจ</span>
+                            </v-card-title>
+                            <v-card-title primary-title>
+                                <h3 class="font-bold text-lg">จังหวัด :</h3>
+                                <v-spacer></v-spacer>
+                                <span class="font-bold text-lg  text-gray-600"> พะเยา</span>
+                            </v-card-title>
+                            <v-card-title primary-title>
+                                <h3 class="font-bold text-lg">อำเภอ :</h3>
+                                <v-spacer></v-spacer>
+                                <span class="font-bold text-lg  text-gray-600"> เมือง</span>
+                            </v-card-title>
+                            <v-card-title primary-title>
+                                <h3 class="font-bold text-lg">ตำบล :</h3>
+                                <v-spacer></v-spacer>
+                                <span class="font-bold text-lg  text-gray-600"> แม่กา</span>
+                            </v-card-title>
+                            <v-card-title primary-title>
+                                <h3 class="font-bold text-lg">จำนวนควายทั้งหมด :</h3>
+                                <v-spacer></v-spacer>
+                                <span class="font-bold text-lg  text-gray-600"> 30 ตัว</span>
+                            </v-card-title>
+                             
                         </div>
                     <!-- </div> -->
                 </div>
@@ -78,7 +93,8 @@ export default {
             province: ['พะเยา', 'น่าน'],
             aumphur: ['เมือง', 'แม่กา'],
             tumbon: ['แม่กา', 'แม่ใจ'],
-            farm: ['พะเยา', 'น่าน']
+            farm: ['พะเยา', 'น่าน'],
+            group: ['กลุ่มแม่กา' , 'กลุ่มแม่ใจ']
         }
     },
 }

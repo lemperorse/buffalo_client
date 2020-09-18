@@ -14,8 +14,8 @@
             </v-container>
 
             <!--Console Content-->
-            <div class="flex flex-row flex-wrap p-3">
-                <div class="mx-auto w-2/3">
+            <div class="flex flex-row flex-wrap p-0 mb-3 md:p-3">
+                <div class="mx-auto w-full md:w-2/3">
                     <!-- Profile Card -->
                     <div class="rounded-lg shadow-lg bg-gray-600 w-full flex flex-row flex-wrap p-3 antialiased bgcardprofile">
                         <div class="md:w-1/3 w-full">
@@ -34,7 +34,7 @@
             </div>
 
             <div class="flex flex-wrap">
-                <div class="w-full md:w-1/1 xl:w-1/1 p-3">
+                <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3">
                     <!-- <v-card> -->
                     <div class="bg-white border-b-4 border-blue-500 rounded shadow-xl p-2">
                         <v-tabs>

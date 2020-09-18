@@ -22,16 +22,20 @@
                     <div class="bg-white border-b-4 border-pink-700 rounded shadow-xl p-2">
                         <div class="flex flex-row items-center">
                             <v-text-field dense class="" v-model="search" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
-                            <v-divider vertical class="ma-1"></v-divider>
-                            <v-btn depressed   color="green" medium dense dark class="">ส่งออกรายงาน</v-btn> 
+                            <!-- <v-divider vertical class="ma-1"></v-divider> -->
+                            
                         </div>
                         <v-divider class="ma-1"></v-divider>
                         <div class="flex flex-row items-center">
-                            <v-select dense color="green" :items="province" label="กรุณาเลือกจังหวัด" hide-details outlined></v-select>
+                            <v-select dense  :items="province" label="กรุณาเลือกจังหวัด" hide-details outlined></v-select>
                             <v-divider vertical class="ma-1"></v-divider>
-                            <v-select dense color="green" :items="district" label="กรุณาเลือกอำเภอ" hide-details outlined></v-select>
+                            <v-select dense  :items="district" label="กรุณาเลือกอำเภอ" hide-details outlined></v-select>
                             <v-divider vertical class="ma-1"></v-divider>
-                            <v-select dense color="green" :items="place" label="กรุณาเลือกตำบล" hide-details outlined></v-select>
+                            <v-select dense  :items="place" label="กรุณาเลือกตำบล" hide-details outlined></v-select>
+                            <v-divider vertical class="ma-1"></v-divider>
+                            <v-select dense  :items="group" label="กรุณาเลือกกลุ่ม" hide-details outlined></v-select>
+                            <v-divider vertical class="ma-1"></v-divider>
+                            <v-btn depressed color="success" medium dense dark class="">ส่งออกรายงาน</v-btn> 
                         </div>
                     </div>
                 </div>
@@ -64,6 +68,7 @@ export default {
                 href: '/#/admin/export',
             },
         ],
+        group:['แม่กา','แม่ใจ'],
         province: [{
                 text: 'พะเยา'
             },

@@ -13,8 +13,8 @@
                 <hr class="border-b-2 border-gray-400 ">
             </v-container>
             <!--Console Content-->
-            <div class="flex flex-row flex-wrap p-3">
-                <div class="mx-auto w-2/3">
+            <div class="flex flex-row flex-wrap p-0 md:p-3 mb-3">
+                <div class="mx-auto w-full md:w-2/3">
                     <!-- Profile Card -->
                     <div class="rounded-lg shadow-lg bg-gray-600 w-full flex flex-row flex-wrap p-3 antialiased bgcardprofile">
                         <div class="md:w-1/3 w-full">

@@ -56,9 +56,9 @@ export default {
                     router: "/user/home"
                 },
                 {
-                    text: "ค้นหาใบพันธ์ประวัติ",
+                    text: "ค้นหาใบพันธุ์ประวัติ",
                     icon: "em em-clipboard",
-                    router: "/user/profile"
+                    router: "/user/search"
                 },
                 {
                     text: "ข้อมูลส่วนตัว",
@@ -72,7 +72,7 @@ export default {
                 }, 
                 {
                     text: "ออกจากระบบ",
-                    icon: "em em-electric_plug",
+                    icon: "em em-outbox_tray",
                     router: "/"
                 },
 

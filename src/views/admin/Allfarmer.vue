@@ -44,24 +44,25 @@
 
                         <template v-slot:item.actions="{ item }">
                             <!-- <v-tooltip v-model="show" top> -->
-                            <v-tooltip top>
+                            <!-- <v-tooltip top>
                                 <template v-slot:activator="{ on, attrs }">
                                     <v-btn color="success" icon v-bind="attrs" v-on="on" @click="$router.push(`farmer`)">
                                         <v-icon>mdi-eye-outline</v-icon>
                                     </v-btn>
                                 </template>
                                 <span>ดูข้อมูล</span>
-                            </v-tooltip>
+                            </v-tooltip> -->
 
                             <!-- <v-tooltip v-model="show" top> -->
-                            <!-- <v-tooltip top>
+                            <v-tooltip top>
                                 <template v-slot:activator="{ on, attrs }">
-                                    <v-btn color="warning" icon v-bind="attrs" v-on="on" @click="editItem(item)">
+                                    <!-- <v-btn color="warning" icon v-bind="attrs" v-on="on" @click="editItem(item)"> -->
+                                        <v-btn color="warning" icon v-bind="attrs" v-on="on" @click="$router.push(`farmer`)">
                                         <v-icon>mdi-pencil</v-icon>
                                     </v-btn>
                                 </template>
                                 <span>แก้ไข</span>
-                            </v-tooltip> -->
+                            </v-tooltip>
 
                             <!-- <v-tooltip v-model="show" top> -->
                             <v-tooltip top>

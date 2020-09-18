@@ -20,6 +20,8 @@
                     <!--Metric Card-->
                     <div class="bg-white border-b-4 border-green-700 rounded shadow-xl p-2">
                         <div class="flex flex-col md:flex-row items-center">
+                            <v-select dense color="green" outlined :items="group" label="กรุณาเลือกกลุ่ม" hide-details></v-select>
+                            <v-divider vertical class="ma-1"></v-divider>
                             <v-select dense color="green" outlined :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
                             <v-divider vertical class="ma-1"></v-divider>
                             <v-select dense color="green" outlined :items="district" label="กรุณาเลือกเดือน" hide-details></v-select>
@@ -94,6 +96,7 @@ export default {
                 href: '/#/admin/reportsystem',
             },
         ], 
+        group:['กลุ่มแม่กา','กลุ่มแม่ใจ'],
         province: [{
                 text: 'พะเยา'
             },
@@ -210,6 +213,11 @@ export default {
                 sortable: false
             },
             {
+                text: 'จังหวัด',
+                value: 'province',
+                sortable: false
+            },
+            {
                 text: 'กลุ่มผู้ใช้',
                 value: 'group',
                 sortable: false
@@ -263,6 +271,7 @@ export default {
                     IDCard: 1234567890123,
                     name: 'นายแดง แดงแดง',
                     Phonenumber: '0911231231',
+                    province: 'พะเยา',
                     group: 'กลุ่มแม่ใจ',
                     status: 'ผู้ใช้สมัครสมาชิกเอง',
                     time: '29/6/2563',
@@ -271,6 +280,7 @@ export default {
                     IDCard: 3123412345612,
                     name: 'นายดำ ดำดำ',
                     Phonenumber: '0914123412',
+                    province: 'พะเยา',
                     group: 'กลุ่มแม่ใจ',
                     status: 'เพิ่มโดยแอดมิน',
                     time: '29/6/2563',
@@ -279,6 +289,7 @@ export default {
                     IDCard: 1231241231233,
                     name: 'นายเขียว เขียวเขียว',
                     Phonenumber: '0812312312',
+                    province: 'พะเยา',
                     group: 'กลุ่มพาน',
                     status: 'สมัครบนแอปพลิเคชัน',
                     time: '29/6/2563',
@@ -287,6 +298,7 @@ export default {
                     IDCard: 1111111111111,
                     name: 'นายเขียว เขียวขจี',
                     Phonenumber: '0822312312',
+                    province: 'แพร่',
                     group: 'กลุ่มพาน',
                     status: 'สมัครบนแอปพลิเคชัน',
                     time: '28/6/2563',
@@ -295,6 +307,7 @@ export default {
                     IDCard: 2222222222222,
                     name: 'นายเหลือง เหลืองเหลือง',
                     Phonenumber: '0833333333',
+                    province: 'น่าน',
                     group: 'กลุ่มแม่กา',
                     status: 'สมัครบนแอปพลิเคชัน',
                     time: '28/6/2563',
@@ -303,6 +316,7 @@ export default {
                     IDCard: 3333333333333,
                     name: 'นายชัย',
                     Phonenumber: '0844444444',
+                    province: 'แพร่',
                     group: 'กลุ่มแม่กา',
                     status: 'เพิ่มโดยแอดมิน',
                     time: '28/6/2563',
@@ -311,6 +325,7 @@ export default {
                     IDCard: 4444444444444,
                     name: 'นายใหญ่',
                     Phonenumber: '0855555555',
+                    province: 'น่าน',
                     group: 'กลุ่มพะเยา',
                     status: 'สมัครบนแอปพลิเคชัน',
                     time: '28/6/2563',
@@ -319,6 +334,7 @@ export default {
                     IDCard: 5555555555555,
                     name: 'นายเล็ก',
                     Phonenumber: '0866666666',
+                    province: 'พะเยา',
                     group: 'กลุ่มพะเยา',
                     status: 'สมัครบนแอปพลิเคชัน',
                     time: '28/6/2563',
@@ -327,6 +343,7 @@ export default {
                     IDCard: 6666666666666,
                     name: 'นายคำ',
                     Phonenumber: '0877777777',
+                    province: 'แพร่',
                     group: 'กลุ่มพะเยา',
                     status: 'เพิ่มโดยแอดมิน',
                     time: '27/6/2563',
@@ -335,6 +352,7 @@ export default {
                     IDCard: 7777777777777,
                     name: 'นายนาย',
                     Phonenumber: '0888888888',
+                    province: 'น่าน',
                     group: 'กลุ่มพะเยา',
                     status: 'สมัครบนแอปพลิเคชัน',
                     time: '27/6/2563',

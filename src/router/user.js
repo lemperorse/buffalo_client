@@ -45,6 +45,16 @@ const userRouter = [
         name: 'addage', 
         component: getView('Addage')
     },
+    {
+        path: 'search',
+        name: 'search', 
+        component: getView('Search')
+    },
+    {
+        path: 'cer',
+        name: 'cer', 
+        component: getView('Cer')
+    },
 
 ]
 
