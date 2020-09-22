@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "git" : "npm run build && cp -R ./dist ../buffalo_cer_web && cd ../buffalo_cer_web && git add -A && git commit -m  'Generate Web' && git push -u origin master && cd ../buffalo_cer_vue"
   },
   "dependencies": {
     "chart.js": "^2.9.3",
