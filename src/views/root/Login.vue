@@ -9,15 +9,15 @@
                         <h2 class="fcw">ยินดีต้อนรับเข้าสู่ระบบ</h2>
                     </div>
                     <div class="mt-6">
-                        <v-text-field class="rounded-lg" solo label="เข้าสู่ระบบ" name="login" prepend-inner-icon="mdi-account" type="text"></v-text-field>
-                        <v-text-field class="rounded-lg" solo id="password" label="รหัสผ่าน" name="password" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
+                        <v-text-field rounded solo label="เข้าสู่ระบบ" name="login" prepend-inner-icon="mdi-account" type="text"></v-text-field>
+                        <v-text-field rounded solo id="password" label="รหัสผ่าน" name="password" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
                         <v-spacer></v-spacer>
-                        <v-btn class="width rounded-lg" dark @click="$router.push('/user/home')" large color="green">เข้าสู่ระบบ</v-btn>
+                        <v-btn class="width" rounded  dark @click="$router.push('/user/home')" large color="green"> <v-icon>mdi-login</v-icon><h1>เข้าสู่ระบบ</h1></v-btn>
                     </div>
                     <div>
                         <v-card-title primary-title> 
                             <v-spacer></v-spacer>
-                            <v-btn  text @click="$router.push('forgotpassword')" color="white">ลืมรหัสผ่าน</v-btn>
+                            <v-btn depressed rounded @click="$router.push('forgotpassword')" color="error">ลืมรหัสผ่าน</v-btn>
                         </v-card-title> 
                     </div>
 
@@ -36,9 +36,9 @@
                     <v-divider class="pa" color="white"></v-divider>
                     <div>
                         <v-card-title primary-title> 
-                            <v-btn depressed @click="$router.push('register')" color="indigo" dark>สมัครสมาชิก</v-btn>
+                            <v-btn rounded depressed @click="$router.push('register')" color="indigo" dark>สมัครสมาชิก</v-btn>
                             <v-spacer></v-spacer>
-                            <v-btn  text @click="$router.push('contact')" color="white">ติดต่อแอดมิน</v-btn>
+                            <v-btn depressed rounded @click="$router.push('contact')">ติดต่อแอดมิน</v-btn>
                         </v-card-title> 
                     </div>
                 </v-col>
