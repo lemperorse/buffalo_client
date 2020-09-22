@@ -21,22 +21,16 @@
                         <div class="flex flex-row items-center">
                             <v-text-field dense class="" v-model="search" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
                             <v-divider vertical class="ma-1"></v-divider>
+                            <v-btn class="" depressed @click="$router.push('/')" color="success" medium dense dark>
+                                <v-icon>mdi-magnify</v-icon>ค้นหา
+                            </v-btn>
+                            <v-divider vertical class="ma-1"></v-divider>
                             <v-btn depressed @click="$router.push('/admin/addfarmer')" color="success" medium dense dark class="">
                                 <v-icon>mdi-plus</v-icon>เพิ่มเกษตรกร
                             </v-btn>
                         </div>
-                        <!-- <v-divider class="ma-1"></v-divider> -->
-                        <!-- <div class="flex flex-row items-center">
-                            <v-select dense color="green" :items="province" label="กรุณาเลือกจังหวัด" hide-details outlined></v-select>
-                            <v-divider vertical class="ma-1"></v-divider>
-                            <v-select dense color="green" :items="district" label="กรุณาเลือกอำเภอ" hide-details outlined></v-select>
-                            <v-divider vertical class="ma-1"></v-divider>
-                            <v-select dense color="green" :items="place" label="กรุณาเลือกตำบล" hide-details outlined></v-select>
-                            <v-divider vertical class="ma-1"></v-divider>
-                            <v-select dense color="green" :items="farm" label="กรุณาเลือกฟาร์ม" hide-details outlined></v-select>
-                        </div> -->
+
                     </div>
-                    <!--/Metric Card-->
                 </div>
 
                 <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3">
@@ -57,7 +51,7 @@
                             <v-tooltip top>
                                 <template v-slot:activator="{ on, attrs }">
                                     <!-- <v-btn color="warning" icon v-bind="attrs" v-on="on" @click="editItem(item)"> -->
-                                        <v-btn color="warning" icon v-bind="attrs" v-on="on" @click="$router.push(`farmer`)">
+                                    <v-btn color="warning" icon v-bind="attrs" v-on="on" @click="$router.push(`farmer`)">
                                         <v-icon>mdi-pencil</v-icon>
                                     </v-btn>
                                 </template>
@@ -90,14 +84,12 @@
 <script>
 export default {
     data: () => ({
-        
-        bc: [
-            {
+
+        bc: [{
             text: 'เกษตกร',
             disabled: false,
             href: '/#/admin/allfarmer',
-            }, 
-        ],
+        }, ],
         province: [{
                 text: 'พะเยา'
             },
@@ -177,7 +169,7 @@ export default {
                 text: 'สิทธ์การใช้งาน',
                 value: 'license',
                 sortable: false,
-            }, 
+            },
             {
                 text: 'การจัดการ',
                 value: 'actions',
@@ -223,7 +215,7 @@ export default {
                     name: 'นายแดง แดงแดง',
                     Phonenumber: '0911231231',
                     group: 'กลุ่มแม่ใจ',
-                    license: 'ผู้ใช้', 
+                    license: 'ผู้ใช้',
                 },
                 {
                     IDCard: 3123412345612,

@@ -21,52 +21,74 @@
                     <!--Metric Card-->
                     <div class="bg-white border-b-4 border-orange-700 rounded shadow-xl p-2">
                         <div class="flex flex-col md:flex-row items-center">
-                            <v-select outlined color="success" :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
+                            <v-expansion-panels flat>
+                                <v-expansion-panel>
+                                    <v-expansion-panel-header class="font-bold "><div class="text-xl">ค้นหา</div> </v-expansion-panel-header>
+                                    <v-expansion-panel-content>
+                                        <div class="flex flex-row flex-wrap">
+                                            <v-select outlined dense class="pa-1" :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
+                                            <v-select outlined dense class="pa-1" :items="aumphur" label="กรุณาเลือกอำเภอ" hide-details></v-select>
+                                            <v-select outlined dense class="pa-1" :items="tumbon" label="กรุณาเลือกตำบล" hide-details></v-select>
+                                            <v-select outlined dense class="pa-1" :items="farm" label="กรุณาเลือกฟาร์ม" hide-details></v-select>
+                                            <v-select outlined dense class="pa-1" :items="group" label="กรุณาเลือกกลุ่มเกษตกร" hide-details></v-select>
+                                            <v-btn depressed class="ma-1 d-sm-block" color="red darken-4"  @click="$router.push('/')" dense dark>
+                                                <v-icon>mdi-magnify</v-icon>ค้นหา
+                                            </v-btn>
+                                            
+                                        </div> 
+                                    </v-expansion-panel-content>
+                                </v-expansion-panel>
+                            </v-expansion-panels>
+                            <!-- <v-select outlined dense class="pa-1" :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
                             <v-divider vertical class="m-1"></v-divider>
-                            <v-select outlined color="success" :items="aumphur" label="กรุณาเลือกอำเภอ" hide-details></v-select>
+                            <v-select outlined dense class="pa-1" :items="aumphur" label="กรุณาเลือกอำเภอ" hide-details></v-select>
                             <v-divider vertical class="m-1"></v-divider>
-                            <v-select outlined color="success" :items="tumbon" label="กรุณาเลือกตำบล" hide-details></v-select>
+                            <v-select outlined dense class="pa-1" :items="tumbon" label="กรุณาเลือกตำบล" hide-details></v-select>
                             <v-divider vertical class="m-1"></v-divider>
-                            <v-select outlined color="success" :items="farm" label="กรุณาเลือกฟาร์ม" hide-details></v-select>
+                            <v-select outlined dense class="pa-1" :items="farm" label="กรุณาเลือกฟาร์ม" hide-details></v-select>
                             <v-divider vertical class="m-1"></v-divider>
-                            <v-select outlined color="success" :items="group" label="กรุณาเลือกกลุ่มเกษตกร" hide-details></v-select>
+                            <v-select outlined dense class="pa-1" :items="group" label="กรุณาเลือกกลุ่มเกษตกร" hide-details></v-select>
+                            <v-divider vertical class="ma-1"></v-divider>
+                            <v-btn depressed fab @click="$router.push('/')" class="pa-1" small dense dark>
+                                <v-icon>mdi-magnify</v-icon>
+                            </v-btn> -->
                         </div>
                     </div>
                     <!--/Metric Card-->
                     <!-- <div class="w-full md:w-1/1 xl:w-1/1 p-3"> -->
-                        <div class="bg-white border-b-4 border-orange-700 rounded shadow-xl p-2 mt-6">
-                            <v-card-title primary-title>
-                                <h3 class="font-bold text-lg">ชื่อฟาร์ม :</h3>
-                                <v-spacer></v-spacer>
-                                <span class="font-bold text-lg  text-gray-600"> สวัสดิ์ฟาร์ม</span>
-                            </v-card-title>
-                            <v-card-title primary-title>
-                                <h3 class="font-bold text-lg">กลุ่มเกษตกร :</h3>
-                                <v-spacer></v-spacer>
-                                <span class="font-bold text-lg  text-gray-600"> แม่ใจ</span>
-                            </v-card-title>
-                            <v-card-title primary-title>
-                                <h3 class="font-bold text-lg">จังหวัด :</h3>
-                                <v-spacer></v-spacer>
-                                <span class="font-bold text-lg  text-gray-600"> พะเยา</span>
-                            </v-card-title>
-                            <v-card-title primary-title>
-                                <h3 class="font-bold text-lg">อำเภอ :</h3>
-                                <v-spacer></v-spacer>
-                                <span class="font-bold text-lg  text-gray-600"> เมือง</span>
-                            </v-card-title>
-                            <v-card-title primary-title>
-                                <h3 class="font-bold text-lg">ตำบล :</h3>
-                                <v-spacer></v-spacer>
-                                <span class="font-bold text-lg  text-gray-600"> แม่กา</span>
-                            </v-card-title>
-                            <v-card-title primary-title>
-                                <h3 class="font-bold text-lg">จำนวนควายทั้งหมด :</h3>
-                                <v-spacer></v-spacer>
-                                <span class="font-bold text-lg  text-gray-600"> 30 ตัว</span>
-                            </v-card-title>
-                             
-                        </div>
+                    <div class="bg-white border-b-4 border-orange-700 rounded shadow-xl p-2 mt-6">
+                        <v-card-title primary-title>
+                            <h3 class="font-bold text-lg">ชื่อฟาร์ม :</h3>
+                            <v-spacer></v-spacer>
+                            <span class="font-bold text-lg  text-gray-600"> สวัสดิ์ฟาร์ม</span>
+                        </v-card-title>
+                        <v-card-title primary-title>
+                            <h3 class="font-bold text-lg">กลุ่มเกษตกร :</h3>
+                            <v-spacer></v-spacer>
+                            <span class="font-bold text-lg  text-gray-600"> แม่ใจ</span>
+                        </v-card-title>
+                        <v-card-title primary-title>
+                            <h3 class="font-bold text-lg">จังหวัด :</h3>
+                            <v-spacer></v-spacer>
+                            <span class="font-bold text-lg  text-gray-600"> พะเยา</span>
+                        </v-card-title>
+                        <v-card-title primary-title>
+                            <h3 class="font-bold text-lg">อำเภอ :</h3>
+                            <v-spacer></v-spacer>
+                            <span class="font-bold text-lg  text-gray-600"> เมือง</span>
+                        </v-card-title>
+                        <v-card-title primary-title>
+                            <h3 class="font-bold text-lg">ตำบล :</h3>
+                            <v-spacer></v-spacer>
+                            <span class="font-bold text-lg  text-gray-600"> แม่กา</span>
+                        </v-card-title>
+                        <v-card-title primary-title>
+                            <h3 class="font-bold text-lg">จำนวนควายทั้งหมด :</h3>
+                            <v-spacer></v-spacer>
+                            <span class="font-bold text-lg  text-gray-600"> 30 ตัว</span>
+                        </v-card-title>
+
+                    </div>
                     <!-- </div> -->
                 </div>
             </div>
@@ -94,7 +116,7 @@ export default {
             aumphur: ['เมือง', 'แม่กา'],
             tumbon: ['แม่กา', 'แม่ใจ'],
             farm: ['พะเยา', 'น่าน'],
-            group: ['กลุ่มแม่กา' , 'กลุ่มแม่ใจ']
+            group: ['กลุ่มแม่กา', 'กลุ่มแม่ใจ']
         }
     },
 }

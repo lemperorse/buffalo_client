@@ -42,6 +42,7 @@
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-text-field name="name" label="ชื่อเจ้าของควาย" prepend-inner-icon="mdi-account"></v-text-field>
+                                                        <v-text-field name="name" label="กลุ่ม" prepend-inner-icon="mdi-account-group"></v-text-field>
                                                         <v-text-field name="name" label="ชื่อฟาร์ม" prepend-inner-icon="mdi-home-outline"></v-text-field>
                                                         <v-text-field name="name" label="ชื่อควาย" prepend-inner-icon="mdi-cow"></v-text-field>
                                                         <v-text-field name="name" label="ที่อยู่ฟาร์ม" prepend-inner-icon="mdi-home-map-marker"></v-text-field>
@@ -68,8 +69,10 @@
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
                                                         <v-text-field name="name" label="ใบพันธุ์ประวัติอ้างอิง" prepend-inner-icon="mdi-file-pdf-outline"></v-text-field>
-                                                    </v-expansion-panel-content>
+                                                    </v-expansion-panel-content> 
+                                                </v-expansion-panel>
 
+                                                <v-expansion-panel> 
                                                     <v-expansion-panel-header>
                                                         <h5 class="font-bold uppercase text-gray-700 text-xl">ใบพันธุ์ประวัติทางการ</h5>
                                                     </v-expansion-panel-header>

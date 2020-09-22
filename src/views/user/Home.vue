@@ -3,7 +3,7 @@
 <div class="bg-gray-100">
     <!--Container-->
     <div class="container w-full mx-auto">
-        <div class="w-full px-2 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal"> 
+        <div class="w-full px-2 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
             <v-container>
                 <h2 class="font-bold text-3xl"><i class="em em-linked_paperclips" aria-role="presentation" aria-label=""></i> &nbsp; แดชบอร์ด</h2>
 
@@ -85,12 +85,12 @@
                                 </div>
                             </div>
                             <div class="flex-1 text-right md:text-center">
-                                <h5 class="font-bold uppercase text-xl text-orange-700 ">รายงานจำนวนควาย</h5> 
+                                <h5 class="font-bold uppercase text-xl text-orange-700 ">รายงานจำนวนควาย</h5>
                                 <button @click="$router.push('reportsummary')" class="text-gray-600 p-2">ดูรายละเอียด</button>
-                                  <!-- <v-btn   color="gray"  text @click="$router.push('reportbuffalo')">ดูรายละเอียด</v-btn> -->
+                                <!-- <v-btn   color="gray"  text @click="$router.push('reportbuffalo')">ดูรายละเอียด</v-btn> -->
                             </div>
                         </div>
-                      
+
                     </div>
                     <!--/Metric Card-->
                 </div>
@@ -100,18 +100,18 @@
                     <div class="bg-white border-b-4 border-purple-700 rounded shadow-xl p-2">
                         <div class="flex flex-row items-center">
                             <div class="flex-shrink pr-4">
-                                <div class="rounded p-2  "> 
+                                <div class="rounded p-2  ">
                                     <i class="em em-chart_with_upwards_trend text-3xl" aria-role="presentation" aria-label="CHART WITH UPWARDS TREND"></i>
                                 </div>
                             </div>
                             <div class="flex-1 text-right md:text-center">
-                                <h5 class="font-bold uppercase text-xl text-purple-700">รายงานสรุปการเจริญเติบโต</h5> 
-                                <button @click="$router.push('reportgrow')" class="text-gray-600 p-2">ดูรายละเอียด</button> 
+                                <h5 class="font-bold uppercase text-xl text-purple-700">รายงานสรุปการเจริญเติบโต</h5>
+                                <button @click="$router.push('reportgrow')" class="text-gray-600 p-2">ดูรายละเอียด</button>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                     <!--/Metric Card-->
-                </div> 
+                </div>
 
             </div>
 
@@ -140,7 +140,7 @@
                             <column-chart :colors="['#009966']" :data="chartData"></column-chart>
                         </div>
                         <!-- <button @click="$router.push('reportsummary')" class="text-gray-600 p-2">ดูรายละเอียด</button>  -->
-                        <v-btn depressed   small class="mt-2" color="success" block @click="$router.push('reportsummary')">แสดงเพิ่มเติม</v-btn>
+                        <v-btn depressed small class="mt-2" color="success" block @click="$router.push('reportsummary')">แสดงเพิ่มเติม</v-btn>
                     </div>
                     <!--/Metric Card-->
                 </div>
@@ -157,11 +157,11 @@
                                 <v-btn text color="primary" @click="menu2 = false">Cancel</v-btn>
                                 <v-btn text color="primary" @click="$refs.menu2.save(date)">OK</v-btn>
                             </v-date-picker>
-                        </v-menu> 
+                        </v-menu>
                         <div class="flex flex-row items-center">
                             <column-chart :data="chartData"></column-chart>
                         </div>
-                        <v-btn depressed   small class="mt-2" color="blue" dark block @click="$router.push('reportsummary')">แสดงเพิ่มเติม</v-btn>
+                        <v-btn depressed small class="mt-2" color="blue" dark block @click="$router.push('reportsummary')">แสดงเพิ่มเติม</v-btn>
                     </div>
                     <!--/Metric Card-->
                 </div>
@@ -178,15 +178,33 @@
                                 <v-btn text color="primary" @click="menu3 = false">Cancel</v-btn>
                                 <v-btn text color="primary" @click="$refs.menu3.save(date)">OK</v-btn>
                             </v-date-picker>
-                        </v-menu> 
+                        </v-menu>
                         <div class="flex flex-row items-center">
                             <column-chart :colors="['#9900CC']" :data="chartData"></column-chart>
                         </div>
-                        <v-btn depressed   small class="mt-2" color="purple" dark block @click="$router.push('reportsummary')">แสดงเพิ่มเติม</v-btn>
+                        <v-btn depressed small class="mt-2" color="purple" dark block @click="$router.push('reportsummary')">แสดงเพิ่มเติม</v-btn>
                     </div>
                     <!--/Metric Card-->
                 </div>
             </div>
+
+            <!-- <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+                <button @click="$refs.example.open()">
+                    Open Success
+                </button>
+                <vue-modality ref="example" title="Example" ok-title="Save" @ok="okHandle" :ok-loading="loading" @cancel="$refs.example.hide()" centered success>
+                    Hello from the other side!
+                </vue-modality>
+            </div>
+            <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+                <button @click="$refs.error.open()">
+                    Open Error
+                </button>
+                <vue-modality ref="error" title="error" ok-title="error" @ok="errorHandle" :ok-loading="loading" @cancel="$refs.error.hide()" centered error>
+                    Hello from the other side!
+                </vue-modality>
+            </div> -->
+
 
         </div>
     </div>
@@ -201,7 +219,7 @@ export default {
     data() {
         return {
             date: new Date().toISOString().substr(0, 10),
-            menu: false, 
+            menu: false,
             menu2: false,
             menu3: false,
 
@@ -221,9 +239,17 @@ export default {
 
         }
     },
-    methods: {
 
-    },
+    methods: {
+        // okHandle: function () {
+        //     this.loading = true;
+        //     var self = this;
+        //     setTimeout(function () {
+        //         self.loading = false;
+        //         self.$refs.example.hide();
+        //     }, 2000)
+        // }
+    }
 
 }
 </script>

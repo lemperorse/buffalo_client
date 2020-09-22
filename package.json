@@ -13,11 +13,14 @@
     "vue-browser-geolocation": "^1.8.0",
     "vue-chartjs": "^3.5.1",
     "vue-chartkick": "^0.6.1",
+    "vue-izitoast": "^1.2.1",
+    "vue-modality": "^1.1.4",
     "vue-router": "^3.2.0",
     "vue2-google-maps": "^0.10.7",
     "vuetify": "^2.2.11",
     "vuex": "^3.4.0",
-    "vuex-pathify": "^1.4.1"
+    "vuex-pathify": "^1.4.1",
+    "xmodal-vue": "^1.0.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

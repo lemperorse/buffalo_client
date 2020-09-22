@@ -20,15 +20,39 @@
                 <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3 mb-3">
                     <!--Metric Card-->
                     <div class="bg-white border-b-4 border-pink-700 rounded shadow-xl p-2">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <v-expansion-panels flat>
+                                <v-expansion-panel>
+                                    <v-expansion-panel-header class="font-bold ">
+                                        <div class="text-xl">ค้นหา</div>
+                                    </v-expansion-panel-header>
+                                    <v-expansion-panel-content>
+                                        <div class="flex flex-row flex-wrap">
+                                            <v-text-field dense class="pa-1" v-model="search" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
+                                            <v-select outlined dense class="pa-1" :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
+                                            <v-select outlined dense class="pa-1" :items="aumphur" label="กรุณาเลือกอำเภอ" hide-details></v-select>
+                                            <v-select outlined dense class="pa-1" :items="tumbon" label="กรุณาเลือกตำบล" hide-details></v-select>
+                                            <v-select outlined dense class="pa-1" :items="group" label="กรุณาเลือกกลุ่มเกษตกร" hide-details></v-select>
+                                            <v-btn depressed class="ma-1 d-sm-block" color="pink darken-3" @click="$router.push('/')" dense dark>
+                                                <v-icon>mdi-magnify</v-icon>ค้นหา
+                                            </v-btn>
+                                            <v-btn depressed color="success" medium dense dark class="ma-1">ส่งออกรายงาน</v-btn> 
+                                        </div>
+                                    </v-expansion-panel-content>
+                                </v-expansion-panel>
+                            </v-expansion-panels>
+                        </div>
+                    </div>
+
+                    <!-- <div class="bg-white border-b-4 border-pink-700 rounded shadow-xl p-2">
                         <div class="flex flex-row items-center">
-                            <v-text-field dense class="" v-model="search" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
-                            <!-- <v-divider vertical class="ma-1"></v-divider> -->
+                            <v-text-field dense class="" v-model="search" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field> 
                         </div>
                         <v-divider class="ma-1"></v-divider>
                         <div class="flex flex-row items-center">
                             <v-select dense  :items="province" label="กรุณาเลือกจังหวัด" hide-details outlined></v-select>
                             <v-divider vertical class="ma-1"></v-divider>
-                            <v-select dense  :items="district" label="กรุณาเลือกอำเภอ" hide-details outlined></v-select>
+                            <v-select dense  :items="tumbon" label="กรุณาเลือกอำเภอ" hide-details outlined></v-select>
                             <v-divider vertical class="ma-1"></v-divider>
                             <v-select dense  :items="place" label="กรุณาเลือกตำบล" hide-details outlined></v-select>
                             <v-divider vertical class="ma-1"></v-divider>
@@ -36,7 +60,8 @@
                             <v-divider vertical class="ma-1"></v-divider>
                             <v-btn depressed color="success" medium dense dark class="">ส่งออกรายงาน</v-btn> 
                         </div>
-                    </div>
+                    </div> -->
+
                 </div>
 
                 <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3 mb-3">
@@ -67,120 +92,10 @@ export default {
                 href: '/#/admin/export',
             },
         ],
-        group:['แม่กา','แม่ใจ'],
-        province: [{
-                text: 'พะเยา'
-            },
-            {
-                text: 'เชียงราย'
-            },
-            {
-                text: 'แพร่'
-            },
-            {
-                text: 'น่าน'
-            },
-        ],
-        district: [{
-                text: 'พะเยา'
-            },
-            {
-                text: 'เชียงราย'
-            },
-            {
-                text: 'แพร่'
-            },
-            {
-                text: 'น่าน'
-            },
-        ],
-
-        place: [{
-                text: 'เชียงกลาง'
-            },
-            {
-                text: 'ท่าวังผา'
-            },
-            {
-                text: 'ทุ่งช้าง'
-            },
-            {
-                text: 'นาน้อย'
-            },
-            {
-                text: 'บ่อเกลือ'
-            },
-            {
-                text: 'นาน้อย'
-            },
-            {
-                text: 'บ้านหลวง'
-            },
-            {
-                text: 'ปัว'
-            },
-            {
-                text: 'ภูเพียง'
-            },
-            {
-                text: 'แม่จริม'
-            },
-            {
-                text: 'เมืองน่าน'
-            },
-            {
-                text: 'เวียงสา'
-            },
-            {
-                text: 'สองแคว'
-            },
-            {
-                text: 'สันติสุข'
-            },
-        ],
-        farm: [{
-                text: 'เชียงกลาง'
-            },
-            {
-                text: 'ท่าวังผา'
-            },
-            {
-                text: 'ทุ่งช้าง'
-            },
-            {
-                text: 'นาน้อย'
-            },
-            {
-                text: 'บ่อเกลือ'
-            },
-            {
-                text: 'นาน้อย'
-            },
-            {
-                text: 'บ้านหลวง'
-            },
-            {
-                text: 'ปัว'
-            },
-            {
-                text: 'ภูเพียง'
-            },
-            {
-                text: 'แม่จริม'
-            },
-            {
-                text: 'เมืองน่าน'
-            },
-            {
-                text: 'เวียงสา'
-            },
-            {
-                text: 'สองแคว'
-            },
-            {
-                text: 'สันติสุข'
-            },
-        ],
+        tumbon: ['แม่กา', 'แม่ใจ'],
+        group: ['กลุ่มแม่กา', 'กลุ่มแม่ใจ'],
+        aumphur: ['เมือง'],
+        province: ['พะเยา', 'เชียงราย', 'แพร่', 'น่าน'],
 
         search: '',
         dialog: false,
@@ -216,12 +131,12 @@ export default {
             },
             {
                 text: 'ตำบล',
-                value: 'district',
+                value: 'tumbon',
                 sortable: false
             },
             {
                 text: 'อำเภอ',
-                value: 'canton',
+                value: 'aumphur',
                 sortable: false
             },
             {
@@ -234,6 +149,7 @@ export default {
                 value: 'group',
                 sortable: false
             },
+            
         ],
         desserts: [],
         editedIndex: -1,

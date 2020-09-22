@@ -1,5 +1,5 @@
 <template>
-<v-app>
+<v-app> 
     <navbaradmin name="ผู้ดูแลระบบ" />
 
     <v-main>

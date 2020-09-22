@@ -19,13 +19,33 @@
                     <!--Metric Card-->
                     <div class="bg-white border-b-4 border-purple-700 rounded shadow-xl p-2">
                         <div class="flex flex-col md:flex-row items-center">
+                            <v-expansion-panels flat>
+                                <v-expansion-panel>
+                                    <v-expansion-panel-header class="font-bold "><div class="text-xl">ค้นหา</div> </v-expansion-panel-header>
+                                    <v-expansion-panel-content>
+                                        <div class="flex flex-row flex-wrap">
+                                            <v-select outlined dense class="pa-1" :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select> 
+                                            <v-select outlined dense class="pa-1" :items="aumphur" label="กรุณาเลือกอำเภอ" hide-details></v-select> 
+                                            <v-select outlined dense class="pa-1" :items="tumbon" label="กรุณาเลือกตำบล" hide-details></v-select>  
+                                            <v-btn depressed class="ma-1 d-sm-block" color="purple darken-4"  @click="$router.push('/')" dense dark>
+                                                <v-icon>mdi-magnify</v-icon>ค้นหา
+                                            </v-btn> 
+                                        </div> 
+                                    </v-expansion-panel-content>
+                                </v-expansion-panel>
+                            </v-expansion-panels> 
+                        </div>
+                    </div>
+ 
+                    <!-- <div class="bg-white border-b-4 border-purple-700 rounded shadow-xl p-2">
+                        <div class="flex flex-col md:flex-row items-center">
                             <v-select dense outlined color="success" :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
                             <v-divider vertical class="m-1"></v-divider>
                             <v-select dense outlined color="success" :items="aumphur" label="กรุณาเลือกอำเภอ" hide-details></v-select>
                             <v-divider vertical class="m-1"></v-divider>
                             <v-select dense outlined color="success" :items="tumbon" label="กรุณาเลือกตำบล" hide-details></v-select>
                         </div>
-                    </div>
+                    </div> -->
                     <!--/Metric Card-->
                 </div>
                 <div class="w-full md:w-1/1 xl:w-1/1 p-3">

@@ -6,13 +6,20 @@ import store from './store'
 import vuetify from './plugins/vuetify';
 
 import Chartkick from 'vue-chartkick'
-import Chart from 'chart.js'
-
+import Chart from 'chart.js' 
 Vue.use(Chartkick.use(Chart))
 
-import VueGeolocation from 'vue-browser-geolocation'
+import VueModality from 'vue-modality'
+Vue.use(VueModality)
 
-Vue.config.productionTip = false
+import VueIziToast from "vue-izitoast";
+import "izitoast/dist/css/iziToast.css";
+Vue.use(VueIziToast); 
+
+Vue.config.productionTip = false;
+
+
+import VueGeolocation from 'vue-browser-geolocation' 
 
 Vue.use(VueGeolocation) 
 // key:'AIzaSyA6tCMNLaeTHyjiwtdPmH1ilJesXelH68U' 

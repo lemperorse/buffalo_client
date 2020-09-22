@@ -21,6 +21,10 @@
                     <div class="bg-white border-b-4 border-blue-500  rounded  shadow-xl  p-2">
                         <div class="flex flex-row items-center">
                             <v-text-field dense v-model="search" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
+                            <v-divider vertical class="ma-1"></v-divider>
+                            <v-btn class="border-blue-500" depressed @click="$router.push('/')" color="primary" medium dense dark>
+                                <v-icon>mdi-magnify</v-icon>
+                            </v-btn>
                         </div>
                     </div>
                     <!--/Metric Card-->
@@ -57,150 +61,150 @@
 </template>
 
 <script>
- export default {
-     data: () => ({
-         bc: [{
-             text: 'คำขอรหัสผ่าน',
-             disabled: false,
-             href: '/#/admin/resetpass',
-         }, ],
+export default {
+    data: () => ({
+        bc: [{
+            text: 'คำขอรหัสผ่าน',
+            disabled: false,
+            href: '/#/admin/resetpass',
+        }, ],
 
-         search: '',
-         dialog: false,
-         headers: [{
-                 text: 'ชื่อ',
-                 value: 'fname',
-                 sortable: false
-             },
-             {
-                 text: 'นามสกุล',
-                 value: 'lname',
-                 sortable: false
-             },
-             {
-                 text: 'เบอร์โทรศัพท์',
-                 value: 'phoneNumber',
-                 sortable: false
-             },
-             {
-                 text: 'สถานะการแก้ไขรหัสผ่าน',
-                 value: 'glutenfree',
-                 sortable: false
-             },
-             {
-                 text: 'วันที่ขอคำร้อง',
-                 value: 'date',
-                 sortable: false
-             },
-             {
-                 text: 'การจัดการ',
-                 value: 'actions',
-                 sortable: false
-             },
+        search: '',
+        dialog: false,
+        headers: [{
+                text: 'ชื่อ',
+                value: 'fname',
+                sortable: false
+            },
+            {
+                text: 'นามสกุล',
+                value: 'lname',
+                sortable: false
+            },
+            {
+                text: 'เบอร์โทรศัพท์',
+                value: 'phoneNumber',
+                sortable: false
+            },
+            {
+                text: 'สถานะการแก้ไขรหัสผ่าน',
+                value: 'glutenfree',
+                sortable: false
+            },
+            {
+                text: 'วันที่ขอคำร้อง',
+                value: 'date',
+                sortable: false
+            },
+            {
+                text: 'การจัดการ',
+                value: 'actions',
+                sortable: false
+            },
 
-         ],
-         show4: false,
+        ],
+        show4: false,
 
-         desserts: [],
-         editedIndex: -1,
-         editedItem: {
-             IDCard: '',
-             name: '',
-             email: '',
-             status: '',
-         },
-         defaultItem: {
-             IDCard: '',
-             name: '',
-             email: '',
-             status: '',
-         },
-     }),
+        desserts: [],
+        editedIndex: -1,
+        editedItem: {
+            IDCard: '',
+            name: '',
+            email: '',
+            status: '',
+        },
+        defaultItem: {
+            IDCard: '',
+            name: '',
+            email: '',
+            status: '',
+        },
+    }),
 
-     computed: {
-         formTitle() {
-             return this.editedIndex === -1 ? ' เพิ่มผู้ดูแล ' : 'แก้ไขข้อมูล'
-         },
-     },
+    computed: {
+        formTitle() {
+            return this.editedIndex === -1 ? ' เพิ่มผู้ดูแล ' : 'แก้ไขข้อมูล'
+        },
+    },
 
-     watch: {
-         dialog(val) {
-             val || this.close()
-         },
-     },
+    watch: {
+        dialog(val) {
+            val || this.close()
+        },
+    },
 
-     created() {
-         this.initialize()
-     },
+    created() {
+        this.initialize()
+    },
 
-     methods: {
-         initialize() {
-             this.desserts = [{
-                     // IDCard: '1231231231231',
-                     // name: 'นาย',
-                     // lastname:'แดง',
-                     fname: 'นายแดง',
-                     lname: 'มีชัย',
-                     phoneNumber: '0123123123',
-                     date: '29/6/2020',
-                     glutenfree: 'ยังไม่ได้แก้ไขรหัสผ่าน',
-                     // glutenfree: true,
-                     // email: 'dang1@gmail.com', 
-                 },
-                 {
-                     // IDCard: '1231231231231',
-                     // name: 'นาย',
-                     // lastname:'แดง',
-                     fname: 'นายแดง',
-                     lname: 'มีชัย',
-                     phoneNumber: '0123123123',
-                     date: '29/6/2020',
-                     glutenfree: 'แก้ไขรหัสผ่านแล้ว',
-                     // email: 'dang1@gmail.com', 
-                 },
-                 {
-                     // IDCard: '1231231231231',
-                     // name: 'นาย',
-                     // lastname:'แดง',
-                     fname: 'นายแดง',
-                     lname: 'มีชัย',
-                     phoneNumber: '0123123123',
-                     date: '29/6/2020',
-                     glutenfree: 'แก้ไขรหัสผ่านแล้ว',
-                     // email: 'dang1@gmail.com', 
-                 },
+    methods: {
+        initialize() {
+            this.desserts = [{
+                    // IDCard: '1231231231231',
+                    // name: 'นาย',
+                    // lastname:'แดง',
+                    fname: 'นายแดง',
+                    lname: 'มีชัย',
+                    phoneNumber: '0123123123',
+                    date: '29/6/2020',
+                    glutenfree: 'ยังไม่ได้แก้ไขรหัสผ่าน',
+                    // glutenfree: true,
+                    // email: 'dang1@gmail.com', 
+                },
+                {
+                    // IDCard: '1231231231231',
+                    // name: 'นาย',
+                    // lastname:'แดง',
+                    fname: 'นายแดง',
+                    lname: 'มีชัย',
+                    phoneNumber: '0123123123',
+                    date: '29/6/2020',
+                    glutenfree: 'แก้ไขรหัสผ่านแล้ว',
+                    // email: 'dang1@gmail.com', 
+                },
+                {
+                    // IDCard: '1231231231231',
+                    // name: 'นาย',
+                    // lastname:'แดง',
+                    fname: 'นายแดง',
+                    lname: 'มีชัย',
+                    phoneNumber: '0123123123',
+                    date: '29/6/2020',
+                    glutenfree: 'แก้ไขรหัสผ่านแล้ว',
+                    // email: 'dang1@gmail.com', 
+                },
 
-             ]
-         },
+            ]
+        },
 
-         editItem(item) {
-             this.editedIndex = this.desserts.indexOf(item)
-             this.editedItem = Object.assign({}, item)
-             this.dialog = true
+        editItem(item) {
+            this.editedIndex = this.desserts.indexOf(item)
+            this.editedItem = Object.assign({}, item)
+            this.dialog = true
 
-         },
+        },
 
-         deleteItem(item) {
-             const index = this.desserts.indexOf(item)
-             confirm('Are you sure you want to delete this item?') && this.desserts.splice(index, 1)
-         },
+        deleteItem(item) {
+            const index = this.desserts.indexOf(item)
+            confirm('Are you sure you want to delete this item?') && this.desserts.splice(index, 1)
+        },
 
-         close() {
-             this.dialog = false
-             this.$nextTick(() => {
-                 this.editedItem = Object.assign({}, this.defaultItem)
-                 this.editedIndex = -1
-             })
-         },
+        close() {
+            this.dialog = false
+            this.$nextTick(() => {
+                this.editedItem = Object.assign({}, this.defaultItem)
+                this.editedIndex = -1
+            })
+        },
 
-         save() {
-             if (this.editedIndex > -1) {
-                 Object.assign(this.desserts[this.editedIndex], this.editedItem)
-             } else {
-                 this.desserts.push(this.editedItem)
-             }
-             this.close()
-         },
-     },
- }
+        save() {
+            if (this.editedIndex > -1) {
+                Object.assign(this.desserts[this.editedIndex], this.editedItem)
+            } else {
+                this.desserts.push(this.editedItem)
+            }
+            this.close()
+        },
+    },
+}
 </script>

@@ -35,7 +35,7 @@
             <div class="flex flex-wrap">
                 <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3">
                     <!-- <v-card> -->
-                        <div class="bg-white border-b-4 border-blue-500 rounded shadow-xl p-2">
+                    <div class="bg-white border-b-4 border-blue-500 rounded shadow-xl p-2">
                         <v-tabs>
                             <v-tab>
                                 <v-icon left>mdi-account</v-icon>
@@ -92,7 +92,7 @@
                                                 </v-expansion-panel>
 
                                             </v-expansion-panels>
-                                        </div> 
+                                        </div>
                                     </v-card-text>
                                     <v-card-title>
                                         <v-spacer></v-spacer>
@@ -148,7 +148,7 @@
                                                 </v-expansion-panel>
 
                                             </v-expansion-panels>
-                                        </div> 
+                                        </div>
                                     </v-card-text>
                                     <v-card-title>
                                         <v-spacer></v-spacer>
@@ -176,10 +176,14 @@
                                                         <div class="flex flex-row items-center">
                                                             <v-text-field dense v-model="search" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
                                                             <v-divider vertical class="ma-1"></v-divider>
+                                                            <v-btn class="border-blue-500" depressed @click="$router.push('/')" color="primary" medium dense dark>
+                                                                <v-icon>mdi-magnify</v-icon>
+                                                            </v-btn>
+                                                            <v-divider vertical class="ma-1"></v-divider>
                                                             <v-btn depressed @click="$router.push('/admin/addbuffalo')" color="success" dark class="">
                                                                 <v-icon>mdi-plus</v-icon>เพิ่มควาย
                                                             </v-btn>
- 
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -259,7 +263,7 @@
 
                                             </v-expansion-panels>
                                         </div>
-                                    </v-card-text> 
+                                    </v-card-text>
                                 </v-card>
                             </v-tab-item>
 
@@ -276,7 +280,6 @@
                                                         <h5 class="font-bold uppercase text-gray-700 text-xl">ตั้งค่ารหัสผ่าน</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
-                                                        <v-text-field value="dang1234" label="รหัสผ่านเก่า" type="password"></v-text-field>
                                                         <v-text-field value="123456789" label="รหัสผ่านใหม่" type="password"></v-text-field>
                                                         <v-text-field value="123456789" label="ยืนยันรหัสผ่าน" type="password"></v-text-field>
                                                     </v-expansion-panel-content>
@@ -313,7 +316,7 @@
                             </v-tab-item>
 
                         </v-tabs>
-                        </div>
+                    </div>
                     <!-- </v-card> -->
                 </div>
             </div>
@@ -357,11 +360,11 @@ export default {
         dialog: false,
 
         loader: null,
-            loading: false,
-            loading2: false,
-            loading3: false,
-            loading4: false,
-            loading5: false,
+        loading: false,
+        loading2: false,
+        loading3: false,
+        loading4: false,
+        loading5: false,
 
         headers: [{
                 text: 'ชื่อ',
@@ -510,6 +513,7 @@ export default {
 .btnw50 {
     width: 50%;
 }
+
 .bgcardprofile {
     background-image: url('https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-repeat: no-repat;

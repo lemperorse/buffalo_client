@@ -17,10 +17,23 @@
             <div class="w-full md:w-1/1 xl:w-1/1 p-3">
                 <!--Metric Card-->
                 <div class="bg-white border-b-4 border-green-500 rounded shadow-xl p-10">
-                    <v-text-field   name="name" label="ชื่อฟาร์ม" ></v-text-field>
-                    <v-text-field   name="name" label="จำนวนควายอายุ 240 วัน" ></v-text-field>
-                    <v-text-field   name="name" label="จำนวนควายอายุ 400 วัน" ></v-text-field>
-                    <v-text-field   name="name" label="จำนวนควายอายุ 600 วัน" ></v-text-field>
+                    <v-text-field name="name" label="ชื่อฟาร์ม"></v-text-field>
+                    <v-text-field name="name" label="จำนวนควายอายุ 240 วัน"></v-text-field>
+                    <v-text-field name="name" label="จำนวนควายอายุ 400 วัน"></v-text-field>
+                    <v-text-field name="name" label="จำนวนควายอายุ 600 วัน"></v-text-field>
+                </div>
+                <!--/Metric Card-->
+            </div>
+        </div>
+
+        <div class="flex flex-wrap">
+            <div class="w-full md:w-1/1 xl:w-1/1 p-3">
+                <!--Metric Card-->
+                <div class="bg-white border-b-4 border-green-500 rounded shadow-xl p-2">
+                    <h3 class="font-bold uppercase text-xl text-green-500">การเจริญเติบโตพันธุ์ประวัติ</h3> 
+                    <div class="flex flex-row items-center">
+                        <bar-chart :colors="['#009966']" :data="chartData"></bar-chart>
+                    </div>
                 </div>
                 <!--/Metric Card-->
             </div>
@@ -34,16 +47,25 @@ export default {
     components: {},
     data: () => ({
         bc: [{
-            text: 'แดชบอร์ด',
-            disabled: false,
-            href: '/#/user/home',
+                text: 'แดชบอร์ด',
+                disabled: false,
+                href: '/#/user/home',
             },
             {
-            text: 'รายงานการเจริญเติบโตพันธุ์ประวัติรายฟาร์ม',
-            disabled: false,
-            href: '/#/user/reportgrow',
-            }, 
-            ],
+                text: 'รายงานการเจริญเติบโตพันธุ์ประวัติรายฟาร์ม',
+                disabled: false,
+                href: '/#/user/reportgrow',
+            },
+        ],
+
+        chartData: {
+                '2020-05-13': '10',
+                '2020-05-14': '15',
+                '2020-05-15': '30',
+                '2020-05-16': '15',
+                '2020-05-17': '50',
+                '2020-05-18': '21',
+            },
 
     }),
 

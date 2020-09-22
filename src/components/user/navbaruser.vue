@@ -29,10 +29,14 @@
     </v-navigation-drawer>
 
     <v-app-bar  color="white" app clipped-left>
-        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+        <v-btn class="d-md-none" color="white" depressed fab @click="$router.go(-1)" small>
+            <v-icon class="icon">mdi-chevron-left</v-icon>
+        </v-btn> 
         <h3>
             &nbsp; {{name}}
-        </h3> 
+        </h3>
+        <v-spacer></v-spacer>
+        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
 
 </div>

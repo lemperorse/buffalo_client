@@ -52,6 +52,8 @@
                     </div>
                 </div>
             </div>
+
+            
         </div>
     </div>
 </div>
@@ -83,9 +85,11 @@ export default {
         checkbox2: false,
         radioGroup: 1,
         switch1: true,
-        page: 1
+        page: 1,
 
-    }),
+    }
+    ),
+    
     methods: {
         editItem(item) {
             this.editedIndex = this.desserts.indexOf(item)

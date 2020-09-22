@@ -20,6 +20,30 @@
                     <!--Metric Card-->
                     <div class="bg-white border-b-4 border-green-700 rounded shadow-xl p-2">
                         <div class="flex flex-col md:flex-row items-center">
+                            <v-expansion-panels flat>
+                                <v-expansion-panel>
+                                    <v-expansion-panel-header class="font-bold ">
+                                        <div class="text-xl">เลือกเดือน</div>
+                                    </v-expansion-panel-header>
+                                    <v-expansion-panel-content>
+                                        <v-menu ref="menu" v-model="menu" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y max-width="290px" min-width="290px">
+                                            <template v-slot:activator="{ on, attrs }">
+                                                <v-text-field v-model="date" label="เลือกเดือน" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
+                                            </template>
+                                            <v-date-picker v-model="date" type="month" no-title scrollable>
+                                                <v-spacer></v-spacer>
+                                                <v-btn text color="primary" @click="menu = false">ยกเลิก</v-btn>
+                                                <v-btn text color="primary" @click="$refs.menu.save(date)">ตกลง</v-btn>
+                                            </v-date-picker>
+                                        </v-menu>
+                                    </v-expansion-panel-content>
+                                </v-expansion-panel>
+                            </v-expansion-panels>
+                        </div>
+                    </div>
+
+                    <!-- <div class="bg-white border-b-4 border-green-700 rounded shadow-xl p-2">
+                        <div class="flex flex-col md:flex-row items-center">
                             <v-select dense color="green" outlined :items="group" label="กรุณาเลือกกลุ่ม" hide-details></v-select>
                             <v-divider vertical class="ma-1"></v-divider>
                             <v-select dense color="green" outlined :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
@@ -28,12 +52,12 @@
                             <v-divider vertical class="ma-1"></v-divider>
                             <v-select dense color="green" outlined :items="place" label="กรุณาเลือกปี" hide-details></v-select>
                         </div>
-                    </div>
+                    </div> -->
                     <!--/Metric Card-->
                 </div>
                 <div class="w-full md:w-1/1 xl:w-1/1 p-3">
                     <v-data-table class="bg-white border-b-4 border-green-700 rounded shadow-xl p-2" :headers="headers" :items="desserts" :search="search" sort-by="calories">
-                        <template v-slot:top>
+                        <!-- <template v-slot:top>
                             <v-dialog v-model="dialog" max-width="500px">
                                 <v-card class="rounded-lg">
                                     <v-card-title>
@@ -59,21 +83,28 @@
                                         </v-container>
                                     </v-card-text>
 
-                                    <v-card-actions>
-                                        <v-spacer></v-spacer>
-                                        <v-btn color="blue darken-1" text @click="close">ยกเลิก</v-btn>
-                                        <v-btn color="blue darken-1" text @click="save">บันทึก</v-btn>
+                                    <v-card-actions> 
                                     </v-card-actions>
                                 </v-card>
-                            </v-dialog>
-                            <!-- </v-toolbar> -->
+                            </v-dialog> 
+                        </template> -->
+
+                        <template v-slot:item.actions="{ item }"> 
+                            <v-tooltip top>
+                                <template v-slot:activator="{ on, attrs }">
+                                    <v-btn color="success" icon v-bind="attrs" v-on="on" @click="$router.push('/admin/farmer')">
+                                        <v-icon>mdi-eye-outline</v-icon>
+                                    </v-btn>
+                                </template>
+                                <span>ดูข้อมูล</span>
+                            </v-tooltip> 
                         </template>
 
                         <template v-slot:no-data>
                             <v-btn color="primary" @click="initialize">Reset</v-btn>
                         </template>
                     </v-data-table>
-                </div> 
+                </div>
 
             </div>
         </div>
@@ -85,6 +116,9 @@
 export default {
     data: () => ({
 
+        date: new Date().toISOString().substr(0, 7),
+        menu: false,
+        modal: false,
         bc: [{
                 text: 'แดชบอร์ด',
                 disabled: false,
@@ -95,8 +129,8 @@ export default {
                 disabled: false,
                 href: '/#/admin/reportsystem',
             },
-        ], 
-        group:['กลุ่มแม่กา','กลุ่มแม่ใจ'],
+        ],
+        group: ['กลุ่มแม่กา', 'กลุ่มแม่ใจ'],
         province: [{
                 text: 'พะเยา'
             },
@@ -197,39 +231,45 @@ export default {
 
         search: '',
         dialog: false,
-        headers: [{
-                text: 'เลขบัตรประชาชน',
-                value: 'IDCard',
-                sortable: false
-            },
+        headers: [
+            // {
+            //     text: 'เลขบัตรประชาชน',
+            //     value: 'IDCard',
+            //     sortable: false
+            // },
             {
                 text: 'ชื่อ',
                 value: 'name',
                 sortable: false
             },
+            // {
+            //     text: 'เบอร์โทรศัพท์',
+            //     value: 'Phonenumber',
+            //     sortable: false
+            // },
+            // {
+            //     text: 'จังหวัด',
+            //     value: 'province',
+            //     sortable: false
+            // },
+            // {
+            //     text: 'กลุ่มผู้ใช้',
+            //     value: 'group',
+            //     sortable: false
+            // },
             {
-                text: 'เบอร์โทรศัพท์',
-                value: 'Phonenumber',
-                sortable: false
-            },
-            {
-                text: 'จังหวัด',
-                value: 'province',
-                sortable: false
-            },
-            {
-                text: 'กลุ่มผู้ใช้',
-                value: 'group',
-                sortable: false
-            },
-            {
-                text: 'สถานะการสมัครสมาชิก',
-                value: 'status',
+                text: 'กิจกรรม',
+                value: 'activity',
                 sortable: false
             },
             {
                 text: 'วันที่ใช้ล่าสุด ',
                 value: 'time',
+                sortable: false
+            },
+            {
+                text: 'การจัดการ',
+                value: 'actions',
                 sortable: false
             },
         ],
@@ -273,7 +313,7 @@ export default {
                     Phonenumber: '0911231231',
                     province: 'พะเยา',
                     group: 'กลุ่มแม่ใจ',
-                    status: 'ผู้ใช้สมัครสมาชิกเอง',
+                    activity: 'ผู้ใช้สมัครสมาชิกเอง',
                     time: '29/6/2563',
                 },
                 {
@@ -282,7 +322,7 @@ export default {
                     Phonenumber: '0914123412',
                     province: 'พะเยา',
                     group: 'กลุ่มแม่ใจ',
-                    status: 'เพิ่มโดยแอดมิน',
+                    activity: 'เพิ่มโดยแอดมิน',
                     time: '29/6/2563',
                 },
                 {
@@ -291,7 +331,7 @@ export default {
                     Phonenumber: '0812312312',
                     province: 'พะเยา',
                     group: 'กลุ่มพาน',
-                    status: 'สมัครบนแอปพลิเคชัน',
+                    activity: 'สมัครบนแอปพลิเคชัน',
                     time: '29/6/2563',
                 },
                 {
@@ -300,7 +340,7 @@ export default {
                     Phonenumber: '0822312312',
                     province: 'แพร่',
                     group: 'กลุ่มพาน',
-                    status: 'สมัครบนแอปพลิเคชัน',
+                    activity: 'สมัครบนแอปพลิเคชัน',
                     time: '28/6/2563',
                 },
                 {
@@ -309,7 +349,7 @@ export default {
                     Phonenumber: '0833333333',
                     province: 'น่าน',
                     group: 'กลุ่มแม่กา',
-                    status: 'สมัครบนแอปพลิเคชัน',
+                    activity: 'สมัครบนแอปพลิเคชัน',
                     time: '28/6/2563',
                 },
                 {
@@ -318,7 +358,7 @@ export default {
                     Phonenumber: '0844444444',
                     province: 'แพร่',
                     group: 'กลุ่มแม่กา',
-                    status: 'เพิ่มโดยแอดมิน',
+                    activity: 'เพิ่มโดยแอดมิน',
                     time: '28/6/2563',
                 },
                 {
@@ -327,7 +367,7 @@ export default {
                     Phonenumber: '0855555555',
                     province: 'น่าน',
                     group: 'กลุ่มพะเยา',
-                    status: 'สมัครบนแอปพลิเคชัน',
+                    activity: 'สมัครบนแอปพลิเคชัน',
                     time: '28/6/2563',
                 },
                 {
@@ -336,7 +376,7 @@ export default {
                     Phonenumber: '0866666666',
                     province: 'พะเยา',
                     group: 'กลุ่มพะเยา',
-                    status: 'สมัครบนแอปพลิเคชัน',
+                    activity: 'สมัครบนแอปพลิเคชัน',
                     time: '28/6/2563',
                 },
                 {
@@ -345,7 +385,7 @@ export default {
                     Phonenumber: '0877777777',
                     province: 'แพร่',
                     group: 'กลุ่มพะเยา',
-                    status: 'เพิ่มโดยแอดมิน',
+                    activity: 'เพิ่มโดยแอดมิน',
                     time: '27/6/2563',
                 },
                 {
@@ -354,7 +394,7 @@ export default {
                     Phonenumber: '0888888888',
                     province: 'น่าน',
                     group: 'กลุ่มพะเยา',
-                    status: 'สมัครบนแอปพลิเคชัน',
+                    activity: 'สมัครบนแอปพลิเคชัน',
                     time: '27/6/2563',
                 },
 
