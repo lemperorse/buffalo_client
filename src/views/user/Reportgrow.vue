@@ -32,7 +32,7 @@
                 <div class="bg-white border-b-4 border-green-500 rounded shadow-xl p-2">
                     <h3 class="font-bold uppercase text-xl text-green-500">การเจริญเติบโตพันธุ์ประวัติ</h3> 
                     <div class="flex flex-row items-center">
-                        <bar-chart :colors="['#009966']" :data="chartData"></bar-chart>
+                        <area-chart :colors="['#009966']" :data="chartData"></area-chart>
                     </div>
                 </div>
                 <!--/Metric Card-->

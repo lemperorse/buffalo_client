@@ -33,7 +33,7 @@
                                             <v-radio color="success" label="ทั้งหมด" value="ทั้งหมด"></v-radio>
                                             <v-radio color="success" label="ตัวผู้" value="ตัวผู้"></v-radio>
                                             <v-radio color="success" label="ตัวเมีย" value="ตัวเมีย"></v-radio>
-                                            <v-btn class="" depressed @click="$router.push('/')" color="success" medium dense dark>
+                                            <v-btn class="" depressed @click="$router.push('/')" color="blue" medium dense dark>
                                                 <v-icon>mdi-magnify</v-icon>ค้นหา
                                             </v-btn>
                                         </v-layout>

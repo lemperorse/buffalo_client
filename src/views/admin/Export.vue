@@ -33,7 +33,7 @@
                                             <v-select outlined dense class="pa-1" :items="aumphur" label="กรุณาเลือกอำเภอ" hide-details></v-select>
                                             <v-select outlined dense class="pa-1" :items="tumbon" label="กรุณาเลือกตำบล" hide-details></v-select>
                                             <v-select outlined dense class="pa-1" :items="group" label="กรุณาเลือกกลุ่มเกษตกร" hide-details></v-select>
-                                            <v-btn depressed class="ma-1 d-sm-block" color="pink darken-3" @click="$router.push('/')" dense dark>
+                                            <v-btn depressed class="ma-1 d-sm-block" color="blue" @click="$router.push('/')" dense dark>
                                                 <v-icon>mdi-magnify</v-icon>ค้นหา
                                             </v-btn>
                                             <v-btn depressed color="success" medium dense dark class="ma-1">ส่งออกรายงาน</v-btn> 
@@ -43,25 +43,7 @@
                             </v-expansion-panels>
                         </div>
                     </div>
-
-                    <!-- <div class="bg-white border-b-4 border-pink-700 rounded shadow-xl p-2">
-                        <div class="flex flex-row items-center">
-                            <v-text-field dense class="" v-model="search" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field> 
-                        </div>
-                        <v-divider class="ma-1"></v-divider>
-                        <div class="flex flex-row items-center">
-                            <v-select dense  :items="province" label="กรุณาเลือกจังหวัด" hide-details outlined></v-select>
-                            <v-divider vertical class="ma-1"></v-divider>
-                            <v-select dense  :items="tumbon" label="กรุณาเลือกอำเภอ" hide-details outlined></v-select>
-                            <v-divider vertical class="ma-1"></v-divider>
-                            <v-select dense  :items="place" label="กรุณาเลือกตำบล" hide-details outlined></v-select>
-                            <v-divider vertical class="ma-1"></v-divider>
-                            <v-select dense  :items="group" label="กรุณาเลือกกลุ่ม" hide-details outlined></v-select>
-                            <v-divider vertical class="ma-1"></v-divider>
-                            <v-btn depressed color="success" medium dense dark class="">ส่งออกรายงาน</v-btn> 
-                        </div>
-                    </div> -->
-
+ 
                 </div>
 
                 <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3 mb-3">

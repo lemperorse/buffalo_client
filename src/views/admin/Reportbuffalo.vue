@@ -31,7 +31,7 @@
                                             <v-select outlined dense class="pa-1" :items="tumbon" label="กรุณาเลือกตำบล" hide-details></v-select>
                                             <v-select outlined dense class="pa-1" :items="farm" label="กรุณาเลือกฟาร์ม" hide-details></v-select>
                                             <v-select outlined dense class="pa-1" :items="group" label="กรุณาเลือกกลุ่มเกษตกร" hide-details></v-select>
-                                            <v-btn depressed class="ma-1 d-sm-block" color="red darken-4"  @click="$router.push('/')" dense dark>
+                                            <v-btn depressed class="ma-1 d-sm-block" color="blue"  @click="$router.push('/')" dense dark>
                                                 <v-icon>mdi-magnify</v-icon>ค้นหา
                                             </v-btn>
                                             

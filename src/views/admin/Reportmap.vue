@@ -27,7 +27,7 @@
                                             <v-select outlined dense class="pa-1" :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select> 
                                             <v-select outlined dense class="pa-1" :items="aumphur" label="กรุณาเลือกอำเภอ" hide-details></v-select> 
                                             <v-select outlined dense class="pa-1" :items="tumbon" label="กรุณาเลือกตำบล" hide-details></v-select>  
-                                            <v-btn depressed class="ma-1 d-sm-block" color="purple darken-4"  @click="$router.push('/')" dense dark>
+                                            <v-btn depressed class="ma-1 d-sm-block" color="blue"  @click="$router.push('/')" dense dark>
                                                 <v-icon>mdi-magnify</v-icon>ค้นหา
                                             </v-btn> 
                                         </div> 

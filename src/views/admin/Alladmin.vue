@@ -23,7 +23,7 @@
                         <div class="flex flex-row items-center">
                             <v-text-field dense v-model="search" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
                             <v-divider vertical class="ma-1"></v-divider>
-                            <v-btn depressed @click="$router.push('/')" color="purple accent-4" medium dense dark class="">
+                            <v-btn depressed @click="$router.push('/')" color="blue" medium dense dark class="">
                                 <v-icon>mdi-magnify</v-icon>ค้นหา
                             </v-btn>
                             <v-divider vertical class="ma-1"></v-divider>
