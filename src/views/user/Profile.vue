@@ -215,9 +215,9 @@
                                                         <h5 class="font-bold uppercase text-gray-700 text-xl">ตั้งค่ารหัสผ่าน</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
-                                                        <v-text-field value="dang1234" label="รหัสผ่านเก่า" type="password"></v-text-field>
-                                                        <v-text-field value="123456789" label="รหัสผ่านใหม่" type="password"></v-text-field>
-                                                        <v-text-field value="123456789" label="ยืนยันรหัสผ่าน" type="password"></v-text-field>
+                                                        <v-text-field value="dang1234" label="รหัสผ่านเก่า" type="password" prepend-inner-icon="mdi-lock"></v-text-field>
+                                                        <v-text-field value="123456789" label="รหัสผ่านใหม่" type="password" prepend-inner-icon="mdi-lock"></v-text-field>
+                                                        <v-text-field value="123456789" label="ยืนยันรหัสผ่าน" type="password" prepend-inner-icon="mdi-lock"></v-text-field>
                                                     </v-expansion-panel-content>
                                                 </v-expansion-panel>
 

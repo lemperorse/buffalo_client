@@ -280,8 +280,17 @@
                                                         <h5 class="font-bold uppercase text-gray-700 text-xl">ตั้งค่ารหัสผ่าน</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
-                                                        <v-text-field value="123456789" label="รหัสผ่านใหม่" type="password"></v-text-field>
-                                                        <v-text-field value="123456789" label="ยืนยันรหัสผ่าน" type="password"></v-text-field>
+                                                        <v-text-field value="123456789" label="รหัสผ่านใหม่" type="password" prepend-inner-icon="mdi-lock"></v-text-field>
+                                                        <v-text-field value="123456789" label="ยืนยันรหัสผ่าน" type="password" prepend-inner-icon="mdi-lock"></v-text-field>
+                                                    </v-expansion-panel-content>
+                                                </v-expansion-panel>
+
+                                                <v-expansion-panel>
+                                                    <v-expansion-panel-header>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">จัดการสิทธิ์</h5>
+                                                    </v-expansion-panel-header>
+                                                    <v-expansion-panel-content>
+                                                        <v-select :items="licen" value="" label="ตั้งค่าสิทธิ์" prepend-inner-icon="mdi-license"></v-select>
                                                     </v-expansion-panel-content>
                                                 </v-expansion-panel>
 
@@ -348,6 +357,8 @@ export default {
         province: ['พะเยา', 'น่าน'],
         postalcode: ['56000', '56100'],
         group: ['แม่กา', 'แม่ใจ'],
+
+        licen:['ผู้ใช้','แบน'],
 
         sex: ['ตัวผู้', 'ตัวเมีย'],
         color: ['ดำ', 'น้ำตาล'],

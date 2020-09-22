@@ -98,6 +98,15 @@
                                                     </v-expansion-panel-content>
                                                 </v-expansion-panel>
 
+                                                <v-expansion-panel>
+                                                    <v-expansion-panel-header>
+                                                        <h5 class="font-bold uppercase text-gray-700 text-xl">จัดการสิทธิ์</h5>
+                                                    </v-expansion-panel-header>
+                                                    <v-expansion-panel-content>
+                                                        <v-select :items="licen" value="" label="ตั้งค่าสิทธิ์" prepend-inner-icon="mdi-license"></v-select>
+                                                    </v-expansion-panel-content>
+                                                </v-expansion-panel>
+
                                             </v-expansion-panels>
                                         </div>
                                     </v-card-text>
@@ -137,6 +146,7 @@ export default {
                 },
             ],
             panel: [0, 1, 2, 3],
+            licen: ['ผู้ดูแลระบบ'],
         }
     },
 }

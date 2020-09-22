@@ -67,7 +67,7 @@ const adminRouter = [
     {
         path: 'editadmin',
         name: 'editadmin', 
-        component: getView('Editadmin')
+        component: getView('Admindetail')
     },
     {
         path: 'addfarmer',
