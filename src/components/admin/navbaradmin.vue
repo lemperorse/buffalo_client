@@ -28,8 +28,8 @@
 
     </v-navigation-drawer>
 
-    <v-app-bar color="bg-nav" class="border-b-2" elevate-on-scroll app clipped-left>
-        <v-btn class="d-md-none" depressed fab @click="$router.go(-1)" small>
+    <v-app-bar color="white" class="border-b-2" app clipped-left>
+        <v-btn class="d-md-none" color="white" depressed fab @click="$router.go(-1)" small>
             <v-icon class="icon">mdi-chevron-left</v-icon>
         </v-btn>
         <h3>
