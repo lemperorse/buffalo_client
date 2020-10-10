@@ -75,7 +75,7 @@ export default {
                     router: "/admin/alladmin"
                 },
                 {
-                    text: "คำขอรหัสผ่าน",
+                    text: "คำขอเปลี่ยนรหัสผ่าน",
                     icon: "em em-spiral_note_pad",
                     router: "/admin/resetpass"
                 },

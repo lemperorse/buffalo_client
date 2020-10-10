@@ -5,7 +5,7 @@
         <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
 
             <v-container>
-                <h2 class="font-bold text-3xl"><i class="em em-spiral_note_pad text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; คำขอรหัสผ่าน</h2>
+                <h2 class="font-bold text-3xl"><i class="em em-spiral_note_pad text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; คำขอเปลี่ยนรหัสผ่าน</h2>
                 <!-- <h2 class="font-bold text-2xl">คำขอรหัสผ่าน</h2> -->
                 <v-breadcrumbs :items="bc" large>
                     <template v-slot:divider>
@@ -64,7 +64,7 @@
 export default {
     data: () => ({
         bc: [{
-            text: 'คำขอรหัสผ่าน',
+            text: 'คำขอเปลี่ยนรหัสผ่าน',
             disabled: false,
             href: '/#/admin/resetpass',
         }, ],
