@@ -1,11 +1,9 @@
-<template>
-<!-- <div class="bg-gray-100 font-sans leading-normal tracking-normal"> -->
+<template> 
 <div class="bg-gray-100">
     <div class="container w-full mx-auto">
         <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
             <v-container>
-                <h2 class="font-bold text-3xl"><i class="em em-water_buffalo text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; ข้อมูลควาย</h2>
-                <!-- <h2 class="font-bold text-2xl">ข้อมูลควาย</h2> -->
+                <h2 class="font-bold text-3xl"><i class="em em-water_buffalo text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; ข้อมูลควาย</h2> 
                 <v-breadcrumbs :items="bc" large>
                     <template v-slot:divider>
                         <v-icon>mdi-chevron-right</v-icon>
@@ -13,10 +11,9 @@
                 </v-breadcrumbs>
                 <hr class="border-b-2 border-gray-400 ">
             </v-container>
-            <!--Console Content-->
+             
             <div class="flex flex-wrap">
-                <div class="w-full md:w-1/2 xl:w-1/2 p-0 mb-3 md:p-3">
-                    <!-- <v-card> -->
+                <div class="w-full md:w-1/2 xl:w-1/2 p-0 mb-3 md:p-3"> 
                     <div class="bg-white border-b-4 border-blue-500  rounded shadow-xl p-2">
                         <v-card-title primary-title>
                             ภาพถ่ายด้านหน้า
@@ -30,11 +27,10 @@
                         <v-card-text>
                             <v-img src="https://images.pexels.com/photos/1054650/pexels-photo-1054650.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" aspect-ratio="2"></v-img>
                         </v-card-text>
-                    </div>
-                    <!-- </v-card> -->
+                    </div> 
                 </div>
-                <div class="w-full md:w-1/2 xl:w-1/2 p-0 mb-3 md:p-3">
-                    <!-- <v-card> -->
+
+                <div class="w-full md:w-1/2 xl:w-1/2 p-0 mb-3 md:p-3"> 
                     <div class="bg-white border-b-4 border-blue-500  rounded shadow-xl p-2">
                         <v-card-title primary-title>
                             ภาพถ่ายด้านข้าง
@@ -46,14 +42,12 @@
                         <v-divider class="px-1"></v-divider>
                         <v-card-text>
                             <v-img src="https://images.pexels.com/photos/1054650/pexels-photo-1054650.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" aspect-ratio="2"></v-img>
-                        </v-card-text>
-                        <!-- </v-card> -->
+                        </v-card-text> 
                     </div>
                 </div>
 
                 <div class="flex flex-wrap">
-                    <div class="w-full md:w-1/1 xl:w-1/1 p-0 mb-3 md:p-3">
-                        <!-- <v-card> -->
+                    <div class="w-full md:w-1/1 xl:w-1/1 p-0 mb-3 md:p-3"> 
                         <div class="bg-white border-b-4 border-blue-500  rounded shadow-xl p-2">
                             <v-tabs>
                                 <v-tab>
@@ -78,6 +72,7 @@
                                         <v-card-title primary-title>
                                             <h5 class="font-bold text-2xl">รายละเอียดควาย</h5>
                                         </v-card-title>
+
                                         <v-card-text>
                                             <div>
                                                 <v-expansion-panels v-model="panel" multiple flat>
@@ -140,14 +135,13 @@
                                                 </v-expansion-panels>
                                             </div>
                                         </v-card-text>
+
                                         <v-card-title>
-                                            <v-spacer></v-spacer>
-                                            <!-- <v-btn class="btnw50" color="success">แก้ไข</v-btn> -->
+                                            <v-spacer></v-spacer> 
                                             <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                                                 แก้ไข
                                             </button>
-                                        </v-card-title>
-
+                                        </v-card-title> 
                                     </v-card>
                                 </v-tab-item>
 
@@ -160,6 +154,7 @@
                                                 <v-icon>mdi-plus</v-icon>เพิ่มอายุ
                                             </v-btn>
                                         </v-card-title>
+
                                         <v-card-text>
                                             <div>
                                                 <v-expansion-panels v-model="panel" multiple flat>
@@ -201,9 +196,9 @@
                                                 </v-expansion-panels>
                                             </div>
                                         </v-card-text>
+
                                         <v-card-title>
                                             <v-spacer></v-spacer>
-                                            <!-- <v-btn class="btnw50" color="success">แก้ไข</v-btn> -->
                                             <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                                                 แก้ไข
                                             </button>
@@ -273,8 +268,6 @@
                                                         </v-expansion-panel-header>
                                                         <v-expansion-panel-content>
                                                             <v-card-title class="black--text white darken-4 d-flex">
-                                                                <!-- <v-icon @click="$router.go()" large color="error">mdi-file-pdf-outline</v-icon>
-                                                            <v-divider vertical inset class="mx-1" dark></v-divider> -->
                                                                 <h5 @click="$router.go()">ลบควาย</h5>
                                                                 <v-spacer></v-spacer>
                                                                 <v-btn depressed :loading="loading3" :disabled="loading3" color="error" class="white--text" @click="loader = 'loading3'">
@@ -291,11 +284,11 @@
                                 </v-tab-item>
 
                             </v-tabs>
-                            <!-- </v-card> -->
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -359,35 +352,15 @@ export default {
             {
                 describe: 'หมายเลขไมโครชิป',
                 calories: ' ',
-            },
-            // {
-            //     describe: 'วัน/เดือน/ปี เกิด',
-            //     calories: ' ',
-            // },
-            // {
-            //     describe: 'เพศ',
-            //     calories: 'เมีย',
-            // },
+            }, 
             {
                 describe: 'อายุ (..ปี..เดือน) ',
                 calories: '4ปี 0เดือน',
-            },
-            // {
-            //     describe: 'สี',
-            //     calories: 'ดำ',
-            // },
-            // {
-            //     describe: 'แหล่งที่มา ',
-            //     calories: 'พ่อค้าคนกลาง',
-            // },
+            }, 
             {
                 describe: 'ราคา',
                 calories: '50000',
-            },
-            // {
-            //     describe: 'สถานะควาย',
-            //     calories: 'ท้อง',
-            // },
+            }, 
             {
                 describe: 'ชื่อหรือหมายเลขพ่อ',
                 calories: ' ',

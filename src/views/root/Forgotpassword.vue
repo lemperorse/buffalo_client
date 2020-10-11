@@ -1,5 +1,4 @@
-<template>
-<!-- <div class="bg-gray-100 font-sans leading-normal tracking-normal"> -->
+<template> 
 <div class="container w-full mx-auto">
     <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
         <v-container>
@@ -9,10 +8,9 @@
             <h2 class="font-bold text-2xl mb-2">ลืมรหัสผ่าน</h2>
             <hr class="border-b-2 border-gray-400 ">
         </v-container>
-        <!--Console Content-->
+        
         <div class="flex flex-wrap">
-            <div class="w-full md:w-1/1 xl:w-1/1 p-3">
-                <!-- <v-card> -->
+            <div class="w-full md:w-1/1 xl:w-1/1 p-3"> 
                 <div class="bg-white border-b-4 border-blue-500 rounded shadow-xl p-2">
                     <v-card-title primary-title>
                         กรอกข้อมูล
@@ -22,18 +20,13 @@
                         <v-text-field value="" label="เลขบัตรประชาชน" type="number" prepend-inner-icon="mdi-card-account-details-outline"></v-text-field>
                         <v-text-field value="" label="เบอร์โทรศัพท์" type="number" prepend-inner-icon="mdi-phone"></v-text-field>
                     </v-card-text>
-                    <!-- <v-card-actions>
-                        <v-spacer></v-spacer>
-                        <v-btn class="btnw50" color="success">ยืนยัน</v-btn>
-                    </v-card-actions> -->
+
                     <v-card-title>
-                    <v-spacer></v-spacer>
-                    <!-- <v-btn class="btnw50" depressed color="blue" dark>แก้ไข</v-btn> -->
+                    <v-spacer></v-spacer> 
                     <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                         ยืนยัน
                     </button>
-                </v-card-title>
-                    <!-- </v-card> -->
+                </v-card-title> 
                 </div>
 
             </div>

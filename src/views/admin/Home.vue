@@ -1,7 +1,5 @@
-<template>
-<!-- <div class="bg-gray-100 font-sans leading-normal tracking-normal"> -->
-<div class="bg-gray-100">
-    <!--Container-->
+<template> 
+<div class="bg-gray-100"> 
     <div class="container w-full mx-auto">
         <div class="w-full px-2 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal"> 
             <v-container>
@@ -9,16 +7,14 @@
 
                 <hr class="border-b-2 border-gray-400 mt-4">
             </v-container>
-            <!--Console Content-->
+             
             <div class="flex flex-wrap mt-2">
-                <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <!--Metric Card-->
+                <div class="w-full md:w-1/2 xl:w-1/3 p-3"> 
                     <div class="bg-white border-b-4  border-blue-700  rounded  shadow-xl  p-2">
                         <div class="flex flex-row items-center">
                             <div class="flex-shrink pr-4">
                                 <div class="rounded p-2 ">
-                                    <i class="em em-male-farmer text-4xl" aria-role="presentation" aria-label=""></i>
-                                    <!-- <v-icon class="text-green-600"   large>mdi-account-multiple</v-icon> -->
+                                    <i class="em em-male-farmer text-4xl" aria-role="presentation" aria-label=""></i> 
                                 </div>
                             </div>
                             <div class="flex-1 text-right md:text-center">
@@ -26,12 +22,10 @@
                                 <h3 class="font-bold text-2xl">324 คน </h3>
                             </div>
                         </div>
-                    </div>
-                    <!--/Metric Card-->
+                    </div> 
                 </div>
 
-                <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <!--Metric Card-->
+                <div class="w-full md:w-1/2 xl:w-1/3 p-3"> 
                     <div class="bg-white border-b-4  border-green-700   rounded shadow-xl p-2">
                         <div class="flex flex-row items-center">
                             <div class="flex-shrink pr-4">
@@ -44,12 +38,10 @@
                                 <h3 class="font-bold text-2xl">120 คน</h3>
                             </div>
                         </div>
-                    </div>
-                    <!--/Metric Card-->
+                    </div> 
                 </div>
 
-                <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <!--Metric Card-->
+                <div class="w-full md:w-1/2 xl:w-1/3 p-3"> 
                     <div class="bg-white border-b-4  border-orange-700   rounded shadow-xl p-2">
                         <div class="flex flex-row items-center">
                             <div class="flex-shrink pr-4">
@@ -62,8 +54,7 @@
                                 <h3 class="font-bold text-2xl">100 ตัว</h3>
                             </div>
                         </div>
-                    </div>
-                    <!--/Metric Card-->
+                    </div> 
                 </div>
 
             </div>
@@ -73,10 +64,8 @@
                 <h3 class="font-bold text-2xl"><i class="em em-chart_with_downwards_trend" aria-role="presentation" aria-label="CHART WITH DOWNWARDS TREND"></i> รายงาน</h3>
             </div>
 
-            <div class="flex flex-wrap">
-
-                <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <!--Metric Card-->
+            <div class="flex flex-wrap"> 
+                <div class="w-full md:w-1/2 xl:w-1/3 p-3"> 
                     <div class="bg-white border-b-4 border-orange-700 rounded shadow-xl p-2">
                         <div class="flex flex-row items-center">
                             <div class="flex-shrink pr-4">
@@ -86,17 +75,13 @@
                             </div>
                             <div class="flex-1 text-right md:text-center">
                                 <h5 class="font-bold uppercase text-xl text-orange-700 ">รายงานจำนวนควาย</h5> 
-                                <button @click="$router.push('reportbuffalo')" class="text-gray-600 p-2">ดูรายละเอียด</button>
-                                  <!-- <v-btn   color="gray"  text @click="$router.push('reportbuffalo')">ดูรายละเอียด</v-btn> -->
+                                <button @click="$router.push('reportbuffalo')" class="text-gray-600 p-2">ดูรายละเอียด</button> 
                             </div>
-                        </div>
-                      
-                    </div>
-                    <!--/Metric Card-->
+                        </div> 
+                    </div> 
                 </div>
 
-                <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <!--Metric Card-->
+                <div class="w-full md:w-1/2 xl:w-1/3 p-3"> 
                     <div class="bg-white border-b-4 border-purple-700 rounded shadow-xl p-2">
                         <div class="flex flex-row items-center">
                             <div class="flex-shrink pr-4">
@@ -109,12 +94,10 @@
                                 <button @click="$router.push('reportmap')" class="text-gray-600 p-2">ดูรายละเอียด</button> 
                             </div>
                         </div> 
-                    </div>
-                    <!--/Metric Card-->
+                    </div> 
                 </div>
 
-                <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <!--Metric Card-->
+                <div class="w-full md:w-1/2 xl:w-1/3 p-3"> 
                     <div class="bg-white border-b-4 border-green-700 rounded shadow-xl p-2">
                         <div class="flex flex-row items-center">
                             <div class="flex-shrink pr-4">
@@ -127,12 +110,10 @@
                                  <button @click="$router.push('reportsystem')" class="text-gray-600 p-2">ดูรายละเอียด</button> 
                             </div>
                         </div> 
-                    </div>
-                    <!--/Metric Card-->
+                    </div> 
                 </div>
 
-                <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <!--Metric Card-->
+                <div class="w-full md:w-1/2 xl:w-1/3 p-3"> 
                     <div class="bg-white border-b-4 border-pink-700 rounded shadow-xl p-2">
                         <div class="flex flex-row items-center">
                             <div class="flex-shrink pr-4">
@@ -144,25 +125,22 @@
                                 <h5 class="font-bold uppercase text-xl text-pink-700">ส่งออกข้อมูลการเจริญเติบโต</h5> 
                                 <button @click="$router.push('export')" class="text-gray-600 p-2">ดูรายละเอียด</button> 
                             </div>
-                        </div>
-                        
-                    </div>
-                    <!--/Metric Card-->
+                        </div> 
+                    </div> 
                 </div>
 
             </div>
 
             <hr class="border-b-2 border-gray-400 my-6 mx-3">
-            <div class="m-3">
-                <!-- <h3 class="font-bold text-2xl">กราฟ</h3> -->
+            <div class="m-3"> 
                 <h3 class="font-bold text-2xl"><i class="em em-bar_chart" aria-role="presentation" aria-label="CHART WITH DOWNWARDS TREND"></i> กราฟ</h3>
             </div>
             
             <div class="flex flex-wrap">
-                <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <!--Metric Card-->
+                <div class="w-full md:w-1/2 xl:w-1/3 p-3"> 
                     <div class="bg-white border-b-4 border-green-700 rounded shadow-xl p-2">
                         <h3 class="font-bold uppercase text-xl text-green-700">จำนวนฟาร์มทั้งหมด</h3>
+
                         <v-menu ref="menu" v-model="menu" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y min-width="290px">
                             <template v-slot:activator="{ on, attrs }">
                                 <v-text-field v-model="date" label="เลือกวันที่" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
@@ -176,17 +154,15 @@
 
                         <div class="flex flex-row items-center">
                             <column-chart :colors="['#009966']" :data="chartData"></column-chart>
-                        </div>
-                        <!-- <button @click="$router.push('reportsummary')" class="text-gray-600 p-2">ดูรายละเอียด</button>  -->
-                        
+                        </div> 
                         <v-btn depressed   small class="mt-2" color="success" block @click="$router.push('reportbuffalo')">แสดงเพิ่มเติม</v-btn>
-                    </div>
-                    <!--/Metric Card-->
+                    </div> 
                 </div>
-                <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <!--Metric Card-->
+
+                <div class="w-full md:w-1/2 xl:w-1/3 p-3"> 
                     <div class="bg-white border-b-4 border-blue-700 rounded shadow-xl p-2">
                         <h3 class="font-bold uppercase text-xl text-blue-700">ควายทั้งหมด</h3>
+
                         <v-menu ref="menu2" v-model="menu2" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y min-width="290px">
                             <template v-slot:activator="{ on, attrs }">
                                 <v-text-field v-model="date" label="เลือกวันที่" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
@@ -197,17 +173,18 @@
                                 <v-btn text color="primary" @click="$refs.menu2.save(date)">OK</v-btn>
                             </v-date-picker>
                         </v-menu> 
+
                         <div class="flex flex-row items-center">
                             <column-chart :data="chartData"></column-chart>
                         </div>
                         <v-btn depressed   small class="mt-2" color="blue" dark block @click="$router.push('reportbuffalo')">แสดงเพิ่มเติม</v-btn>
-                    </div>
-                    <!--/Metric Card-->
+                    </div> 
                 </div>
-                <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <!--Metric Card-->
+
+                <div class="w-full md:w-1/2 xl:w-1/3 p-3"> 
                     <div class="bg-white border-b-4 border-purple-700 rounded shadow-xl p-2">
                         <h3 class="font-bold uppercase text-xl text-purple-700">จำนวนผู้ใช้งานในแต่ละเดือน</h3>
+
                         <v-menu ref="menu3" v-model="menu3" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y min-width="290px">
                             <template v-slot:activator="{ on, attrs }">
                                 <v-text-field v-model="date" label="เลือกวันที่" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
@@ -218,12 +195,12 @@
                                 <v-btn text color="primary" @click="$refs.menu3.save(date)">OK</v-btn>
                             </v-date-picker>
                         </v-menu> 
+
                         <div class="flex flex-row items-center">
                             <column-chart :colors="['#9900CC']" :data="chartData"></column-chart>
                         </div>
                         <v-btn depressed   small class="mt-2" color="purple" dark block @click="$router.push('reportsystem')">แสดงเพิ่มเติม</v-btn>
                     </div>
-                    <!--/Metric Card-->
                 </div>
             </div>
 

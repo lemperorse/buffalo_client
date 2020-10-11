@@ -4,8 +4,7 @@
         <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
 
             <v-container>
-                <h2 class="font-bold text-3xl"><i class="em em-male-farmer text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; จัดการเกษตกร</h2>
-                <!-- <h2 class="font-bold text-2xl">เกษตกร</h2> -->
+                <h2 class="font-bold text-3xl"><i class="em em-male-farmer text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; จัดการเกษตกร</h2> 
                 <v-breadcrumbs :items="bc" large>
                     <template v-slot:divider>
                         <v-icon>mdi-chevron-right</v-icon>
@@ -13,10 +12,9 @@
                 </v-breadcrumbs>
                 <hr class="border-b-2 border-gray-400 ">
             </v-container>
-            <!--Console Content-->
+             
             <div class="flex flex-wrap">
-                <div class="w-full md:w-1/1 xl:w-1/1 p-0 mb-3 md:p-3">
-                    <!--Metric Card-->
+                <div class="w-full md:w-1/1 xl:w-1/1 p-0 mb-3 md:p-3"> 
                     <div class="bg-white border-b-4 border-green-500 rounded shadow-xl p-2">
                         <div class="flex flex-row items-center">
                             <v-text-field dense class="" v-model="search" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
@@ -36,29 +34,16 @@
                 <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3">
                     <v-data-table class="bg-white border-b-4 border-green-500  rounded  shadow-xl  p-2" :headers="headers" :items="desserts" :search="search">
 
-                        <template v-slot:item.actions="{ item }">
-                            <!-- <v-tooltip v-model="show" top> -->
-                            <!-- <v-tooltip top>
-                                <template v-slot:activator="{ on, attrs }">
-                                    <v-btn color="success" icon v-bind="attrs" v-on="on" @click="$router.push(`farmer`)">
-                                        <v-icon>mdi-eye-outline</v-icon>
-                                    </v-btn>
-                                </template>
-                                <span>ดูข้อมูล</span>
-                            </v-tooltip> -->
-
-                            <!-- <v-tooltip v-model="show" top> -->
+                        <template v-slot:item.actions="{ item }"> 
                             <v-tooltip top>
-                                <template v-slot:activator="{ on, attrs }">
-                                    <!-- <v-btn color="warning" icon v-bind="attrs" v-on="on" @click="editItem(item)"> -->
+                                <template v-slot:activator="{ on, attrs }"> 
                                     <v-btn color="warning" icon v-bind="attrs" v-on="on" @click="$router.push(`farmer`)">
                                         <v-icon>mdi-pencil</v-icon>
                                     </v-btn>
                                 </template>
                                 <span>แก้ไข</span>
                             </v-tooltip>
-
-                            <!-- <v-tooltip v-model="show" top> -->
+ 
                             <v-tooltip top>
                                 <template v-slot:activator="{ on, attrs }">
                                     <v-btn color="error" icon v-bind="attrs" v-on="on" @click="deleteItem(item)">
@@ -66,14 +51,15 @@
                                     </v-btn>
                                 </template>
                                 <span>ลบ</span>
-                            </v-tooltip>
-
+                            </v-tooltip> 
                         </template>
+
                         <template v-slot:no-data>
                             <v-btn color="primary" @click="initialize">Reset</v-btn>
                         </template>
                     </v-data-table>
                 </div>
+                
             </div>
         </div>
     </div>

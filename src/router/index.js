@@ -49,8 +49,7 @@ const routes = [
    
 ]
 
-const router = new VueRouter({
-  // mode: 'history',
+const router = new VueRouter({ 
   base: process.env.BASE_URL,
   routes
 })

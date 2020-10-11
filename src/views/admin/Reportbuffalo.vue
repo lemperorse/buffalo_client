@@ -1,13 +1,10 @@
-<template>
-<!-- <div class="bg-gray-100 font-sans leading-normal tracking-normal"> -->
-<div class="bg-gray-100">
-    <!--Container-->
+<template> 
+<div class="bg-gray-100"> 
     <div class="container w-full mx-auto">
         <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
 
             <v-container>
-                <h2 class="font-bold text-3xl"><i class="em em-card_file_box text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; รายงานจำนวนควาย</h2>
-                <!-- <h2 class="font-bold text-2xl">รายงานสรุปจำนวนควาย</h2> -->
+                <h2 class="font-bold text-3xl"><i class="em em-card_file_box text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; รายงานจำนวนควาย</h2> 
                 <v-breadcrumbs :items="bc" large>
                     <template v-slot:divider>
                         <v-icon>mdi-chevron-right</v-icon>
@@ -15,15 +12,15 @@
                 </v-breadcrumbs>
                 <hr class="border-b-2 border-gray-400 ">
             </v-container>
-            <!--Console Content-->
+             
             <div class="flex flex-wrap">
-                <div class="w-full md:w-1/1 xl:w-1/1 p-3">
-                    <!--Metric Card-->
+                <div class="w-full md:w-1/1 xl:w-1/1 p-3"> 
                     <div class="bg-white border-b-4 border-orange-700 rounded shadow-xl p-2">
                         <div class="flex flex-col md:flex-row items-center">
                             <v-expansion-panels flat>
                                 <v-expansion-panel>
                                     <v-expansion-panel-header class="font-bold "><div class="text-xl">ค้นหา</div> </v-expansion-panel-header>
+
                                     <v-expansion-panel-content>
                                         <div class="flex flex-row flex-wrap">
                                             <v-select outlined dense class="pa-1" :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
@@ -33,29 +30,15 @@
                                             <v-select outlined dense class="pa-1" :items="group" label="กรุณาเลือกกลุ่มเกษตกร" hide-details></v-select>
                                             <v-btn depressed class="ma-1 d-sm-block" color="blue"  @click="$router.push('/')" dense dark>
                                                 <v-icon>mdi-magnify</v-icon>ค้นหา
-                                            </v-btn>
-                                            
+                                            </v-btn> 
                                         </div> 
                                     </v-expansion-panel-content>
+
                                 </v-expansion-panel>
-                            </v-expansion-panels>
-                            <!-- <v-select outlined dense class="pa-1" :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
-                            <v-divider vertical class="m-1"></v-divider>
-                            <v-select outlined dense class="pa-1" :items="aumphur" label="กรุณาเลือกอำเภอ" hide-details></v-select>
-                            <v-divider vertical class="m-1"></v-divider>
-                            <v-select outlined dense class="pa-1" :items="tumbon" label="กรุณาเลือกตำบล" hide-details></v-select>
-                            <v-divider vertical class="m-1"></v-divider>
-                            <v-select outlined dense class="pa-1" :items="farm" label="กรุณาเลือกฟาร์ม" hide-details></v-select>
-                            <v-divider vertical class="m-1"></v-divider>
-                            <v-select outlined dense class="pa-1" :items="group" label="กรุณาเลือกกลุ่มเกษตกร" hide-details></v-select>
-                            <v-divider vertical class="ma-1"></v-divider>
-                            <v-btn depressed fab @click="$router.push('/')" class="pa-1" small dense dark>
-                                <v-icon>mdi-magnify</v-icon>
-                            </v-btn> -->
+                            </v-expansion-panels> 
                         </div>
-                    </div>
-                    <!--/Metric Card-->
-                    <!-- <div class="w-full md:w-1/1 xl:w-1/1 p-3"> -->
+                    </div> 
+
                     <div class="bg-white border-b-4 border-orange-700 rounded shadow-xl p-2 mt-6">
                         <v-card-title primary-title>
                             <h3 class="font-bold text-lg">ชื่อฟาร์ม :</h3>
@@ -88,8 +71,7 @@
                             <span class="font-bold text-lg  text-gray-600"> 30 ตัว</span>
                         </v-card-title>
 
-                    </div>
-                    <!-- </div> -->
+                    </div> 
                 </div>
             </div>
         </div>

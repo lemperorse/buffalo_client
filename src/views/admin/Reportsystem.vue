@@ -1,30 +1,29 @@
 <template>
-<div class="bg-gray-100">
-    <!--Container-->
+<div class="bg-gray-100"> 
     <div class="container w-full mx-auto">
         <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
 
             <v-container>
-                <h2 class="font-bold text-3xl"><i class="em em-desktop_computer text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; รายงานความเคลื่อนไหวการใช้งานระบบ</h2>
-                <!-- <h2 class="font-bold text-2xl">ผู้ดูแลระบบ</h2> -->
+                <h2 class="font-bold text-3xl"><i class="em em-desktop_computer text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; รายงานความเคลื่อนไหวการใช้งานระบบ</h2> 
                 <v-breadcrumbs :items="bc" large>
                     <template v-slot:divider>
                         <v-icon>mdi-chevron-right</v-icon>
                     </template>
                 </v-breadcrumbs>
                 <hr class="border-b-2 border-gray-400 ">
-            </v-container>
-            <!--Console Content-->
+            </v-container> 
+
             <div class="flex flex-wrap">
-                <div class="w-full md:w-1/1 xl:w-1/1 p-3">
-                    <!--Metric Card-->
+                <div class="w-full md:w-1/1 xl:w-1/1 p-3"> 
                     <div class="bg-white border-b-4 border-green-700 rounded shadow-xl p-2">
                         <div class="flex flex-col md:flex-row items-center">
                             <v-expansion-panels flat>
                                 <v-expansion-panel>
+
                                     <v-expansion-panel-header class="font-bold ">
                                         <div class="text-xl">เลือกเดือน</div>
                                     </v-expansion-panel-header>
+
                                     <v-expansion-panel-content>
                                         <v-menu ref="menu" v-model="menu" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y max-width="290px" min-width="290px">
                                             <template v-slot:activator="{ on, attrs }">
@@ -37,58 +36,14 @@
                                             </v-date-picker>
                                         </v-menu>
                                     </v-expansion-panel-content>
+
                                 </v-expansion-panel>
                             </v-expansion-panels>
                         </div>
-                    </div>
-
-                    <!-- <div class="bg-white border-b-4 border-green-700 rounded shadow-xl p-2">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <v-select dense color="green" outlined :items="group" label="กรุณาเลือกกลุ่ม" hide-details></v-select>
-                            <v-divider vertical class="ma-1"></v-divider>
-                            <v-select dense color="green" outlined :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
-                            <v-divider vertical class="ma-1"></v-divider>
-                            <v-select dense color="green" outlined :items="district" label="กรุณาเลือกเดือน" hide-details></v-select>
-                            <v-divider vertical class="ma-1"></v-divider>
-                            <v-select dense color="green" outlined :items="place" label="กรุณาเลือกปี" hide-details></v-select>
-                        </div>
-                    </div> -->
-                    <!--/Metric Card-->
+                    </div> 
                 </div>
                 <div class="w-full md:w-1/1 xl:w-1/1 p-3">
                     <v-data-table class="bg-white border-b-4 border-green-700 rounded shadow-xl p-2" :headers="headers" :items="desserts" :search="search" sort-by="calories">
-                        <!-- <template v-slot:top>
-                            <v-dialog v-model="dialog" max-width="500px">
-                                <v-card class="rounded-lg">
-                                    <v-card-title>
-                                        <span class="headline">{{ formTitle }}</span>
-                                    </v-card-title>
-                                    <v-card-text>
-                                        <v-container>
-                                            <v-row>
-                                                <v-col cols="12" sm="6" md="4">
-                                                    <v-text-field v-model="editedItem.IDCard" label="เลขบัตรประชาชน"></v-text-field>
-                                                </v-col>
-                                                <v-col cols="12" sm="6" md="4">
-                                                    <v-text-field v-model="editedItem.name" label="ชื่อ"></v-text-field>
-                                                </v-col>
-                                                <v-col cols="12" sm="6" md="4">
-                                                    <v-text-field v-model="editedItem.Phonenumber" label="เบอร์โทรศัพท์"></v-text-field>
-                                                </v-col>
-                                                <v-col cols="12" sm="6" md="4">
-                                                    <v-text-field v-model="editedItem.group" label="กลุ่มผู้ใช้"></v-text-field>
-                                                </v-col>
-
-                                            </v-row>
-                                        </v-container>
-                                    </v-card-text>
-
-                                    <v-card-actions> 
-                                    </v-card-actions>
-                                </v-card>
-                            </v-dialog> 
-                        </template> -->
-
                         <template v-slot:item.actions="{ item }"> 
                             <v-tooltip top>
                                 <template v-slot:activator="{ on, attrs }">
@@ -231,32 +186,12 @@ export default {
 
         search: '',
         dialog: false,
-        headers: [
-            // {
-            //     text: 'เลขบัตรประชาชน',
-            //     value: 'IDCard',
-            //     sortable: false
-            // },
+        headers: [ 
             {
                 text: 'ชื่อ',
                 value: 'name',
                 sortable: false
-            },
-            // {
-            //     text: 'เบอร์โทรศัพท์',
-            //     value: 'Phonenumber',
-            //     sortable: false
-            // },
-            // {
-            //     text: 'จังหวัด',
-            //     value: 'province',
-            //     sortable: false
-            // },
-            // {
-            //     text: 'กลุ่มผู้ใช้',
-            //     value: 'group',
-            //     sortable: false
-            // },
+            }, 
             {
                 text: 'กิจกรรม',
                 value: 'activity',

@@ -1,20 +1,16 @@
-<template>
-<!-- <div class="bg-gray-100 font-sans leading-normal tracking-normal"> -->
-<div class="bg-gray-100">
-    <!--Container-->
+<template> 
+<div class="bg-gray-100"> 
     <div class="container w-full mx-auto">
         <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
             <v-container>
-                <h2 class="font-bold text-3xl"><i class="em em-water_buffalo text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; เพิ่มควาย</h2>
-                <!-- <h2 class="font-bold text-2xl">เพิ่มควาย</h2> -->
+                <h2 class="font-bold text-3xl"><i class="em em-water_buffalo text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; เพิ่มควาย</h2> 
                 <v-breadcrumbs :items="bc" large>
                     <template v-slot:divider>
                         <v-icon>mdi-chevron-right</v-icon>
                     </template>
                 </v-breadcrumbs>
                 <hr class="border-b-2 border-gray-400 ">
-            </v-container>
-            <!--Console Content-->
+            </v-container> 
 
             <div class="flex flex-wrap">
                 <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3">
@@ -119,20 +115,20 @@
                                     </v-card-title>
                                     <h5 class="font-bold uppercase text-gray-700 text-xl ml-6">ภาพถ่ายด้านหน้า</h5>
                                     <v-card-title class="black--text white darken-4 d-flex">
-                                        <v-divider vertical inset class="mx-1" dark></v-divider>
-                                        <!-- <v-spacer></v-spacer> -->
+                                        <v-divider vertical inset class="mx-1" dark></v-divider> 
                                         <v-btn depressed block :loading="loading3" :disabled="loading3" color="indigo" class="white--text" @click="loader = 'loading3'">
                                             <v-icon>mdi-cloud-upload</v-icon>อัพโหลด
                                         </v-btn>
                                     </v-card-title>
+
                                     <h5 class="font-bold uppercase text-gray-700 text-xl ml-6">ภาพถ่ายด้านข้าง</h5>
                                     <v-card-title class="black--text white darken-4 d-flex">
-                                        <v-divider vertical inset class="mx-1" dark></v-divider>
-                                        <!-- <v-spacer></v-spacer> -->
+                                        <v-divider vertical inset class="mx-1" dark></v-divider> 
                                         <v-btn depressed block :loading="loading3" :disabled="loading3" color="indigo" class="white--text" @click="loader = 'loading3'">
                                             <v-icon>mdi-cloud-upload</v-icon>อัพโหลด
                                         </v-btn>
                                     </v-card-title>
+
                                     <v-card-title primary-title>
                                         <v-spacer></v-spacer>
                                         <v-btn text @click="e1 = 4">กลับ</v-btn>
@@ -146,20 +142,16 @@
                                     <v-card-title primary-title>
                                         <div class="font-bold text-2xl">ใบพันธุ์ประวัติ</div>
                                     </v-card-title>
+
                                     <h5 class="font-bold uppercase text-gray-700 text-xl ml-6">ใบพันธุ์ประวัติอ้างอิง</h5>
-                                    <v-card-title class="black--text white darken-4 d-flex">
-                                        <!-- <v-icon @click="$router.go()" large color="error">mdi-file-pdf-outline</v-icon>
-                                        <v-divider vertical inset class="mx-1" dark></v-divider> 
-                                        <v-spacer></v-spacer> -->
+                                    <v-card-title class="black--text white darken-4 d-flex"> 
                                         <v-btn depressed block :loading="loading3" :disabled="loading3" color="indigo" class="white--text" @click="loader = 'loading3'">
                                             <v-icon>mdi-cloud-upload</v-icon>อัพโหลด
                                         </v-btn>
                                     </v-card-title>
+
                                     <h5 class="font-bold uppercase text-gray-700 text-xl ml-6">ใบพันธุ์ประวัติทางการ</h5>
-                                    <v-card-title class="black--text white darken-4 d-flex">
-                                        <!-- <v-icon @click="$router.go()" large color="error">mdi-file-pdf-outline</v-icon>
-                                        <v-divider vertical inset class="mx-1" dark></v-divider> 
-                                        <v-spacer></v-spacer> -->
+                                    <v-card-title class="black--text white darken-4 d-flex"> 
                                         <v-btn depressed block :loading="loading3" :disabled="loading3" color="indigo" class="white--text" @click="loader = 'loading3'">
                                             <v-icon>mdi-cloud-upload</v-icon>อัพโหลด
                                         </v-btn>
@@ -172,6 +164,7 @@
                                         </v-btn>
                                     </v-card-title>
                                 </v-stepper-content>
+                                
                             </v-stepper-items>
                         </v-stepper>
                     </div>

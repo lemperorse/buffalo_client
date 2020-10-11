@@ -4,8 +4,7 @@
         <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
 
             <v-container>
-                <h2 class="font-bold text-3xl"><i class="em em-male-farmer text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; ข้อมูลเกษตกร</h2>
-                <!-- <h2 class="font-bold text-2xl">ข้อมูลเกษตกร</h2> -->
+                <h2 class="font-bold text-3xl"><i class="em em-male-farmer text-4xl" aria-role="presentation" aria-label=""></i> &nbsp; ข้อมูลเกษตกร</h2> 
                 <v-breadcrumbs :items="bc" large>
                     <template v-slot:divider>
                         <v-icon>mdi-chevron-right</v-icon>
@@ -13,10 +12,9 @@
                 </v-breadcrumbs>
                 <hr class="border-b-2 border-gray-400 ">
             </v-container>
-            <!--Console Content-->
+             
             <div class="flex flex-row flex-wrap p-0 md:p-3 mb-3">
-                <div class="mx-auto w-full md:w-2/3">
-                    <!-- Profile Card -->
+                <div class="mx-auto w-full md:w-2/3"> 
                     <div class="rounded-lg shadow-lg bg-gray-600 w-full flex flex-row flex-wrap p-3 antialiased bgcardprofile">
                         <div class="md:w-1/3 w-full">
                             <img class="rounded-lg shadow-lg antialiased" src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg">
@@ -28,14 +26,12 @@
                                 <div class="text-sm text-gray-300 hover:text-gray-400 cursor-pointer md:absolute pt-3 md:pt-0 bottom-0 right-0">เข้าสู่ระบบครั้งล่าสุด: <b>2 ที่ผ่านมา</b></div>
                             </div>
                         </div>
-                    </div>
-                    <!-- End Profile Card -->
+                    </div> 
                 </div>
             </div> 
 
             <div class="flex flex-wrap ">
-                <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3">
-                    <!-- <v-card> -->
+                <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3"> 
                     <div class="bg-white border-b-4 border-blue-500 rounded shadow-xl p-2">
                         <v-tabs>
                             <v-tab>
@@ -60,6 +56,7 @@
                                     <v-card-title primary-title>
                                         <h2 class="font-bold text-2xl">ข้อมูลเกษตกร</h2>
                                     </v-card-title>
+
                                     <v-card-text>
                                         <div>
                                             <v-expansion-panels v-model="panel" multiple flat>
@@ -91,9 +88,9 @@
                                             </v-expansion-panels>
                                         </div> 
                                     </v-card-text>
+
                                     <v-card-title>
-                                        <v-spacer></v-spacer>
-                                        <!-- <v-btn class="btnw50" depressed color="blue" dark>แก้ไข</v-btn> -->
+                                        <v-spacer></v-spacer> 
                                         <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                                             แก้ไข
                                         </button>
@@ -148,8 +145,7 @@
                                         </div> 
                                     </v-card-text>
                                     <v-card-title>
-                                        <v-spacer></v-spacer>
-                                        <!-- <v-btn class="btnw50" color="success">แก้ไข</v-btn> -->
+                                        <v-spacer></v-spacer> 
                                         <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                                             แก้ไข
                                         </button>
@@ -163,6 +159,7 @@
                                     <v-card-title primary-title>
                                         <h2 class="font-bold text-2xl">รูปภาพ</h2>
                                     </v-card-title>
+
                                     <v-card-text>
                                         <div>
                                             <v-expansion-panels v-model="panel" multiple flat>
@@ -171,8 +168,7 @@
                                                         <h5 class="font-bold uppercase text-gray-700 text-xl">ภาพถ่ายบัตรประชาชน</h5>
                                                     </v-expansion-panel-header>
                                                     <v-expansion-panel-content>
-                                                        <center>
-                                                            <!-- <h3>ภาพถ่ายบัตรประจำตัวประชาชน</h3> -->
+                                                        <center> 
                                                             <v-img class=" elevation-1" width="300" height="150" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNf3OTIf1lugjQhtLRTP8cwuosPAJmIykTsry1UL87ArfVFx84&usqp=CAU"></v-img>
                                                             <v-btn color="success mt-4" depressed>
                                                                 <v-icon>mdi-upload</v-icon>อัพโหลดบัตรประชาชน
@@ -185,9 +181,9 @@
                                                     <v-expansion-panel-header>
                                                         <h5 class="font-bold uppercase text-gray-700 text-xl">ภาพถ่ายฟาร์ม</h5>
                                                     </v-expansion-panel-header>
+
                                                     <v-expansion-panel-content>
-                                                        <center>
-                                                            <!-- <h3>ภาพถ่ายบัตรประจำตัวประชาชน</h3> -->
+                                                        <center> 
                                                             <v-img class=" elevation-1" width="300" height="150" src="https://images.pexels.com/photos/158179/lake-constance-sheep-pasture-sheep-blue-158179.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></v-img>
                                                             <v-btn color="success mt-4" depressed>
                                                                 <v-icon>mdi-upload</v-icon>อัพโหลดภาพถ่ายฟาร์ม
@@ -207,6 +203,7 @@
                                     <v-card-title primary-title>
                                         <h2 class="font-bold text-2xl">รหัสผ่าน</h2>
                                     </v-card-title>
+
                                     <v-card-text>
                                         <div>
                                             <v-expansion-panels v-model="panel" multiple flat>
@@ -224,9 +221,9 @@
                                             </v-expansion-panels>
                                         </div>
                                     </v-card-text>
+
                                     <v-card-title>
-                                        <v-spacer></v-spacer>
-                                        <!-- <v-btn class="btnw50" color="success">แก้ไข</v-btn> -->
+                                        <v-spacer></v-spacer> 
                                         <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                                             แก้ไข
                                         </button>
@@ -235,8 +232,7 @@
                             </v-tab-item>
 
                         </v-tabs>
-                    </div>
-                    <!-- </v-card> -->
+                    </div> 
                 </div>
             </div>
         </div>

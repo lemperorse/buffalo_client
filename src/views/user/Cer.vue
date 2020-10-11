@@ -1,11 +1,9 @@
-<template>
-<!-- <div class="bg-gray-100 font-sans leading-normal tracking-normal"> -->
+<template> 
 <div class="bg-gray-100">
     <div class="container w-full mx-auto ">
         <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
             <v-container>
-                <h2 class="font-bold text-3xl"><i class="em em-clipboard" aria-role="presentation" aria-label=""></i> &nbsp; ควายและใบพันธุ์ประวัติ</h2>
-                <!-- <h2 class="font-bold text-2xl">รายงานการเจริญเติบโตพันธุ์ประวัติรายฟาร์ม</h2> -->
+                <h2 class="font-bold text-3xl"><i class="em em-clipboard" aria-role="presentation" aria-label=""></i> &nbsp; ควายและใบพันธุ์ประวัติ</h2> 
                 <v-breadcrumbs :items="bc" large>
                     <template v-slot:divider>
                         <v-icon>mdi-chevron-right</v-icon>
@@ -15,8 +13,7 @@
             </v-container>
 
             <div class="flex flex-wrap">
-                <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3">
-                    <!-- <v-card> -->
+                <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3"> 
                     <div class="bg-white border-b-4 border-green-500  rounded  shadow-xl  p-2">
                         <v-tabs>
                             <v-tab>
@@ -60,6 +57,7 @@
                                     <v-card-title primary-title>
                                         <h2 class="font-bold text-2xl">ใบพันธุ์ประวัติ</h2>
                                     </v-card-title>
+                                    
                                     <v-card-text>
                                         <div>
                                             <v-expansion-panels v-model="panel" multiple flat>
@@ -88,8 +86,7 @@
                             </v-tab-item>
 
                         </v-tabs>
-                    </div>
-                    <!-- </v-card> -->
+                    </div> 
                 </div>
             </div>
 
