@@ -22,6 +22,7 @@
                                     <v-expansion-panel-header class="font-bold ">
                                         <div class="text-xl">ค้นหา</div>
                                     </v-expansion-panel-header>
+
                                     <v-expansion-panel-content>
                                         <div class="flex flex-row flex-wrap">
                                             <v-text-field dense class="pa-1" v-model="search" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
@@ -74,9 +75,7 @@ export default {
         group: ['กลุ่มแม่กา', 'กลุ่มแม่ใจ'],
         aumphur: ['เมือง'],
         province: ['พะเยา', 'เชียงราย', 'แพร่', 'น่าน'],
-
-        search: '',
-        dialog: false,
+ 
         headers: [{
                 text: 'เลขบัตรประชาชน',
                 value: 'IDCard',
@@ -130,31 +129,15 @@ export default {
             
         ],
         desserts: [],
-        editedIndex: -1,
-        editedItem: {
-            IDCard: '',
-            name: '',
-            Phonenumber: '',
-            group: '',
-        },
-        defaultItem: {
-            IDCard: '',
-            name: '',
-            Phonenumber: '',
-            group: '',
-        },
+      
     }),
 
     computed: {
-        formTitle() {
-            return this.editedIndex === -1 ? 'เพิ่ม' : 'แก้ไข'
-        },
+
     },
 
     watch: {
-        dialog(val) {
-            val || this.close()
-        },
+ 
     },
 
     created() {
@@ -227,33 +210,6 @@ export default {
             ]
         },
 
-        editItem(item) {
-            this.editedIndex = this.desserts.indexOf(item)
-            this.editedItem = Object.assign({}, item)
-            this.dialog = true
-        },
-
-        deleteItem(item) {
-            const index = this.desserts.indexOf(item)
-            confirm('Are you sure you want to delete this item?') && this.desserts.splice(index, 1)
-        },
-
-        close() {
-            this.dialog = false
-            this.$nextTick(() => {
-                this.editedItem = Object.assign({}, this.defaultItem)
-                this.editedIndex = -1
-            })
-        },
-
-        save() {
-            if (this.editedIndex > -1) {
-                Object.assign(this.desserts[this.editedIndex], this.editedItem)
-            } else {
-                this.desserts.push(this.editedItem)
-            }
-            this.close()
-        },
     },
 }
 </script>

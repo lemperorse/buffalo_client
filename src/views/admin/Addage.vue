@@ -20,7 +20,7 @@
                         <v-text-field value="" prepend-inner-icon="mdi-arrow-left-right"   type="number" label="ความกว้างรอบอก(เซนติเมตร)"></v-text-field>
                         <v-text-field value="" prepend-inner-icon="mdi-arrow-left-right"   type="number" label="ความยาวรอบลำตัว(เซนติเมตร)"></v-text-field>
                         <v-text-field value="" prepend-inner-icon="mdi-human-male-height-variant"   type="number" label="ความสูง(เซนติเมตร)"></v-text-field>
-                        <v-select :items="age1" value="" prepend-inner-icon="mdi-clock"   label="อายุ(240,400,600วัน)"></v-select> 
+                        <v-select :items="age1" value="" prepend-inner-icon="mdi-clock"   label="อายุ (แรกเกิด,240,400,600วัน)"></v-select> 
                             <v-btn depressed tile block medium class="mt-2" @click="$router.push('/admin/buffalo')" color="success">บันทึก</v-btn> 
                     </div> 
                 </div>
@@ -56,7 +56,7 @@ export default {
                     href: '/#/admin/addage'
                 },
             ],
-            age1: ['240', '400', '600'],
+            age1: ['แรกเกิด','240', '400', '600'],
 
         }
     },
@@ -64,7 +64,5 @@ export default {
 </script>
 
 <style scoped>
-.btnw50 {
-    width: 50%;
-}
+ 
 </style>

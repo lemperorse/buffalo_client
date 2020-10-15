@@ -17,6 +17,7 @@
                                     <i class="em em-water_buffalo text-4xl" aria-role="presentation" aria-label="WATER BUFFALO"></i> 
                                 </div>
                             </div>
+                            
                             <div class="flex-1 text-right md:text-center">
                                 <h5 class="font-bold uppercase text-blue-700">ควายทั้งหมด</h5>
                                 <h3 class="font-bold text-2xl">324 ตัว </h3>
@@ -49,6 +50,7 @@
                                     <i class="em em-broken_heart text-4xl" aria-role="presentation" aria-label="WATER BUFFALO"></i>
                                 </div>
                             </div>
+                            
                             <div class="flex-1 text-right md:text-center">
                                 <h5 class="font-bold uppercase text-orange-700">ควายที่เสียชีวิต</h5>
                                 <h3 class="font-bold text-2xl">15 ตัว</h3>
@@ -73,6 +75,7 @@
                                     <i class="em em-card_file_box text-3xl" aria-role="presentation" aria-label=""></i>
                                 </div>
                             </div>
+                            
                             <div class="flex-1 text-right md:text-center">
                                 <h5 class="font-bold uppercase text-xl text-orange-700 ">รายงานจำนวนควาย</h5>
                                 <button @click="$router.push('reportsummary')" class="text-gray-600 p-2">ดูรายละเอียด</button> 
@@ -89,6 +92,7 @@
                                     <i class="em em-chart_with_upwards_trend text-3xl" aria-role="presentation" aria-label="CHART WITH UPWARDS TREND"></i>
                                 </div>
                             </div>
+                            
                             <div class="flex-1 text-right md:text-center">
                                 <h5 class="font-bold uppercase text-xl text-purple-700">รายงานสรุปการเจริญเติบโต</h5>
                                 <button @click="$router.push('reportgrow')" class="text-gray-600 p-2">ดูรายละเอียด</button>
@@ -111,6 +115,7 @@
                             <template v-slot:activator="{ on, attrs }">
                                 <v-text-field v-model="date" label="เลือกวันที่" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
                             </template>
+
                             <v-date-picker v-model="date" no-title scrollable>
                                 <v-spacer></v-spacer>
                                 <v-btn text color="primary" @click="menu = false">Cancel</v-btn>
@@ -132,12 +137,14 @@
                             <template v-slot:activator="{ on, attrs }">
                                 <v-text-field v-model="date" label="เลือกวันที่" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
                             </template>
+
                             <v-date-picker v-model="date" no-title scrollable>
                                 <v-spacer></v-spacer>
                                 <v-btn text color="primary" @click="menu2 = false">Cancel</v-btn>
                                 <v-btn text color="primary" @click="$refs.menu2.save(date)">OK</v-btn>
                             </v-date-picker>
                         </v-menu>
+
                         <div class="flex flex-row items-center">
                             <column-chart :data="chartData"></column-chart>
                         </div>
@@ -152,12 +159,14 @@
                             <template v-slot:activator="{ on, attrs }">
                                 <v-text-field v-model="date" label="เลือกวันที่" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
                             </template>
+
                             <v-date-picker v-model="date" no-title scrollable>
                                 <v-spacer></v-spacer>
                                 <v-btn text color="primary" @click="menu3 = false">Cancel</v-btn>
                                 <v-btn text color="primary" @click="$refs.menu3.save(date)">OK</v-btn>
                             </v-date-picker>
                         </v-menu>
+
                         <div class="flex flex-row items-center">
                             <column-chart :colors="['#9900CC']" :data="chartData"></column-chart>
                         </div>
@@ -207,4 +216,5 @@ export default {
 </script>
 
 <style scoped> 
+
 </style>

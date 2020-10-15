@@ -46,9 +46,9 @@
                                 <v-card flat>
                                     <v-card-title primary-title>
                                         <h2 class="font-bold text-2xl">ข้อมูลส่วนตัว</h2>
-                                    </v-card-title>
-                                    <v-card-text>
-                                        <div>
+                                    </v-card-title> 
+
+                                    <v-card-text> 
                                             <v-expansion-panels v-model="panel" multiple flat>
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
@@ -61,8 +61,7 @@
                                                     </v-expansion-panel-content>
                                                 </v-expansion-panel>
 
-                                            </v-expansion-panels>
-                                        </div>
+                                            </v-expansion-panels> 
                                     </v-card-text>
 
                                     <v-card-title>
@@ -80,8 +79,7 @@
                                         <h2 class="font-bold text-2xl">รหัสผ่าน</h2>
                                     </v-card-title>
 
-                                    <v-card-text>
-                                        <div>
+                                    <v-card-text> 
                                             <v-expansion-panels v-model="panel" multiple flat>
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
@@ -94,9 +92,9 @@
                                                     </v-expansion-panel-content>
                                                 </v-expansion-panel>
 
-                                            </v-expansion-panels>
-                                        </div>
+                                            </v-expansion-panels> 
                                     </v-card-text>
+
                                     <v-card-title>
                                         <v-spacer></v-spacer> 
                                         <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
@@ -132,9 +130,6 @@ export default {
 </script>
 
 <style scoped>
-.btnw50 {
-    width: 50%;
-}
 
 .bgcardprofile {
     background-image: url('https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');

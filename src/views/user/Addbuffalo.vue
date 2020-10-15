@@ -52,6 +52,7 @@
                                     <v-select :items="status" value="" prepend-inner-icon="mdi-post-outline" label="สถานะ"></v-select>
                                     <v-card-title primary-title>
                                         <v-spacer></v-spacer>
+
                                         <v-btn text>ยกเลิก</v-btn>
                                         <v-btn depressed color="primary" @click="e1 = 2">
                                             ต่อไป
@@ -134,6 +135,7 @@
                                             <v-icon>mdi-cloud-upload</v-icon>อัพโหลด
                                         </v-btn>
                                     </v-card-title>
+
                                     <v-card-title primary-title>
                                         <v-spacer></v-spacer>
                                         <v-btn text @click="e1 = 4">กลับ</v-btn>
@@ -147,6 +149,7 @@
                                     <v-card-title primary-title>
                                         <div class="font-bold text-2xl">ใบพันธุ์ประวัติ</div>
                                     </v-card-title>
+
                                     <h5 class="font-bold uppercase text-gray-700 text-xl ml-6">ใบพันธุ์ประวัติอ้างอิง</h5>
                                     <v-card-title class="black--text white darken-4 d-flex"> 
                                         <v-btn depressed block :loading="loading3" :disabled="loading3" color="indigo" class="white--text" @click="loader = 'loading3'">
@@ -184,7 +187,6 @@
 export default {
     data() {
         return {
-            dialog: true,
             date: null,
             menu: false,
             e1: 1,
@@ -209,8 +211,6 @@ export default {
             loading: false,
             loading2: false,
             loading3: false,
-            loading4: false,
-            loading5: false,
         }
     },
     watch: {

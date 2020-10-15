@@ -167,7 +167,7 @@
                                                 <div class="w-full md:w-1/1 xl:w-1/1 p-1"> 
                                                     <div class="bg-white border-b-4 border-blue-500 rounded shadow-xl p-2">
                                                         <div class="flex flex-row items-center">
-                                                            <v-text-field dense v-model="search" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
+                                                            <v-text-field dense clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
                                                             <v-divider vertical class="ma-1"></v-divider>
                                                             <v-btn class="border-blue-500" depressed @click="$router.push('/')" color="blue" medium dense dark>
                                                                 <v-icon>mdi-magnify</v-icon>ค้นหา
@@ -184,7 +184,7 @@
                                     </div>
 
                                     <v-card-text>
-                                        <v-data-table class="bg-white  border-blue-500 rounded shadow-xl p-2" :headers="headers" :items="desserts" :search="search" sort-by="calories">
+                                        <v-data-table class="bg-white  border-blue-500 rounded shadow-xl p-2" :headers="headers" :items="desserts" sort-by="calories">
                                             <template v-slot:item.actions="{ item }"> 
                                                 <v-tooltip top>
                                                     <template v-slot:activator="{ on, attrs }">
@@ -356,18 +356,15 @@ export default {
         color: ['ดำ', 'น้ำตาล'],
         from: ['พ่อค้าคนกลาง', 'คลอด'],
         status: ['ท้อง', 'ไม่ท้อง'],
-        date: null,
+
         menu: false,
         tab: null,
-        search: '',
-        dialog: false,
+
 
         loader: null,
         loading: false,
         loading2: false,
         loading3: false,
-        loading4: false,
-        loading5: false,
 
         headers: [{
                 text: 'ชื่อ',
@@ -397,27 +394,11 @@ export default {
         ],
 
         desserts: [],
-        editedIndex: -1,
-        editedItem: {
-            IDcardFarmer: '',
-            nonb: '',
-            nid: '',
-            nmi: '',
-            birth: ''
-        },
-        defaultItem: {
-            name: '',
-            number: '',
-            gene: '',
-            age: '',
-            certifacate: ''
-        },
+       
     }),
 
     watch: {
-        dialog(val) {
-            val || this.close()
-        },
+ 
         menu(val) {
             val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
         },
@@ -474,47 +455,12 @@ export default {
             ]
         },
 
-        editItem(item) {
-            this.editedIndex = this.desserts.indexOf(item)
-            this.editedItem = Object.assign({}, item)
-            this.dialog = true
-        },
-
-        deleteItem(item) {
-            const index = this.desserts.indexOf(item)
-            confirm('Are you sure you want to delete this item?') && this.desserts.splice(index, 1)
-        },
-
-        close() {
-            this.dialog = false
-            this.$nextTick(() => {
-                this.editedItem = Object.assign({}, this.defaultItem)
-                this.editedIndex = -1
-            })
-        },
-
-        save() {
-            if (this.editedIndex > -1) {
-                Object.assign(this.desserts[this.editedIndex], this.editedItem)
-            } else {
-                this.desserts.push(this.editedItem)
-            }
-            this.close()
-
-        },
-        save1(date) {
-            this.$refs.menu.save(date)
-        },
-
     },
 
 }
 </script>
 
 <style scoped>
-.btnw50 {
-    width: 50%;
-}
 
 .bgcardprofile {
     background-image: url('https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');

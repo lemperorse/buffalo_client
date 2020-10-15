@@ -44,6 +44,7 @@
                                         </template>
                                         <v-date-picker ref="picker" v-model="date" :max="new Date().toISOString().substr(0, 10)" min="1950-01-01" @change="save1"></v-date-picker>
                                     </v-menu>
+
                                     <v-text-field value="" prepend-inner-icon="mdi-calendar-clock" type="number" label="อายุ(ปี)"></v-text-field>
                                     <v-select :items="sex" value="" prepend-inner-icon="mdi-gender-male-female" label="เพศ"></v-select>
                                     <v-select :items="color" value="" prepend-inner-icon="mdi-invert-colors" label="สี"></v-select>
@@ -180,8 +181,6 @@
 export default {
     data() {
         return {
-            dialog: true,
-            date: null,
             menu: false,
             e1: 1,
             bc: [{
@@ -210,8 +209,6 @@ export default {
             loading: false,
             loading2: false,
             loading3: false,
-            loading4: false,
-            loading5: false,
         }
     },
     watch: {
@@ -222,9 +219,7 @@ export default {
     /*-------------------------Methods------------------------------------------*/
     methods: {
         load: async function () {},
-        save1(date) {
-            this.$refs.menu.save(date)
-        },
+      
     },
 }
 </script>

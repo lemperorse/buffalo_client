@@ -19,6 +19,7 @@
                         <div class="md:w-1/3 w-full">
                             <img class="rounded-lg shadow-lg antialiased" src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg">
                         </div>
+                        
                         <div class="md:w-2/3 w-full px-3 flex flex-row flex-wrap">
                             <div class="w-full text-right text-gray-700 font-semibold relative pt-3 md:pt-0">
                                 <div class="text-2xl text-white leading-tight">นายแดง มีชัย</div>
@@ -64,6 +65,7 @@
                                                     <v-expansion-panel-header>
                                                         <h5 class="font-bold uppercase text-gray-700 text-xl">เกี่ยวกับเกษตกร</h5>
                                                     </v-expansion-panel-header>
+
                                                     <v-expansion-panel-content>
                                                         <v-select :items="prefix" value="นาย" label="คำนำหน้า" prepend-inner-icon="mdi-human-male-female"></v-select>
                                                         <v-text-field value="นายแดง" label="ชื่อ" prepend-inner-icon="mdi-card-account-details-outline"></v-text-field>
@@ -79,6 +81,7 @@
                                                     <v-expansion-panel-header>
                                                         <h5 class="font-bold uppercase text-gray-700 text-xl">ติดต่อและที่อยู่</h5>
                                                     </v-expansion-panel-header>
+                                                    
                                                     <v-expansion-panel-content>
                                                         <v-text-field value="123/123" label="ที่อยู่" prepend-inner-icon="mdi-home-map-marker"></v-text-field>
                                                         <v-text-field value="0123123123" label="เบอร์โทร" type="number" prepend-inner-icon="mdi-phone"></v-text-field>
@@ -104,13 +107,14 @@
                                     <v-card-title primary-title>
                                         <h2 class="font-bold text-2xl">ข้อมูลฟาร์ม</h2>
                                     </v-card-title>
+
                                     <v-card-text>
-                                        <div>
                                             <v-expansion-panels v-model="panel" multiple flat>
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
                                                         <h5 class="font-bold uppercase text-gray-700 text-xl">เกี่ยวกับฟาร์ม</h5>
                                                     </v-expansion-panel-header>
+
                                                     <v-expansion-panel-content>
                                                         <v-text-field value="ฟาร์มนายแดง" prepend-inner-icon="mdi-home-outline" label="ชื่อฟาร์ม"></v-text-field>
                                                         <v-text-field value="12 ตัว" prepend-inner-icon="mdi-cow" type="number" label="จำนวนควายทั้งหมด"></v-text-field>
@@ -122,6 +126,7 @@
                                                     <v-expansion-panel-header>
                                                         <h5 class="font-bold uppercase text-gray-700 text-xl">ที่อยู่ฟาร์ม</h5>
                                                     </v-expansion-panel-header>
+
                                                     <v-expansion-panel-content>
                                                         <v-text-field value="111 ต.แม่กา" prepend-inner-icon="mdi-home" label="​ที่อยู่ฟาร์ม"></v-text-field>
                                                         <v-select :items="tumbon" value="แม่กา" prepend-inner-icon="mdi-map-marker-multiple" label="ตำบล"></v-select>
@@ -135,6 +140,7 @@
                                                     <v-expansion-panel-header>
                                                         <h5 class="font-bold uppercase text-gray-700 text-xl">พิกัด GPS</h5>
                                                     </v-expansion-panel-header>
+                                                    
                                                     <v-expansion-panel-content>
                                                         <v-text-field value="1231231231" prepend-inner-icon="mdi-map-marker-multiple-outline" label="พิกัดฟาร์มตามระบบ GPS (ละติจูด)"></v-text-field>
                                                         <v-text-field value="123123123" prepend-inner-icon="mdi-map-marker-multiple-outline" label="พิกัดฟาร์มตามระบบ GPS (ลองติจูด)"></v-text-field>
@@ -142,8 +148,9 @@
                                                 </v-expansion-panel>
 
                                             </v-expansion-panels>
-                                        </div> 
+                                        
                                     </v-card-text>
+
                                     <v-card-title>
                                         <v-spacer></v-spacer> 
                                         <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
@@ -161,7 +168,6 @@
                                     </v-card-title>
 
                                     <v-card-text>
-                                        <div>
                                             <v-expansion-panels v-model="panel" multiple flat>
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
@@ -193,7 +199,7 @@
                                                 </v-expansion-panel>
 
                                             </v-expansion-panels>
-                                        </div>
+
                                     </v-card-text> 
                                 </v-card>
                             </v-tab-item>
@@ -205,7 +211,6 @@
                                     </v-card-title>
 
                                     <v-card-text>
-                                        <div>
                                             <v-expansion-panels v-model="panel" multiple flat>
                                                 <v-expansion-panel>
                                                     <v-expansion-panel-header>
@@ -219,7 +224,6 @@
                                                 </v-expansion-panel>
 
                                             </v-expansion-panels>
-                                        </div>
                                     </v-card-text>
 
                                     <v-card-title>
@@ -262,11 +266,9 @@ export default {
         color: ['ดำ', 'น้ำตาล'],
         from: ['พ่อค้าคนกลาง', 'คลอด'],
         status: ['ท้อง', 'ไม่ท้อง'],
-        date: null,
-        menu: false,
+
         tab: null,
-        search: '',
-        dialog: false,
+  
 
         headers: [{
                 text: 'ชื่อ',
@@ -314,12 +316,7 @@ export default {
     }),
 
     watch: {
-        dialog(val) {
-            val || this.close()
-        },
-        menu(val) {
-            val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
-        },
+        
     },
 
     created() {
@@ -373,37 +370,7 @@ export default {
             ]
         },
 
-        editItem(item) {
-            this.editedIndex = this.desserts.indexOf(item)
-            this.editedItem = Object.assign({}, item)
-            this.dialog = true
-        },
 
-        deleteItem(item) {
-            const index = this.desserts.indexOf(item)
-            confirm('Are you sure you want to delete this item?') && this.desserts.splice(index, 1)
-        },
-
-        close() {
-            this.dialog = false
-            this.$nextTick(() => {
-                this.editedItem = Object.assign({}, this.defaultItem)
-                this.editedIndex = -1
-            })
-        },
-
-        save() {
-            if (this.editedIndex > -1) {
-                Object.assign(this.desserts[this.editedIndex], this.editedItem)
-            } else {
-                this.desserts.push(this.editedItem)
-            }
-            this.close()
-
-        },
-        save1(date) {
-            this.$refs.menu.save(date)
-        },
 
     },
 
@@ -412,9 +379,6 @@ export default {
 </script>
 
 <style scoped>
-.btnw50 {
-    width: 50%;
-}
 
 .bgcardprofile {
     background-image: url('https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');

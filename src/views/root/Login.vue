@@ -23,6 +23,7 @@
 
                 </v-col>
             </v-row>
+            
              <v-row class="" align="center" justify="center">
                 <v-col cols="10" sm="8" md="4">
                     <v-divider class="pa" color="white"></v-divider>
@@ -95,14 +96,6 @@ export default {
     color: white;
 }
 
-.f16 {
-    font-size: 16px;
-    color: white;
-}
-.f14 {
-    font-size: 14px;
-    color: white;
-}
 .imglogin{
     width:65%;
 }

@@ -8,14 +8,16 @@
             <h2 class="font-bold text-2xl mb-2">ลืมรหัสผ่าน</h2>
             <hr class="border-b-2 border-gray-400 ">
         </v-container> 
+
         <div class="flex flex-wrap">
             <div class="w-full md:w-1/1 xl:w-1/1 p-3"> 
                 <div class="bg-white border-b-4 border-blue-500 rounded shadow-xl p-2">
                     <v-card-title primary-title>
                         <h2 class="font-bold text-2xl">ติดต่อสอบสอบถาม</h2>
                     </v-card-title>
+                    
                     <v-card-text>
-                        <div>
+                       
                             <v-expansion-panels v-model="panel" multiple flat>
                                 <v-expansion-panel>
                                     <v-expansion-panel-header>
@@ -50,7 +52,7 @@
                                 </v-expansion-panel>
 
                             </v-expansion-panels>
-                        </div>
+                        
                        
                     </v-card-text>
 

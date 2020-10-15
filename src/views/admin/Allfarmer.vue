@@ -17,9 +17,9 @@
                 <div class="w-full md:w-1/1 xl:w-1/1 p-0 mb-3 md:p-3"> 
                     <div class="bg-white border-b-4 border-green-500 rounded shadow-xl p-2">
                         <div class="flex flex-row items-center">
-                            <v-text-field dense class="" v-model="search" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
+                            <v-text-field dense clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
                             <v-divider vertical class="ma-1"></v-divider>
-                            <v-btn class="" depressed @click="$router.push('/')" color="blue" medium dense dark>
+                            <v-btn  depressed @click="$router.push('/')" color="blue" medium dense dark>
                                 <v-icon>mdi-magnify</v-icon>ค้นหา
                             </v-btn>
                             <v-divider vertical class="ma-1"></v-divider>
@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3">
-                    <v-data-table class="bg-white border-b-4 border-green-500  rounded  shadow-xl  p-2" :headers="headers" :items="desserts" :search="search">
+                    <v-data-table class="bg-white border-b-4 border-green-500  rounded  shadow-xl  p-2" :headers="headers" :items="desserts" >
 
                         <template v-slot:item.actions="{ item }"> 
                             <v-tooltip top>
@@ -76,61 +76,7 @@ export default {
             disabled: false,
             href: '/#/admin/allfarmer',
         }, ],
-        province: [{
-                text: 'พะเยา'
-            },
-            {
-                text: 'เชียงราย'
-            },
-            {
-                text: 'แพร่'
-            },
-            {
-                text: 'น่าน'
-            },
-        ],
-        district: [{
-                text: 'พะเยา'
-            },
-            {
-                text: 'เชียงราย'
-            },
-            {
-                text: 'แพร่'
-            },
-            {
-                text: 'น่าน'
-            },
-        ],
-        place: [{
-                text: 'พะเยา'
-            },
-            {
-                text: 'เชียงราย'
-            },
-            {
-                text: 'แพร่'
-            },
-            {
-                text: 'น่าน'
-            },
-        ],
-        farm: [{
-                text: 'พะเยา'
-            },
-            {
-                text: 'เชียงราย'
-            },
-            {
-                text: 'แพร่'
-            },
-            {
-                text: 'น่าน'
-            },
-        ],
-
-        search: '',
-        dialog: false,
+ 
         headers: [{
                 text: 'เลขบัตรประชาชน',
                 value: 'IDCard',
@@ -162,32 +108,15 @@ export default {
                 sortable: false,
             },
         ],
-        desserts: [],
-        editedIndex: -1,
-        editedItem: {
-            IDCard: '',
-            name: '',
-            Phonenumber: '',
-            group: '',
-        },
-        defaultItem: {
-            IDCard: '',
-            name: '',
-            Phonenumber: '',
-            group: '',
-        },
+        desserts: [],  
     }),
 
     computed: {
-        formTitle() {
-            return this.editedIndex === -1 ? 'เพิ่มข้อมูลเกษตรกร' : 'แก้ไขข้อมูลเกษตรกร'
-        },
+         
     },
 
     watch: {
-        dialog(val) {
-            val || this.close()
-        },
+        
     },
 
     created() {
@@ -270,34 +199,6 @@ export default {
             ]
         },
 
-        editItem(item) {
-            this.editedIndex = this.desserts.indexOf(item)
-            this.editedItem = Object.assign({}, item)
-            this.dialog = true
-        },
-
-        deleteItem(item) {
-            const index = this.desserts.indexOf(item)
-            confirm('Are you sure you want to delete this item?') && this.desserts.splice(index, 1)
-        },
-
-        close() {
-            this.dialog = false
-            this.$nextTick(() => {
-                this.editedItem = Object.assign({}, this.defaultItem)
-                this.editedIndex = -1
-            })
-        },
-
-        save() {
-            if (this.editedIndex > -1) {
-                Object.assign(this.desserts[this.editedIndex], this.editedItem)
-            } else {
-                this.desserts.push(this.editedItem)
-            }
-            this.close()
-
-        },
     },
 }
 </script>

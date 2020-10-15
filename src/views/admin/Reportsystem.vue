@@ -72,8 +72,7 @@ export default {
     data: () => ({
 
         date: new Date().toISOString().substr(0, 7),
-        menu: false,
-        modal: false,
+        menu: false, 
         bc: [{
                 text: 'แดชบอร์ด',
                 disabled: false,
@@ -85,107 +84,7 @@ export default {
                 href: '/#/admin/reportsystem',
             },
         ],
-        group: ['กลุ่มแม่กา', 'กลุ่มแม่ใจ'],
-        province: [{
-                text: 'พะเยา'
-            },
-            {
-                text: 'เชียงราย'
-            },
-            {
-                text: 'แพร่'
-            },
-            {
-                text: 'น่าน'
-            },
-        ],
-        district: [{
-                text: 'มกราคม'
-            },
-            {
-                text: 'กุมภาพันธ์'
-            },
-            {
-                text: 'มีนาคม'
-            },
-            {
-                text: 'เมษายน'
-            },
-            {
-                text: 'พฤษภาคม'
-            },
-            {
-                text: 'มิถุนายน'
-            },
-            {
-                text: 'สิงหาคม'
-            },
-            {
-                text: 'กันยายน'
-            },
-            {
-                text: 'ตุลาคม'
-            },
-            {
-                text: 'พฤศจิกายน'
-            },
-            {
-                text: 'ธันวาคม'
-            },
-
-        ],
-
-        place: [{
-                text: '2563'
-            },
-
-        ],
-        farm: [{
-                text: 'เชียงกลาง'
-            },
-            {
-                text: 'ท่าวังผา'
-            },
-            {
-                text: 'ทุ่งช้าง'
-            },
-            {
-                text: 'นาน้อย'
-            },
-            {
-                text: 'บ่อเกลือ'
-            },
-            {
-                text: 'นาน้อย'
-            },
-            {
-                text: 'บ้านหลวง'
-            },
-            {
-                text: 'ปัว'
-            },
-            {
-                text: 'ภูเพียง'
-            },
-            {
-                text: 'แม่จริม'
-            },
-            {
-                text: 'เมืองน่าน'
-            },
-            {
-                text: 'เวียงสา'
-            },
-            {
-                text: 'สองแคว'
-            },
-            {
-                text: 'สันติสุข'
-            },
-        ],
-
-        search: '',
-        dialog: false,
+        
         headers: [ 
             {
                 text: 'ชื่อ',
@@ -209,31 +108,14 @@ export default {
             },
         ],
         desserts: [],
-        editedIndex: -1,
-        editedItem: {
-            IDCard: '',
-            name: '',
-            Phonenumber: '',
-            group: '',
-        },
-        defaultItem: {
-            IDCard: '',
-            name: '',
-            Phonenumber: '',
-            group: '',
-        },
+       
     }),
 
-    computed: {
-        formTitle() {
-            return this.editedIndex === -1 ? 'เพิ่ม' : 'แก้ไข'
-        },
+    computed: { 
     },
 
     watch: {
-        dialog(val) {
-            val || this.close()
-        },
+ 
     },
 
     created() {
@@ -335,34 +217,7 @@ export default {
 
             ]
         },
-
-        editItem(item) {
-            this.editedIndex = this.desserts.indexOf(item)
-            this.editedItem = Object.assign({}, item)
-            this.dialog = true
-        },
-
-        deleteItem(item) {
-            const index = this.desserts.indexOf(item)
-            confirm('Are you sure you want to delete this item?') && this.desserts.splice(index, 1)
-        },
-
-        close() {
-            this.dialog = false
-            this.$nextTick(() => {
-                this.editedItem = Object.assign({}, this.defaultItem)
-                this.editedIndex = -1
-            })
-        },
-
-        save() {
-            if (this.editedIndex > -1) {
-                Object.assign(this.desserts[this.editedIndex], this.editedItem)
-            } else {
-                this.desserts.push(this.editedItem)
-            }
-            this.close()
-        },
+ 
     },
 }
 </script>

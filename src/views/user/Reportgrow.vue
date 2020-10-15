@@ -15,6 +15,7 @@
             <div class="w-full md:w-1/1 xl:w-1/1 p-3"> 
                 <div class="bg-white border-b-4 border-green-500 rounded shadow-xl p-10">
                     <v-text-field name="name" label="ชื่อฟาร์ม"></v-text-field>
+                    <v-text-field name="name" label="จำนวนควายอายุแรกเกิด"></v-text-field>
                     <v-text-field name="name" label="จำนวนควายอายุ 240 วัน"></v-text-field>
                     <v-text-field name="name" label="จำนวนควายอายุ 400 วัน"></v-text-field>
                     <v-text-field name="name" label="จำนวนควายอายุ 600 วัน"></v-text-field>
@@ -67,11 +68,5 @@ export default {
 </script>
 
 <style>
-.bg {
-    background: rgba(242, 243, 244);
-    height: 100%;
-    background-position: center;
-    background-repeat: repeat;
-    background-size: cover;
-}
+ 
 </style>

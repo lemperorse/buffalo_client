@@ -52,7 +52,5 @@ export default {
 }
 </script>
 <style scoped>
-.btnw50{
-    width:50%;
-} 
+ 
 </style>

@@ -320,19 +320,14 @@ export default {
         color: ['ดำ', 'น้ำตาล'],
         from: ['พ่อค้าคนกลาง', 'ตลาด', 'เพาะพันธุ์'],
         status: ['ท้อง', 'ไม่ท้อง'],
-        age1: ['240', '400', '600'],
+        age1: ['แรกเกิด','240', '400', '600'],
 
         loader: null,
         loading: false,
         loading2: false,
         loading3: false,
-        loading4: false,
-        loading5: false,
-
-        length: 2,
+ 
         onboarding: 0,
-
-        dialog: false,
 
         items: ['มีชีวิต', 'ไม่มีชีวิต', ],
         date: null,
@@ -440,20 +435,7 @@ export default {
     /*-------------------------Methods------------------------------------------*/
     methods: {
         load: async function () {},
-        save1(date) {
-            this.$refs.menu.save(date)
-        },
 
-        next() {
-            this.onboarding = this.onboarding + 1 === this.length ?
-                0 :
-                this.onboarding + 1
-        },
-        prev() {
-            this.onboarding = this.onboarding - 1 < 0 ?
-                this.length - 1 :
-                this.onboarding - 1
-        },
     },
 
 }
