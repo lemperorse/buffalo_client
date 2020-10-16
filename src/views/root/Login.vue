@@ -9,10 +9,10 @@
                         <h2 class="fcw">ยินดีต้อนรับเข้าสู่ระบบ</h2>
                     </div>
                     <div class="mt-6">
-                        <v-text-field rounded solo label="เข้าสู่ระบบ" name="login" prepend-inner-icon="mdi-account" type="text"></v-text-field>
-                        <v-text-field rounded solo id="password" label="รหัสผ่าน" name="password" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
+                        <v-text-field v-model="form.username"  rounded solo label="เข้าสู่ระบบ" name="login" prepend-inner-icon="mdi-account" type="text"></v-text-field>
+                        <v-text-field v-model="form.password"  rounded solo id="password" label="รหัสผ่าน" name="password" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
                         <v-spacer></v-spacer>
-                        <v-btn class="width" rounded  dark @click="$router.push('/user/home')" large color="green"> <v-icon>mdi-login</v-icon><h1>เข้าสู่ระบบ</h1></v-btn>
+                        <v-btn class="width" rounded  dark @click="prepareLogin()" large color="green"> <v-icon>mdi-login</v-icon><h1>เข้าสู่ระบบ</h1></v-btn>
                     </div>
                     <div>
                         <v-card-title primary-title> 
@@ -43,6 +43,7 @@
 </template>
 
 <script>
+import {sync,call} from 'vuex-pathify';
 export default {
     name: 'Root',
     /*-------------------------ประกาศ components ---------------------------------------*/
@@ -56,7 +57,7 @@ export default {
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
         return {
-
+            form:{},
             txt: 'Hello World'
 
         };
@@ -72,14 +73,18 @@ export default {
     },
     /*-------------------------ใช้จัดการ operation  หรือ คำนวณค่าต่างๆ (คล้าย methods)------------------------------------------*/
     computed: {
-
+        ...sync('auth/*')
     },
     /*-------------------------Methods------------------------------------------*/
     methods: {
+        ...call('auth/*'),
+        async prepareLogin(){
+            await this.login(this.form);
+        },
         /******* Methods default run ******/
         load: async function () {
-            console.log(this.$store);
-            await this.$store.dispatch('auth/test')
+           // console.log(this.$store);
+         //   await this.$store.dispatch('auth/test')
         }
     },
 }
