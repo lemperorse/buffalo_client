@@ -77,7 +77,10 @@ export default {
     /*-------------------------Methods------------------------------------------*/
     methods: {
         /******* Methods default run ******/
-        load: async function () {}
+        load: async function () {
+            console.log(this.$store);
+            await this.$store.dispatch('auth/test')
+        }
     },
 }
 </script>
