@@ -9,33 +9,36 @@
                         <h2 class="fcw">ยินดีต้อนรับเข้าสู่ระบบ</h2>
                     </div>
                     <div class="mt-6">
-                        <v-text-field v-model="form.username"  rounded solo label="เข้าสู่ระบบ" name="login" prepend-inner-icon="mdi-account" type="text"></v-text-field>
-                        <v-text-field v-model="form.password"  rounded solo id="password" label="รหัสผ่าน" name="password" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
+                        <v-text-field v-model="form.username" rounded solo label="เข้าสู่ระบบ" name="login" prepend-inner-icon="mdi-account" type="text"></v-text-field>
+                        <v-text-field v-model="form.password" rounded solo id="password" label="รหัสผ่าน" name="password" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
                         <v-spacer></v-spacer>
-                        <v-btn class="width" rounded  dark @click="prepareLogin()" large color="green"> <v-icon>mdi-login</v-icon><h1>เข้าสู่ระบบ</h1></v-btn>
+                        <v-btn class="width" rounded dark @click="prepareLogin()" large color="green">
+                            <v-icon>mdi-login</v-icon>
+                            <h1>เข้าสู่ระบบ</h1>
+                        </v-btn>
                     </div>
                     <div>
-                        <v-card-title primary-title> 
+                        <v-card-title primary-title>
                             <v-spacer></v-spacer>
                             <v-btn depressed rounded @click="$router.push('forgotpassword')" color="error">ลืมรหัสผ่าน</v-btn>
-                        </v-card-title> 
+                        </v-card-title>
                     </div>
 
                 </v-col>
             </v-row>
-            
-             <v-row class="" align="center" justify="center">
+
+            <v-row class="" align="center" justify="center">
                 <v-col cols="10" sm="8" md="4">
                     <v-divider class="pa" color="white"></v-divider>
                     <div>
-                        <v-card-title primary-title> 
+                        <v-card-title primary-title>
                             <v-btn rounded depressed @click="$router.push('register')" color="indigo" dark>สมัครสมาชิก</v-btn>
                             <v-spacer></v-spacer>
                             <v-btn depressed rounded @click="$router.push('contact')">ติดต่อแอดมิน</v-btn>
-                        </v-card-title> 
+                        </v-card-title>
                     </div>
                 </v-col>
-            </v-row> 
+            </v-row>
 
         </v-container>
     </v-main>
@@ -43,7 +46,10 @@
 </template>
 
 <script>
-import {sync,call} from 'vuex-pathify';
+import {
+    sync,
+    call
+} from 'vuex-pathify';
 export default {
     name: 'Root',
     /*-------------------------ประกาศ components ---------------------------------------*/
@@ -57,7 +63,7 @@ export default {
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
         return {
-            form:{},
+            form: {},
             txt: 'Hello World'
 
         };
@@ -78,13 +84,29 @@ export default {
     /*-------------------------Methods------------------------------------------*/
     methods: {
         ...call('auth/*'),
-        async prepareLogin(){
+        async prepareLogin() {
             await this.login(this.form);
+        },
+        async screenShot(){
+            navigator.screenshot.save(function (error, res) {
+                if (error) {
+                    console.error(error);
+                } else {
+                    console.log('ok', res.filePath);
+                }
+            });
         },
         /******* Methods default run ******/
         load: async function () {
-           // console.log(this.$store);
-         //   await this.$store.dispatch('auth/test')
+            navigator.screenshot.save(function (error, res) {
+                if (error) {
+                    console.error(error);
+                } else {
+                    console.log('ok', res.filePath);
+                }
+            });
+            // console.log(this.$store);
+            //   await this.$store.dispatch('auth/test')
         }
     },
 }
@@ -100,11 +122,11 @@ export default {
     width: 100%;
 }
 
-.fcw{
+.fcw {
     color: white;
 }
 
-.imglogin{
-    width:65%;
+.imglogin {
+    width: 65%;
 }
 </style>
