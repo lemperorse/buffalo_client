@@ -77,7 +77,7 @@ export default {
                 {
                     text: "ออกจากระบบ",
                     icon: "em em-outbox_tray",
-                    router: "/"
+                    router: "/user/logout"
                 },
 
             ],

@@ -18,6 +18,8 @@ Vue.use(VueIziToast);
 
 Vue.config.productionTip = false;
 
+import Notifications from 'vue-notification' 
+Vue.use(Notifications)
 
 import VueGeolocation from 'vue-browser-geolocation' 
 

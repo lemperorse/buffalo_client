@@ -55,6 +55,11 @@ const userRouter = [
         name: 'cer', 
         component: getView('Cer')
     },
+    {
+        path: 'logout',
+        name: 'logout', 
+        component: getView('Logout')
+    },
 
 ]
 

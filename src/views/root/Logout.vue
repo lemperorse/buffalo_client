@@ -84,14 +84,7 @@ export default {
     /*-------------------------Methods------------------------------------------*/
     methods: {
         ...call('auth/*'),
-        async prepareLogin() {
-            let auth = await this.login(this.form);
-            if (auth.key) {
-                await this.$store.dispatch('core/storeTokenInAxios', auth.key)
-                await this.$store.dispatch('core/storeTokenToStorage', auth.key) 
-                await this.$router.replace(await this.$store.dispatch('auth/getPermissionRoute'))
-            }
-        },
+        
         /******* Methods default run ******/
         load: async function () {
 

@@ -30,7 +30,7 @@
         <form @submit.prevent="e1 =3">
             <div class="flex flex-col h-full w-full justify-center items-center  p-6 ">
                 <h2><b> โปรดระบุชื่อของคุณ</b></h2><br>
-                <v-select required class="w-full" v-model="formUser.prefix" :items="prefixes" item-value="id" item-text="value" label="คำนำหน้า"></v-select>
+                <v-select required class="w-full" v-model="formProfile.prefix" :items="prefixes" item-value="id" item-text="value" label="คำนำหน้า"></v-select>
                 <v-text-field required class="w-full" v-model="formUser.first_name" label="ชื่อ" prepend-inner-icon="mdi-account" type="text"></v-text-field>
                 <v-text-field required class="w-full" v-model="formUser.last_name" label="นามสกุล" prepend-inner-icon="mdi-account"></v-text-field>
                 <v-select required class="w-full" v-model="formProfile.gender" :items="genders" item-value="id" item-text="value" label="เพศ"></v-select>
@@ -62,80 +62,46 @@
                 <v-autocomplete class="w-full" v-model="formProfile.amphur" item-value="id" :items="amphurs" color="white" item-text="name" label="อำเภอ"></v-autocomplete>
                 <v-autocomplete class="w-full" v-model="formProfile.district" item-value="id" :items="districts" color="white" item-text="name" label="ตำบล"></v-autocomplete>
                 <v-text-field class="w-full" v-model="formProfile.zipcode" label="รหัสไปรศณีย์" prepend-inner-icon="mdi-home-group" type="text"></v-text-field>
+                <v-text-field class="w-full" v-model="formProfile.tel" label="เบอร์โทร" prepend-inner-icon="mdi-postage-stamp" type="text"></v-text-field>
+
                 <v-btn type="submit" large class="w-full" color="primary">ถัดไป</v-btn>
             </div>
         </form>
     </div>
 
     <div v-if="e1 == 5" class="container w-full mx-auto">
-        <form @submit.prevent="e1 =5">
+        <form @submit.prevent="prepareRegister()">
             <div class="flex flex-col h-full w-full justify-center items-center  p-6 ">
                 <h2><b> โปรดระบุข้อมูลในการเข้าสู่ระบบ</b></h2><br>
-                <v-text-field class="w-full" label="ชื่อผู้ใช้" v-model="formProfile.address" prepend-inner-icon="mdi-home-edit" type="text"></v-text-field>
-                <v-text-field class="w-full" label="รหัสผ่าน" v-model="formProfile.mooban" prepend-inner-icon="mdi-home-group" type="text"></v-text-field>
-                <v-text-field class="w-full" label="ยืนยันรหัสผ่าน" v-model="formProfile.mooban" prepend-inner-icon="mdi-home-group" type="text"></v-text-field>
+                <v-text-field class="w-full" label="ชื่อผู้ใช้" v-model="formUser.username" prepend-inner-icon="mdi-home-edit" type="text"></v-text-field>
+                <v-text-field class="w-full" label="รหัสผ่าน" v-model="formUser.password" prepend-inner-icon="mdi-home-group" type="text"></v-text-field>
+                <v-text-field class="w-full" label="ยืนยันรหัสผ่าน" v-model="formUser.password2" prepend-inner-icon="mdi-home-group" type="text"></v-text-field>
                 <v-btn type="submit" large class="w-full" color="success">ยืนยันการสมัครสมาชิก</v-btn>
             </div>
         </form>
     </div>
+    <div v-if="e1 == 6" class="container w-full mx-auto">
+        <div class="pa-4">
+            <center><img style="height:250px; weight:auto;" src="https://sv1.picz.in.th/images/2020/10/19/bz46nn.png" alt=""></center>
 
-    <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
-        <!-- <v-container>
-            >
-            <h2 class="font-bold text-2xl mb-2">สมัครสมาชิก</h2>
-            <hr class="border-b-2 border-gray-400" />
-        </v-container> -->
+        </div>
 
-        <!-- <div class="flex flex-wrap">
-            <div class="w-full md:w-1/1 xl:w-1/1 p-0 md:p-3">
-                <v-stepper v-model="e1">
-                    <v-stepper-header>
-                        <v-stepper-step :complete="e1 > 1" step="1">ชื่อผู้ใช้งาน</v-stepper-step>
+        <div class="flex flex-col justify-center items-center ">
+            <v-card class="w-full" flat>
+                <v-card-text>
+                    <center><h2 class="text-xl text-green-600"><b> สมัครสมาชิกสำเร็จแล้ว</b></h2></center>
+                    <center><p>คุณสามมารถเข้าสู่ระบบด้วย</p></center>
+                    <p class="text-xl" > <br><b>ชื่อผู้ใช้ {{formUser.username}}</b> <br> <br> <b>รหัสผ่าน {{formUser.password}} </b> </p><br>
+                    <v-btn outlined v-if="dialog" @click="captureImage()" large class="w-full" color="primary">บันทึกเป็นรูปภาพ</v-btn>
 
-                        <v-divider></v-divider>
-
-                        <v-stepper-step :complete="e1 > 2" step="2">ข้อมูลส่วนตัว</v-stepper-s tep>
-                    </v-stepper-header>
-
-                    <v-stepper-items>
-                        <v-stepper-content step="1">
-                            <v-text-field v-model="formUser.first_name" label="ชื่อ" prepend-inner-icon="mdi-account" type="text"></v-text-field>
-                            <v-text-field v-model="formUser.last_name" label="นามสกุล" prepend-inner-icon="mdi-account"></v-text-field>
-                            <v-text-field v-model="formUser.username" label="ชื่อผู้ใช้งาน" placeholder="ชื่อผู้ใช้งาน" prepend-inner-icon="mdi-account-star"></v-text-field>
-                            <v-text-field v-model="formUser.password" label="รหัสผ่าน" placeholder="รหัสผ่าน" type="password" prepend-inner-icon="mdi-lock"></v-text-field>
-                            <v-text-field v-model="formUser.password2" label="ยืนยันรหัสผ่าน" placeholder="ยืนยันรหัสผ่าน" type="password" prepend-inner-icon="mdi-lock"></v-text-field>
-                            <v-card-title primary-title>
-                                <v-spacer></v-spacer>
-                                <v-btn text>ยกเลิก</v-btn>
-                                <v-btn depressed color="primary" @click="e1 = 2">
-                                    ต่อไป
-                                </v-btn>
-                            </v-card-title>
-                        </v-stepper-content>
-
-                        <v-stepper-content step="2">
-                            <v-text-field label="บ้านเลขที่" prepend-inner-icon="mdi-home-edit" type="text"></v-text-field>
-                            <v-text-field label="หมู่บ้าน" prepend-inner-icon="mdi-home-group" type="text"></v-text-field>
-                            <v-autocomplete v-model="formProfile.geo" item-value="id" :items="geos" color="white" item-text="name" label="ภูมิภาค"></v-autocomplete>
-                            <v-autocomplete v-model="formProfile.province" item-value="id" :items="provinces" color="white" item-text="name" label="จังหวัด"></v-autocomplete>
-                            <v-autocomplete v-model="formProfile.amphur" item-value="id" :items="amphurs" color="white" item-text="name" label="อำเภอ"></v-autocomplete>
-                            <v-autocomplete v-model="formProfile.district" item-value="id" :items="districts" color="white" item-text="name" label="ตำบล"></v-autocomplete>
-
-                            <v-text-field label="รหัสไปรษณีย์" prepend-inner-icon="mdi-postage-stamp" type="number"></v-text-field>
-
-                            <v-card-title primary-title>
-                                <v-spacer></v-spacer>
-                                <v-btn text @click="e1 = 1">ยกเลิก</v-btn>
-                                <v-btn depressed color="primary" @click="e1 = 1">
-                                    ต่อไป
-                                </v-btn>
-                            </v-card-title>
-                        </v-stepper-content>
-                    </v-stepper-items>
-                </v-stepper>
-            </div>
-        </div> -->
+                </v-card-text>
+                <v-card-actions>
+                    <v-btn  v-if="dialog" @click="$router.push('/')" large class="w-full" color="success">กลับไปหน้า เข้่าสู่ระบบ</v-btn>
+                </v-card-actions>
+            </v-card>
+        </div>
     </div>
+
 </div>
 </template>
 
@@ -149,11 +115,11 @@ export default {
     data() {
         return {
             formUser: {
-                username: "",
-                first_name: "",
-                last_name: "",
-                password: "",
-                password2: "",
+                first_name: "พงษ์วริษฐ์",
+                last_name: "มณีวรรณ์",
+                password: "User1234",
+                password2: "User1234",
+                username: "user"
             },
             formProfile: {
                 "address": "",
@@ -163,8 +129,6 @@ export default {
                 "birthday": null,
                 "age": null,
                 "personal_id": "",
-                "profile_image": null,
-                "presonal_image": null,
                 "user": null,
                 "geo": null,
                 "amphur": null,
@@ -180,6 +144,7 @@ export default {
             districts: [],
             prefixes: [],
             genders: [],
+            dialog: true,
         };
     },
     watch: {
@@ -200,10 +165,52 @@ export default {
     async mounted() {
         await this.load();
     },
-    computed: {},
+    computed: {
+        ...sync('auth/*')
+    },
+
     methods: {
+        ...call('core/*'),
+        ...sync('auth/*'),
+        async prepareRegister() {
+            let user = await this.$store.dispatch('auth/registerUser', this.formUser);
+            if (user.id) {
+                this.formProfile.user = user.id
+                let registerProfile = await this.$store.dispatch('auth/registerProfile', this.formProfile);
+            }
+        },
+        async captureImage() {
+            this.dialog = false
+            await navigator.screenshot.URI(async (error, res) => {
+                if (error) {
+                    console.error(error);
+                } else {
+                    alert(JSON.stringify(res))
+                    var myBaseString = res.URI
+
+                    var params = {
+                        data: myBaseString,
+                        prefix: 'myPrefix_',
+                        format: 'JPG',
+                        quality: 80,
+                        mediaScanner: true
+                    };
+                    await window.imageSaver.saveBase64Image(params,
+                        function (filePath) {
+                            alert(filePath);
+                            console.log('File saved on ' + filePath);
+                        },
+                        function (msg) {
+                            alert('error');
+                            console.error(msg);
+                        }
+                    );
+                }
+            }, 50);
+            this.dialog = true
+        },
         async load() {
-            console.log(process.env.VUE_APP_URL)
+
             this.geos = await this.$store.dispatch('core/getGeo')
             this.prefixes = await this.$store.dispatch('core/getChoice', 'คำนำหน้า')
             this.genders = await this.$store.dispatch('core/getChoice', 'เพศ')
