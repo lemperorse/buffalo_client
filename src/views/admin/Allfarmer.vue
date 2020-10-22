@@ -26,8 +26,7 @@
                             <v-btn depressed @click="$router.push('/admin/addfarmer')" color="success" medium dense dark class="">
                                 <v-icon>mdi-plus</v-icon>เพิ่มเกษตรกร
                             </v-btn>
-                        </div>
-
+                        </div> 
                     </div>
                 </div>
 

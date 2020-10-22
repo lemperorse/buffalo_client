@@ -28,6 +28,7 @@ const actions = {
         let request  = await axios.delete(url).then((r)=>{return r.data}).catch((e)=>{return e.response.data});
         return request
     },
+    
     async getGeo(context,form){
         let request  = await actions.getHttp('/api/geo/')
         return request

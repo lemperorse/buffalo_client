@@ -61,6 +61,7 @@
                                         <h2 class="font-bold text-2xl">ข้อมูลเกษตกร</h2>
                                     </v-card-title>
                                     <v-card-text>
+                                    
                                         <div>
                                             <v-expansion-panels v-model="panel" multiple flat>
                                                 <v-expansion-panel>
@@ -326,8 +327,11 @@
 </div>
 </template>
 
-<script>
+<script> 
 export default {
+    components:{
+         
+    },
     data: () => ({
         bc: [{
                 text: 'เกษตกร',
