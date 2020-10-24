@@ -3,7 +3,9 @@ import Vuex from 'vuex'
 import pathify from 'vuex-pathify'
 import auth from './auth'
 import core from './core'
-
+import buffalo from './buffalo'
+import farmer from './farmer'
+import cer from './cer'
 Vue.use(Vuex) 
 
 export default function(/* { ssrContext } */) {
@@ -11,7 +13,10 @@ export default function(/* { ssrContext } */) {
     plugins: [pathify.plugin],
     modules: {
       core,
-      auth
+      auth,
+      buffalo,
+      cer,
+      farmer
     }
   });
 
